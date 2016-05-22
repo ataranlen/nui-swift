@@ -39,7 +39,8 @@
 {
     // Set background color
     if ([NUISettings hasProperty:@"background-color" withClass:className]) {
-        [cell setBackgroundColor:[NUISettings getColor:@"background-color" withClass:className]];
+        UIImage *colorImage = [NUISettings getImageFromColor:@"background-color" withClass:className];
+        tableView.backgroundView = [[UIImageView alloc] initWithImage:colorImage];
 
         // in iOS 7, the UITableView's backgroundView is drawn above the UIRefreshControl
         if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1)
