@@ -1,0 +1,15 @@
+comment:
+  layout: header, changes, diff, sunburst
+coverage:
+  precision: 2
+  round: down
+  range: "60...95"
+  ignore:
+  - Demo/NUITests/*
+  status:
+    patch:
+      default:
+        target: auto
+    project:
+      default:
+        target: auto
