@@ -6,17 +6,15 @@ matrix:
     - osx_image: xcode7.3
       env: DEVICE="iPhone 5s" VERSION=8.4
     - osx_image: xcode7.3
-      env: DEVICE="iPhone 6s" VERSION=8.4
+      env: DEVICE="iPhone 6" VERSION=8.4
     - osx_image: xcode7.3
-      env: DEVICE="iPhone 6s Plus" VERSION=8.4
+      env: DEVICE="iPhone 6 Plus" VERSION=8.4
     - osx_image: xcode7.3
       env: DEVICE="iPad 2" VERSION=8.4
     - osx_image: xcode7.3
       env: DEVICE="iPad Retina" VERSION=8.4
     - osx_image: xcode7.3
       env: DEVICE="iPad Air 2" VERSION=8.4
-    - osx_image: xcode7.3
-      env: DEVICE="iPad Pro" VERSION=8.4
     - osx_image: xcode7.3
       env: DEVICE="iPhone 4s" VERSION=9.3
     - osx_image: xcode7.3
