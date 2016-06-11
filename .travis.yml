@@ -33,7 +33,9 @@ matrix:
       env: DEVICE="iPad Pro" VERSION=9.3
 before_install:
   - export LANG=en_US.UTF-8
-before_script:
-  - bundle exec pod install --project-directory=Demo
+  - sudo gem install xcpretty --no-rdoc --no-ri --no-document
+  - sudo gem install cocoapods --no-rdoc --no-ri --no-document
+  - pod install --project-directory=Demo
 script:
-  - xctool -sdk iphonesimulator -workspace Demo/NUIDemo.xcworkspace -scheme NUITests -destination "platform=iOS Simulator,name=$DEVICE,OS=$VERSION" clean test
+  - set -o pipefail && xcodebuild -workspace Demo/NUIDemo.xcworkspace -scheme NUITests -destination "platform=iOS Simulator,name=$DEVICE,OS=$VERSION" clean test | xcpretty
+  
