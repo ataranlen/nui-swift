@@ -92,12 +92,11 @@
 		7C5A17A81CCE1435001288C5 /* NUIActivityIndicatorRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17A71CCE1435001288C5 /* NUIActivityIndicatorRenderer.m */; };
 		7C5A17AB1CCE1822001288C5 /* NUIActivityIndicatorRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AA1CCE1822001288C5 /* NUIActivityIndicatorRendererTests.m */; };
 		7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */; };
-		832B9C1B176AEADA0054F06E /* iPad Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832B9C19176AEADA0054F06E /* iPad Storyboard.storyboard */; };
-		832B9C1E176AEAED0054F06E /* iPhone Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832B9C1C176AEAED0054F06E /* iPhone Storyboard.storyboard */; };
 		870C41D41D0B502E00B73A39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D31D0B502E00B73A39 /* ViewController.swift */; };
 		870C41D61D0B6C9000B73A39 /* NUIDemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D51D0B6C9000B73A39 /* NUIDemoTableViewController.swift */; };
 		870C41D81D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D71D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift */; };
 		870C41DA1D0B7FA600B73A39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D91D0B7FA600B73A39 /* AppDelegate.swift */; };
+		871325B21D0C7A9E00907BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871325B11D0C7A9E00907BA5 /* Main.storyboard */; };
 		871C76501D0B833900A12CBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871C764E1D0B833900A12CBA /* Launch Screen.storyboard */; };
 		89B940701671418200850A9A /* NUIAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940241671418100850A9A /* NUIAppearance.m */; };
 		89B940711671418200850A9A /* NUIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940261671418100850A9A /* NUIConverter.m */; };
@@ -267,13 +266,12 @@
 		7C5A17AC1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+NUI.h"; sourceTree = "<group>"; };
 		7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+NUI.m"; sourceTree = "<group>"; };
 		80CA9B780E980B9CA99F0367 /* Pods-NUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUIDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NUIDemo/Pods-NUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		832B9C1A176AEADA0054F06E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/iPad Storyboard.storyboard"; sourceTree = "<group>"; };
-		832B9C1D176AEAED0054F06E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/iPhone Storyboard.storyboard"; sourceTree = "<group>"; };
 		870C41D21D0B502E00B73A39 /* NUIDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NUIDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		870C41D31D0B502E00B73A39 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		870C41D51D0B6C9000B73A39 /* NUIDemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIDemoTableViewController.swift; sourceTree = "<group>"; };
 		870C41D71D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyCreatedViewController.swift; sourceTree = "<group>"; };
 		870C41D91D0B7FA600B73A39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		871325B11D0C7A9E00907BA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		871C764F1D0B833900A12CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		89B940231671418100850A9A /* NUIAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIAppearance.h; sourceTree = "<group>"; };
 		89B940241671418100850A9A /* NUIAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIAppearance.m; sourceTree = "<group>"; };
@@ -309,7 +307,7 @@
 		89B940431671418100850A9A /* NUITextFieldRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUITextFieldRenderer.m; sourceTree = "<group>"; };
 		89B940441671418100850A9A /* NUIViewRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIViewRenderer.h; sourceTree = "<group>"; };
 		89B940451671418100850A9A /* NUIViewRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIViewRenderer.m; sourceTree = "<group>"; };
-		89B940461671418100850A9A /* NUIStyle.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NUIStyle.nss; sourceTree = "<group>"; };
+		89B940461671418100850A9A /* NUIStyle.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NUIStyle.nss; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		89B9404A1671418100850A9A /* NUIViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NUIViewBackground.png; sourceTree = "<group>"; };
 		945E0E35381989455733E516 /* Pods-NUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NUITests/Pods-NUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C18CD8B18E7B5E8A45C072E /* Pods_NUIDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NUIDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -594,13 +592,12 @@
 			children = (
 				870C41D21D0B502E00B73A39 /* NUIDemo-Bridging-Header.h */,
 				89B940211671418100850A9A /* NUI */,
+				870C41D91D0B7FA600B73A39 /* AppDelegate.swift */,
 				870C41D51D0B6C9000B73A39 /* NUIDemoTableViewController.swift */,
 				870C41D71D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift */,
 				870C41D31D0B502E00B73A39 /* ViewController.swift */,
-				832B9C19176AEADA0054F06E /* iPad Storyboard.storyboard */,
-				832B9C1C176AEAED0054F06E /* iPhone Storyboard.storyboard */,
+				871325B11D0C7A9E00907BA5 /* Main.storyboard */,
 				871C764E1D0B833900A12CBA /* Launch Screen.storyboard */,
-				870C41D91D0B7FA600B73A39 /* AppDelegate.swift */,
 				165D32551BF2239900BF3069 /* Images.xcassets */,
 				4A0B863C165EE59A005B5756 /* Supporting Files */,
 			);
@@ -965,6 +962,7 @@
 				4A9965E6169FB56800DAA38A /* Default.NUI.nss in Resources */,
 				0E5516131938751100B293B7 /* background_image.png in Resources */,
 				4A9965E7169FB56800DAA38A /* Googolplex.NUI.nss in Resources */,
+				871325B21D0C7A9E00907BA5 /* Main.storyboard in Resources */,
 				4A9965E8169FB56800DAA38A /* Round.NUI.nss in Resources */,
 				0E55162219388C1E00B293B7 /* foreground_image@2x.png in Resources */,
 				4A9965E9169FB56800DAA38A /* Route.NUI.nss in Resources */,
@@ -972,9 +970,7 @@
 				4A9965EB169FB56800DAA38A /* Switchboard.NUI.nss in Resources */,
 				0E3F5E02193C64AD003F6A77 /* shadow_image@2x.png in Resources */,
 				0E55162019388C1E00B293B7 /* foreground_image.png in Resources */,
-				832B9C1B176AEADA0054F06E /* iPad Storyboard.storyboard in Resources */,
 				871C76501D0B833900A12CBA /* Launch Screen.storyboard in Resources */,
-				832B9C1E176AEAED0054F06E /* iPhone Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1211,22 +1207,6 @@
 				4A0B863F165EE59A005B5756 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		832B9C19176AEADA0054F06E /* iPad Storyboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				832B9C1A176AEADA0054F06E /* en */,
-			);
-			name = "iPad Storyboard.storyboard";
-			sourceTree = "<group>";
-		};
-		832B9C1C176AEAED0054F06E /* iPhone Storyboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				832B9C1D176AEAED0054F06E /* en */,
-			);
-			name = "iPhone Storyboard.storyboard";
 			sourceTree = "<group>";
 		};
 		871C764E1D0B833900A12CBA /* Launch Screen.storyboard */ = {

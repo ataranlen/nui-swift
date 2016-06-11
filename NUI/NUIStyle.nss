@@ -87,7 +87,7 @@ SegmentedControl {
     border-width: @primaryBorderWidth;
     corner-radius: 7;
     font-name: @secondaryFontNameBold;
-    font-size: 13;
+    font-size: 11;
     font-color: @primaryFontColor;
     text-shadow-color: clear;
 }

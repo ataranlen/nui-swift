@@ -30,7 +30,7 @@ class NUIDemoTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("NUIDemoCell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("NUIDemoCell", forIndexPath: indexPath)
         
         let item = demoItems[indexPath.row]
         
