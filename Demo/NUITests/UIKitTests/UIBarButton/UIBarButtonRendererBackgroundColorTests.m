@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "NUIRenderer.h"
+#import "UIBarButtonItem+NUI.h"
 #import <UIImage_ColorFromImage/UIImage+ColorFromImage.h>
 
 @interface UIBarButtonRendererBackgroundColorTests : XCTestCase

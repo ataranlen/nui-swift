@@ -2,7 +2,7 @@
 //  NUIPageControlRenderer.swift
 //  NUIDemo
 //
-//  Created by Sergej Jaskiewicz on 11.06.16.
+//  Created by Sergej Jaskiewicz on 06/11/16.
 //  Copyright © 2016 Tom Benner. All rights reserved.
 //
 
@@ -24,9 +24,11 @@ class NUIPageControlRenderer: NSObject {
         // Work around of the issue that rendering does not happen properly.
         // After setting color, you have to unset/set all pages as current.
         let currentPage = pageControl.currentPage
+        
         for i in 0 ..< pageControl.numberOfPages {
             pageControl.currentPage = i
         }
+        
         pageControl.currentPage = currentPage
     }
 }

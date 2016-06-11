@@ -7,6 +7,7 @@
 //
 
 #import "UINavigationBar+NUI.h"
+#import "UIBarButtonItem+NUI.h"
 
 @implementation UINavigationBar (NUI)
 

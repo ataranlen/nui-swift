@@ -7,6 +7,7 @@
 //
 
 #import "UIToolbar+NUI.h"
+#import "UIBarButtonItem+NUI.h"
 
 @implementation UIToolbar (NUI)
 

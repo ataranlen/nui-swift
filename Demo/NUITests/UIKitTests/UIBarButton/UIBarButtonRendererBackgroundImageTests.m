@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "NUIRenderer.h"
+#import "UIBarButtonItem+NUI.h"
 #import <FBSnapshotTestCase/UIImage+Compare.h>
 
 static NSString * const NUIBarButtonBackgroundImageTestsStyleClass = @"BarButtonWithBackgroundImage";
