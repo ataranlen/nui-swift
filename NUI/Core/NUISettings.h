@@ -26,7 +26,7 @@
 @property(nonatomic,retain)NSMutableArray *globalExclusions;
 @property(nonatomic,retain)NSString* stylesheetOrientation;
 
-+ (void)init;
++ (void)initDefault;
 + (void)initWithStylesheet:(NSString*)name;
 + (void)appendStylesheet:(NSString*)name;
 + (void)loadStylesheetByPath:(NSString*)path;

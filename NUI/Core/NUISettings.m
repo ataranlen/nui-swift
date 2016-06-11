@@ -18,7 +18,7 @@
 
 static NUISettings *instance = nil;
 
-+ (void)init
++ (void)initDefault
 {
     [self initWithStylesheet:@"NUIStyle"];
 }
