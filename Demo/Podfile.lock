@@ -1,18 +1,22 @@
 PODS:
-  - FBSnapshotTestCase (1.6)
-  - NUIParse (1.2.1)
+  - FBSnapshotTestCase (2.1.1):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
+  - FBSnapshotTestCase/Core (2.1.1)
+  - FBSnapshotTestCase/SwiftSupport (2.1.1):
+    - FBSnapshotTestCase/Core
+  - NUIParse (1.3)
   - UIImage+ColorFromImage (0.0.2)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 1.6)
+  - FBSnapshotTestCase
   - NUIParse
-  - UIImage+ColorFromImage (= 0.0.2)
+  - UIImage+ColorFromImage
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  NUIParse: 9b6d5a6b782dc654ac6c846d623885080306f07f
+  FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
+  NUIParse: 2e3885ba7807477266396292626bd387d34c2338
   UIImage+ColorFromImage: b84b5f8b4dc9d996d17d2b736e1429f4a13b37e4
 
-PODFILE CHECKSUM: 6ba6276f44db442fb804ea4b83f35b2a5eff1241
+PODFILE CHECKSUM: 19dbe197c3a895aaa98b87ade77b617e838ee98a
 
 COCOAPODS: 1.0.0

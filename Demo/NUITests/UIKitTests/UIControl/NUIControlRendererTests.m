@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Tom Benner. All rights reserved.
 //
 
-#import "FBSnapshotTestCase.h"
+#import <FBSnapshotTestCase/FBSnapshotTestCase.h>
 
 #import "NUIRenderer.h"
 
@@ -26,6 +26,8 @@
     [_sut applyNUI];
     
     self.recordMode = NO;
+    
+    self.deviceAgnostic = YES;
 }
 
 - (void)tearDown

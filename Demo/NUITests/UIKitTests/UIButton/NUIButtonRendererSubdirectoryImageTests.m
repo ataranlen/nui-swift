@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "UIButton+NUI.h"
-#import <UIImage+Compare.h>
+#import <FBSnapshotTestCase/UIImage+Compare.h>
 
 static NSString * const NUIButtonSubdirectoryImageTestsStyleClass = @"ButtonWithImageFromSubdirectory";
 
@@ -46,7 +46,7 @@ static NSString * const NUIButtonSubdirectoryImageTestsStyleClass = @"ButtonWith
     UIImage *image = [UIImage imageNamed:@"Assets/subdirectory_image"];
     UIImage *buttonImage = [_sut backgroundImageForState:state];
     
-    return [buttonImage compareWithImage:image];
+    return [buttonImage fb_compareWithImage:image tolerance:0];
 }
 
 - (BOOL)equalForegroundImagesWithState:(UIControlState)state
@@ -54,7 +54,7 @@ static NSString * const NUIButtonSubdirectoryImageTestsStyleClass = @"ButtonWith
     UIImage *image = [UIImage imageNamed:@"Assets/subdirectory_image"];
     UIImage *buttonImage = [_sut imageForState:state];
     
-    return [buttonImage compareWithImage:image];
+    return [buttonImage fb_compareWithImage:image tolerance:0];
 }
 
 // background-image (Image)

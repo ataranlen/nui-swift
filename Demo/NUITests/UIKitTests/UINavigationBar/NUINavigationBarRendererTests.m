@@ -59,7 +59,7 @@
     
     // Images must be compared using FBSnapshotTestCase category
     // as resizable images always have unique pointers.
-    XCTAssertTrue([barBackgroundImage compareWithImage:backgroundImage], @"NUI should set navigation bar background image");
+    XCTAssertTrue([barBackgroundImage fb_compareWithImage:backgroundImage tolerance:0], @"NUI should set navigation bar background image");
 }
 
 // background-image-insets (Box)
@@ -107,7 +107,7 @@
     
     // Images must be compared using FBSnapshotTestCase category
     // as resizable images always have unique pointers.
-    XCTAssertTrue([_sut.shadowImage compareWithImage:shadowImage], @"NUI should set navigation bar shadow image");
+    XCTAssertTrue([_sut.shadowImage fb_compareWithImage:shadowImage tolerance:0], @"NUI should set navigation bar shadow image");
 }
 
 // text-shadow-color (Color)

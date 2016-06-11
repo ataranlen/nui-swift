@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "UIButton+NUI.h"
-#import <UIImage+Compare.h>
+#import <FBSnapshotTestCase/UIImage+Compare.h>
 
 static NSString * const NUIButtonBackgroundImageTestsStyleClass = @"ButtonWithBackgroundImage";
 
@@ -46,7 +46,7 @@ static NSString * const NUIButtonBackgroundImageTestsStyleClass = @"ButtonWithBa
     UIImage *image = [UIImage imageNamed:@"background_image"];
     UIImage *buttonImage = [_sut backgroundImageForState:state];
     
-    return [buttonImage compareWithImage:image];
+    return [buttonImage fb_compareWithImage:image tolerance:0];
 }
 
 - (UIEdgeInsets)insetsForState:(UIControlState)state

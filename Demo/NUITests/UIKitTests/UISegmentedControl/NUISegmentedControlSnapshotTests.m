@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Tom Benner. All rights reserved.
 //
 
-#import "FBSnapshotTestCase.h"
+#import <FBSnapshotTestCase/FBSnapshotTestCase.h>
 
 #import "NUIRenderer.h"
 
@@ -33,6 +33,8 @@ static NSString * const NUISegmentedControlTestsStyleClass = @"SegmentedControlC
     
     // Flip this to YES to record images in the reference image directory.
     self.recordMode = NO;
+    
+    self.deviceAgnostic = YES;
 }
 
 // background-color (Color)

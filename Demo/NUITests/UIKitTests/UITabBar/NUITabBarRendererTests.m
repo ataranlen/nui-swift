@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import "NUIRenderer.h"
-#import <UIImage+ColorFromImage/UIImage+ColorFromImage.h>
+#import <UIImage_ColorFromImage/UIImage+ColorFromImage.h>
 
 @interface NUITabBarRendererTests : XCTestCase
 @property (strong, nonatomic) UITabBar *sut;

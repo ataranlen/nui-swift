@@ -47,7 +47,7 @@
 {
     UIImage *offImage = _sut.offImage;
     UIImage *image = [UIImage imageNamed:@"background_image"];
-    XCTAssertTrue([offImage compareWithImage:image], @"NUI should set switch off image");
+    XCTAssertTrue([offImage fb_compareWithImage:image tolerance:0], @"NUI should set switch off image");
 }
 
 // off-image-insets (Box)
@@ -62,7 +62,7 @@
 {
     UIImage *onImage = _sut.onImage;
     UIImage *image = [UIImage imageNamed:@"foreground_image"];
-    XCTAssertTrue([onImage compareWithImage:image], @"NUI should set switch on image");
+    XCTAssertTrue([onImage fb_compareWithImage:image tolerance:0], @"NUI should set switch on image");
 }
 
 // on-image-insets (Box)

@@ -38,7 +38,7 @@
 {
     UIImage *image = [UIImage imageNamed:@"background_image"];
     UIImage *backgroundImage = _sut.backgroundImage;
-    XCTAssertTrue([backgroundImage compareWithImage:image], @"NUI should set tab bar background image");
+    XCTAssertTrue([backgroundImage fb_compareWithImage:image tolerance:0], @"NUI should set tab bar background image");
 }
 
 // background-image-insets (Box)
@@ -54,7 +54,7 @@
 {
     UIImage *image = [UIImage imageNamed:@"foreground_image"];
     UIImage *selectedImage = _sut.selectionIndicatorImage;
-    XCTAssertTrue([selectedImage compareWithImage:image], @"NUI should set tab bar selected image");
+    XCTAssertTrue([selectedImage fb_compareWithImage:image tolerance:0], @"NUI should set tab bar selected image");
 }
 
 @end

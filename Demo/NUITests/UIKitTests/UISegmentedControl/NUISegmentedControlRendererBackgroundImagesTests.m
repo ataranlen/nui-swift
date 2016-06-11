@@ -10,7 +10,7 @@
 
 #import "NUIRenderer.h"
 #import <FBSnapshotTestCase/UIImage+Compare.h>
-#import <UIImage+ColorFromImage/UIImage+ColorFromImage.h>
+#import <UIImage_ColorFromImage/UIImage+ColorFromImage.h>
 
 static NSString * const NUISegmentedControlBackgroundImageTestsStyleClass = @"SegmentedControlWithImages";
 
@@ -53,7 +53,7 @@ static NSString * const NUISegmentedControlBackgroundImageTestsStyleClass = @"Se
     
     UIImage *backgroundImage = [_sut backgroundImageForState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
-    XCTAssertTrue([backgroundImage compareWithImage:image], @"NUI should set segmented control background image");
+    XCTAssertTrue([backgroundImage fb_compareWithImage:image tolerance:0], @"NUI should set segmented control background image");
 }
 
 // background-image-insets (Box)
@@ -75,7 +75,7 @@ static NSString * const NUISegmentedControlBackgroundImageTestsStyleClass = @"Se
     
     UIImage *backgroundImage = [_sut backgroundImageForState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
     
-    XCTAssertTrue([backgroundImage compareWithImage:image], @"NUI should set segmented control background image when selected");
+    XCTAssertTrue([backgroundImage fb_compareWithImage:image tolerance:0], @"NUI should set segmented control background image when selected");
 }
 
 // background-image-selected-insets (Box)

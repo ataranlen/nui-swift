@@ -10,7 +10,7 @@
 
 #import "NUIRenderer.h"
 #import <FBSnapshotTestCase/UIImage+Compare.h>
-#import <UIImage+ColorFromImage/UIImage+ColorFromImage.h>
+#import <UIImage_ColorFromImage/UIImage+ColorFromImage.h>
 
 @interface NUISearchBarRendererTests : XCTestCase
 @property (strong, nonatomic) UISearchBar *sut;
@@ -51,7 +51,7 @@
     
     UIImage *backgroundImage = _sut.backgroundImage;
     
-    XCTAssertTrue([backgroundImage compareWithImage:image], @"NUI should set search bar background image");
+    XCTAssertTrue([backgroundImage fb_compareWithImage:image tolerance:0], @"NUI should set search bar background image");
 }
 
 // background-tint-color (Color)

@@ -53,7 +53,7 @@ static NSString * const NUIBarButtonBackgroundImageTestsStyleClass = @"BarButton
 {
     UIImage *image = [UIImage imageNamed:@"background_image"];
     UIImage *buttonImage = [_sut backgroundImageForState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    XCTAssertTrue([buttonImage compareWithImage:image], @"NUI should set bar button background image");
+    XCTAssertTrue([buttonImage fb_compareWithImage:image tolerance:0], @"NUI should set bar button background image");
 }
 
 // background-image-insets (Box)

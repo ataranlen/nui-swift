@@ -10,7 +10,7 @@
 
 #import "UIButton+NUI.h"
 #import "NUIRenderer.h"
-#import <UIImage+ColorFromImage/UIImage+ColorFromImage.h>
+#import <UIImage_ColorFromImage/UIImage+ColorFromImage.h>
 
 static NSString * const NUIButtonBackgroundColorTestsStyleClass = @"ButtonWithColor";
 
