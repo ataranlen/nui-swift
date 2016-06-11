@@ -16,7 +16,5 @@ class NUIActivityIndicatorRenderer: NSObject {
         if NUISettings.hasProperty("color", withClass: className) {
             activityIndicator.color = NUISettings.getColor("color", withClass: className)
         }
-        
     }
-    
 }
