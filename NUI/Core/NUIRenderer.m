@@ -8,6 +8,7 @@
 
 #import "NUIRenderer.h"
 #import "UIProgressView+NUI.h"
+#import "NUIDemo-Swift.h"
 
 @implementation NUIRenderer
 

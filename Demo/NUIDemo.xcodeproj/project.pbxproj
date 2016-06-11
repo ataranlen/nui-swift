@@ -89,7 +89,6 @@
 		5B5888C31992BD15005F1ACB /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5888C21992BD15005F1ACB /* Assets */; };
 		5B5888C41992BD1C005F1ACB /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5888C21992BD15005F1ACB /* Assets */; };
 		5B5888C61992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5888C51992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m */; };
-		7C5A17A81CCE1435001288C5 /* NUIActivityIndicatorRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17A71CCE1435001288C5 /* NUIActivityIndicatorRenderer.m */; };
 		7C5A17AB1CCE1822001288C5 /* NUIActivityIndicatorRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AA1CCE1822001288C5 /* NUIActivityIndicatorRendererTests.m */; };
 		7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */; };
 		870C41D41D0B502E00B73A39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D31D0B502E00B73A39 /* ViewController.swift */; };
@@ -98,6 +97,7 @@
 		870C41DA1D0B7FA600B73A39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D91D0B7FA600B73A39 /* AppDelegate.swift */; };
 		871325B21D0C7A9E00907BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871325B11D0C7A9E00907BA5 /* Main.storyboard */; };
 		871C76501D0B833900A12CBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871C764E1D0B833900A12CBA /* Launch Screen.storyboard */; };
+		87D50A581D0CA330008EFAEF /* NUIActivityIndicatorRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D50A571D0CA330008EFAEF /* NUIActivityIndicatorRenderer.swift */; };
 		89B940701671418200850A9A /* NUIAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940241671418100850A9A /* NUIAppearance.m */; };
 		89B940711671418200850A9A /* NUIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940261671418100850A9A /* NUIConverter.m */; };
 		89B940721671418200850A9A /* NUIGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940281671418100850A9A /* NUIGraphics.m */; };
@@ -260,8 +260,6 @@
 		5B5888C51992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIButtonRendererSubdirectoryImageTests.m; sourceTree = "<group>"; };
 		5E7A82143441C74ECBC50656 /* Pods_NUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6327BDA600E6A42FDF1220F4 /* Pods-NUIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUIDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NUIDemo/Pods-NUIDemo.release.xcconfig"; sourceTree = "<group>"; };
-		7C5A17A61CCE1435001288C5 /* NUIActivityIndicatorRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIActivityIndicatorRenderer.h; sourceTree = "<group>"; };
-		7C5A17A71CCE1435001288C5 /* NUIActivityIndicatorRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIActivityIndicatorRenderer.m; sourceTree = "<group>"; };
 		7C5A17AA1CCE1822001288C5 /* NUIActivityIndicatorRendererTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NUIActivityIndicatorRendererTests.m; path = UIActivityIndicatorView/NUIActivityIndicatorRendererTests.m; sourceTree = "<group>"; };
 		7C5A17AC1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+NUI.h"; sourceTree = "<group>"; };
 		7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+NUI.m"; sourceTree = "<group>"; };
@@ -273,6 +271,7 @@
 		870C41D91D0B7FA600B73A39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		871325B11D0C7A9E00907BA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		871C764F1D0B833900A12CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		87D50A571D0CA330008EFAEF /* NUIActivityIndicatorRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIActivityIndicatorRenderer.swift; sourceTree = "<group>"; };
 		89B940231671418100850A9A /* NUIAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIAppearance.h; sourceTree = "<group>"; };
 		89B940241671418100850A9A /* NUIAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIAppearance.m; sourceTree = "<group>"; };
 		89B940251671418100850A9A /* NUIConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIConverter.h; sourceTree = "<group>"; };
@@ -704,8 +703,7 @@
 		89B940311671418100850A9A /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
-				7C5A17A61CCE1435001288C5 /* NUIActivityIndicatorRenderer.h */,
-				7C5A17A71CCE1435001288C5 /* NUIActivityIndicatorRenderer.m */,
+				87D50A571D0CA330008EFAEF /* NUIActivityIndicatorRenderer.swift */,
 				DBB82A891C5C2DDF00A483D3 /* NUIPageControlRenderer.h */,
 				DBB82A8A1C5C2DDF00A483D3 /* NUIPageControlRenderer.m */,
 				89B940321671418100850A9A /* NUIBarButtonItemRenderer.h */,
@@ -1170,10 +1168,10 @@
 				4A38831116C7268000DB99C2 /* NUIWindowRenderer.m in Sources */,
 				4A38831516C7269F00DB99C2 /* UIWindow+NUI.m in Sources */,
 				870C41D41D0B502E00B73A39 /* ViewController.swift in Sources */,
+				87D50A581D0CA330008EFAEF /* NUIActivityIndicatorRenderer.swift in Sources */,
 				FC280DB916F127DE00B01664 /* UIProgressView+NUI.m in Sources */,
 				4A5B5B2916F6471400CF8D16 /* NUIProgressViewRenderer.m in Sources */,
 				4E61356E1C964C7A0005CA52 /* NUITextInputTraitsRenderer.m in Sources */,
-				7C5A17A81CCE1435001288C5 /* NUIActivityIndicatorRenderer.m in Sources */,
 				E291BBD7179C89470016BC1D /* NUITableViewRenderer.m in Sources */,
 				E291BBDA179C89710016BC1D /* UITableView+NUI.m in Sources */,
 				EAB69D45188625E900358420 /* NUIParserDelegate.m in Sources */,
@@ -1357,6 +1355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NUIDemo/NUIDemo-Prefix.pch";
 				INFOPLIST_FILE = "NUIDemo/NUIDemo-Info.plist";
@@ -1377,6 +1376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NUIDemo/NUIDemo-Prefix.pch";
 				INFOPLIST_FILE = "NUIDemo/NUIDemo-Info.plist";
