@@ -33,6 +33,7 @@ before_install:
   - export LANG=en_US.UTF-8
   - sudo gem install xcpretty --no-rdoc --no-ri --no-document
   - sudo gem install cocoapods --no-rdoc --no-ri --no-document
+  - pod repo update
   - pod install --project-directory=Demo
 script:
   - set -o pipefail && xcodebuild -workspace Demo/NUIDemo.xcworkspace -scheme NUITests -destination "platform=iOS Simulator,name=$DEVICE,OS=$VERSION" clean test | xcpretty
