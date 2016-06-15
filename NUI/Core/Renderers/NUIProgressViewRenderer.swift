@@ -2,7 +2,7 @@
 //  NUIProgressViewRenderer.swift
 //  NUIDemo
 //
-//  Created by Sergej Jaskiewicz on 15.06.16.
+//  Created by Sergej Jaskiewicz on 06/15/16.
 //  Copyright © 2016 Tom Benner. All rights reserved.
 //
 

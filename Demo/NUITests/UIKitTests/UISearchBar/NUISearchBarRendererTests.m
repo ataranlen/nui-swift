@@ -37,7 +37,7 @@
 // background-color (Color)
 - (void)testSetBackgroundColor
 {
-    UIColor *backgroundColor = [_sut.backgroundImage sqf_colorFromImage];
+    UIColor *backgroundColor = _sut.backgroundColor;
     XCTAssertEqualObjects(backgroundColor, [UIColor redColor], @"NUI should set search bar background color");
 }
 
