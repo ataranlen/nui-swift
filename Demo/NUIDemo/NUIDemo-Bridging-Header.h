@@ -12,3 +12,4 @@
 #import "UILabel+NUI.h"
 #import "UITextField+NUI.h"
 #import "UIBarButtonItem+NUI.h"
+#import "UINavigationBar+NUI.h"
