@@ -4,6 +4,8 @@
 
 #import "NUIGraphics.h"
 #import "NUIUtilities.h"
+#import "NUIRenderer.h"
+#import "NUISettings.h"
 
 #import "UIButton+NUI.h"
 #import "UILabel+NUI.h"

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NUIDemo
 //
-//  Created by Sergej Jaskiewicz on 11.06.16.
+//  Created by Sergej Jaskiewicz on 06/11/16.
 //  Copyright © 2016 Tom Benner. All rights reserved.
 //
 
