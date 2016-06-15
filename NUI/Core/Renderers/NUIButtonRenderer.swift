@@ -147,8 +147,9 @@ class NUIButtonRenderer: NSObject {
             let image = NUISettings.getImage("image-dsiabled", withClass: className)
             button.setImage(image, forState: .Disabled)
         }
-        
-        NUILabelRenderer.renderText(button.titleLabel, withClass: className)
+        if let titleLabel = button.titleLabel {
+            NUILabelRenderer.renderText(titleLabel, withClass: className)
+        }
         
         // MARK: Set text align
         if NUISettings.hasProperty("text-align", withClass: className) {

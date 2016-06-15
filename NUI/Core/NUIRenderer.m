@@ -55,12 +55,12 @@ static NUIRenderer *gInstance = nil;
 
 + (void)renderLabel:(UILabel*)label
 {
-    [NUILabelRenderer render:label withClass:@"Label"];
+    [NUILabelRenderer render:label withClass:@"Label" withSuffix:@""];
 }
 
 + (void)renderLabel:(UILabel*)label withClass:(NSString*)className
 {
-    [NUILabelRenderer render:label withClass:className];
+    [NUILabelRenderer render:label withClass:className withSuffix:@""];
 }
 
 + (void)renderLabel:(UILabel*)label withClass:(NSString*)className withSuffix:(NSString*)suffix
