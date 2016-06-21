@@ -40,38 +40,6 @@
     XCTAssertEqualObjects(_sut.backgroundColor, [UIColor orangeColor], @"NUI should set switch background color");
 }
 
-#pragma mark - Images
-
-// off-image (Image)
-- (void)testSetOffImage
-{
-    UIImage *offImage = _sut.offImage;
-    UIImage *image = [UIImage imageNamed:@"background_image"];
-    XCTAssertTrue([offImage fb_compareWithImage:image tolerance:0], @"NUI should set switch off image");
-}
-
-// off-image-insets (Box)
-- (void)testSetOffImageInsets
-{
-    UIEdgeInsets insets = UIEdgeInsetsMake(2, 2, 2, 2);
-    XCTAssertTrue(UIEdgeInsetsEqualToEdgeInsets(_sut.offImage.capInsets, insets), @"NUI should set switch off image insets");
-}
-
-// on-image (Image)
-- (void)testSetOnImage
-{
-    UIImage *onImage = _sut.onImage;
-    UIImage *image = [UIImage imageNamed:@"foreground_image"];
-    XCTAssertTrue([onImage fb_compareWithImage:image tolerance:0], @"NUI should set switch on image");
-}
-
-// on-image-insets (Box)
-- (void)testSetOnImageInsets
-{
-    UIEdgeInsets insets = UIEdgeInsetsMake(3, 3, 3, 3);
-    XCTAssertTrue(UIEdgeInsetsEqualToEdgeInsets(_sut.onImage.capInsets, insets), @"NUI should set switch on image insets");
-}
-
 #pragma mark - Tint Color
 
 // on-tint-color (Color)

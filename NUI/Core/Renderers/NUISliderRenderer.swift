@@ -2,7 +2,7 @@
 //  NUISliderRenderer.swift
 //  NUIDemo
 //
-//  Created by Sergej Jaskiewicz on 21.06.16.
+//  Created by Sergej Jaskiewicz on 06/21/16.
 //  Copyright © 2016 Tom Benner. All rights reserved.
 //
 
