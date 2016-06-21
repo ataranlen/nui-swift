@@ -10,7 +10,6 @@
 #import "NUIConstants.h"
 #import "NUIFileMonitor.h"
 #import "NUISettings.h"
-#import "NUISegmentedControlRenderer.h"
 #import "NUISliderRenderer.h"
 #import "NUISwitchRenderer.h"
 #import "NUITabBarRenderer.h"

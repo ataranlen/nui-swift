@@ -89,6 +89,7 @@
 		5B5888C61992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5888C51992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m */; };
 		7C5A17AB1CCE1822001288C5 /* NUIActivityIndicatorRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AA1CCE1822001288C5 /* NUIActivityIndicatorRendererTests.m */; };
 		7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */; };
+		8703F4CA1D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703F4C91D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift */; };
 		870C41D41D0B502E00B73A39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D31D0B502E00B73A39 /* ViewController.swift */; };
 		870C41D61D0B6C9000B73A39 /* NUIDemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D51D0B6C9000B73A39 /* NUIDemoTableViewController.swift */; };
 		870C41D81D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D71D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift */; };
@@ -112,7 +113,6 @@
 		89B940741671418200850A9A /* NUISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9402C1671418100850A9A /* NUISettings.m */; };
 		89B940751671418200850A9A /* NUIStyleParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9402E1671418100850A9A /* NUIStyleParser.m */; };
 		89B940761671418200850A9A /* NUIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940301671418100850A9A /* NUIUtilities.m */; };
-		89B9407C1671418200850A9A /* NUISegmentedControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9403D1671418100850A9A /* NUISegmentedControlRenderer.m */; };
 		89B9407D1671418200850A9A /* NUITabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9403F1671418100850A9A /* NUITabBarRenderer.m */; };
 		89B9407E1671418200850A9A /* NUITableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940411671418100850A9A /* NUITableViewCellRenderer.m */; };
 		89B9407F1671418200850A9A /* NUITextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940431671418100850A9A /* NUITextFieldRenderer.m */; };
@@ -260,6 +260,7 @@
 		7C5A17AC1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+NUI.h"; sourceTree = "<group>"; };
 		7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+NUI.m"; sourceTree = "<group>"; };
 		80CA9B780E980B9CA99F0367 /* Pods-NUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUIDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NUIDemo/Pods-NUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8703F4C91D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISegmentedControlRenderer.swift; sourceTree = "<group>"; };
 		870C41D21D0B502E00B73A39 /* NUIDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NUIDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		870C41D31D0B502E00B73A39 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		870C41D51D0B6C9000B73A39 /* NUIDemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIDemoTableViewController.swift; sourceTree = "<group>"; };
@@ -291,8 +292,6 @@
 		89B9402E1671418100850A9A /* NUIStyleParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIStyleParser.m; sourceTree = "<group>"; };
 		89B9402F1671418100850A9A /* NUIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIUtilities.h; sourceTree = "<group>"; };
 		89B940301671418100850A9A /* NUIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIUtilities.m; sourceTree = "<group>"; };
-		89B9403C1671418100850A9A /* NUISegmentedControlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUISegmentedControlRenderer.h; sourceTree = "<group>"; };
-		89B9403D1671418100850A9A /* NUISegmentedControlRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUISegmentedControlRenderer.m; sourceTree = "<group>"; };
 		89B9403E1671418100850A9A /* NUITabBarRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUITabBarRenderer.h; sourceTree = "<group>"; };
 		89B9403F1671418100850A9A /* NUITabBarRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUITabBarRenderer.m; sourceTree = "<group>"; };
 		89B940401671418100850A9A /* NUITableViewCellRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUITableViewCellRenderer.h; sourceTree = "<group>"; };
@@ -704,8 +703,7 @@
 				87B215E71D11DA6B007D4DF7 /* NUINavigationItemRenderer.swift */,
 				87B215E91D11DF1A007D4DF7 /* NUIProgressViewRenderer.swift */,
 				87B215ED1D11EB0D007D4DF7 /* NUISearchBarRenderer.swift */,
-				89B9403C1671418100850A9A /* NUISegmentedControlRenderer.h */,
-				89B9403D1671418100850A9A /* NUISegmentedControlRenderer.m */,
+				8703F4C91D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift */,
 				D983DF1D169DC87200A3A180 /* NUISliderRenderer.h */,
 				D983DF1E169DC87500A3A180 /* NUISliderRenderer.m */,
 				B51BC28C16972527004A38F8 /* NUISwitchRenderer.h */,
@@ -1104,7 +1102,6 @@
 				89B940751671418200850A9A /* NUIStyleParser.m in Sources */,
 				89B940761671418200850A9A /* NUIUtilities.m in Sources */,
 				87B215E81D11DA6B007D4DF7 /* NUINavigationItemRenderer.swift in Sources */,
-				89B9407C1671418200850A9A /* NUISegmentedControlRenderer.m in Sources */,
 				89B9407D1671418200850A9A /* NUITabBarRenderer.m in Sources */,
 				EAB69D48188625E900358420 /* NUIStyleSheet.m in Sources */,
 				89B9407E1671418200850A9A /* NUITableViewCellRenderer.m in Sources */,
@@ -1146,6 +1143,7 @@
 				4ADA71C616A0F15C00BDCF81 /* UISearchBar+NUI.m in Sources */,
 				87E2F35F1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift in Sources */,
 				D8E7168516B9980300686854 /* UIControl+NUI.m in Sources */,
+				8703F4CA1D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift in Sources */,
 				4A38831116C7268000DB99C2 /* NUIWindowRenderer.m in Sources */,
 				4A38831516C7269F00DB99C2 /* UIWindow+NUI.m in Sources */,
 				870C41D41D0B502E00B73A39 /* ViewController.swift in Sources */,
