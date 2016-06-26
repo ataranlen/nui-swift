@@ -7,6 +7,7 @@
 #import "NUIRenderer.h"
 #import "NUISettings.h"
 #import "NUIViewRenderer.h"
+#import "NUITextInputTraitsRenderer.h"
 
 #import "UIButton+NUI.h"
 #import "UILabel+NUI.h"

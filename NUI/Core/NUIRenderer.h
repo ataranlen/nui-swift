@@ -11,7 +11,6 @@
 #import "NUIFileMonitor.h"
 #import "NUISettings.h"
 #import "NUIToolbarRenderer.h"
-#import "NUITextFieldRenderer.h"
 #import "NUITextViewRenderer.h"
 #import "NUIViewRenderer.h"
 #import "NUIWindowRenderer.h"
