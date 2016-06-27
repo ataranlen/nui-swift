@@ -7,7 +7,8 @@
 //
 
 #import "NUISettings.h"
-#import "NUIAppearance.h"
+
+#import "NUIDemo-Swift.h"
 
 @implementation NUISettings
 
@@ -32,7 +33,7 @@ static NUISettings *instance = nil;
     NUIStyleParser *parser = [[NUIStyleParser alloc] init];
     instance.styles = [parser getStylesFromFile:name];
     
-    [NUIAppearance init];
+    [NUIAppearance initDefault];
 }
 
 + (void)appendStylesheet:(NSString *)name

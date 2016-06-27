@@ -100,6 +100,7 @@
 		87A4E8721D219BCF00A926C1 /* NUIViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */; };
 		87A4E8741D21A37900A926C1 /* NUIWindowRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8731D21A37900A926C1 /* NUIWindowRenderer.swift */; };
 		87A4E8761D21A4E000A926C1 /* NUITextInputTraitsRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8751D21A4E000A926C1 /* NUITextInputTraitsRenderer.swift */; };
+		87A4E8781D21B10100A926C1 /* NUIAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8771D21B10100A926C1 /* NUIAppearance.swift */; };
 		87B215E81D11DA6B007D4DF7 /* NUINavigationItemRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B215E71D11DA6B007D4DF7 /* NUINavigationItemRenderer.swift */; };
 		87B215EA1D11DF1A007D4DF7 /* NUIProgressViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B215E91D11DF1A007D4DF7 /* NUIProgressViewRenderer.swift */; };
 		87B215EE1D11EB0D007D4DF7 /* NUISearchBarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B215ED1D11EB0D007D4DF7 /* NUISearchBarRenderer.swift */; };
@@ -115,7 +116,6 @@
 		87E2F35B1D119E0300E84AC2 /* NUIControlRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2F35A1D119E0300E84AC2 /* NUIControlRenderer.swift */; };
 		87E2F35D1D11A79800E84AC2 /* NUILabelRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2F35C1D11A79800E84AC2 /* NUILabelRenderer.swift */; };
 		87E2F35F1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2F35E1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift */; };
-		89B940701671418200850A9A /* NUIAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940241671418100850A9A /* NUIAppearance.m */; };
 		89B940711671418200850A9A /* NUIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940261671418100850A9A /* NUIConverter.m */; };
 		89B940721671418200850A9A /* NUIGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940281671418100850A9A /* NUIGraphics.m */; };
 		89B940731671418200850A9A /* NUIRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9402A1671418100850A9A /* NUIRenderer.m */; };
@@ -269,6 +269,7 @@
 		87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIViewRenderer.swift; sourceTree = "<group>"; };
 		87A4E8731D21A37900A926C1 /* NUIWindowRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIWindowRenderer.swift; sourceTree = "<group>"; };
 		87A4E8751D21A4E000A926C1 /* NUITextInputTraitsRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUITextInputTraitsRenderer.swift; sourceTree = "<group>"; };
+		87A4E8771D21B10100A926C1 /* NUIAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIAppearance.swift; sourceTree = "<group>"; };
 		87B215E71D11DA6B007D4DF7 /* NUINavigationItemRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUINavigationItemRenderer.swift; sourceTree = "<group>"; };
 		87B215E91D11DF1A007D4DF7 /* NUIProgressViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIProgressViewRenderer.swift; sourceTree = "<group>"; };
 		87B215ED1D11EB0D007D4DF7 /* NUISearchBarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISearchBarRenderer.swift; sourceTree = "<group>"; };
@@ -284,8 +285,6 @@
 		87E2F35A1D119E0300E84AC2 /* NUIControlRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIControlRenderer.swift; sourceTree = "<group>"; };
 		87E2F35C1D11A79800E84AC2 /* NUILabelRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUILabelRenderer.swift; sourceTree = "<group>"; };
 		87E2F35E1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUINavigationBarRenderer.swift; sourceTree = "<group>"; };
-		89B940231671418100850A9A /* NUIAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIAppearance.h; sourceTree = "<group>"; };
-		89B940241671418100850A9A /* NUIAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIAppearance.m; sourceTree = "<group>"; };
 		89B940251671418100850A9A /* NUIConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIConverter.h; sourceTree = "<group>"; };
 		89B940261671418100850A9A /* NUIConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIConverter.m; sourceTree = "<group>"; };
 		89B940271671418100850A9A /* NUIGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIGraphics.h; sourceTree = "<group>"; };
@@ -653,8 +652,7 @@
 		89B940221671418100850A9A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				89B940231671418100850A9A /* NUIAppearance.h */,
-				89B940241671418100850A9A /* NUIAppearance.m */,
+				87A4E8771D21B10100A926C1 /* NUIAppearance.swift */,
 				89B940251671418100850A9A /* NUIConverter.h */,
 				89B940261671418100850A9A /* NUIConverter.m */,
 				4A744B171699044F0068F3CF /* NUIFileMonitor.h */,
@@ -1069,7 +1067,6 @@
 				87A4E8761D21A4E000A926C1 /* NUITextInputTraitsRenderer.swift in Sources */,
 				870C41D61D0B6C9000B73A39 /* NUIDemoTableViewController.swift in Sources */,
 				87923D8B1D11737F001DCFAC /* NUIButtonRenderer.swift in Sources */,
-				89B940701671418200850A9A /* NUIAppearance.m in Sources */,
 				89B940711671418200850A9A /* NUIConverter.m in Sources */,
 				DBB82A8E1C5C2FC900A483D3 /* UIPageControl+NUI.m in Sources */,
 				EAB69D4C188625E900358420 /* NUIVariableToken.m in Sources */,
@@ -1108,6 +1105,7 @@
 				870C41DA1D0B7FA600B73A39 /* AppDelegate.swift in Sources */,
 				EAB69D44188625E900358420 /* NUIDefinition.m in Sources */,
 				4A55F08816758EDA0056753C /* UITableViewCell+NUI.m in Sources */,
+				87A4E8781D21B10100A926C1 /* NUIAppearance.swift in Sources */,
 				870C41D81D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift in Sources */,
 				87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */,
 				4A55F08B16758F360056753C /* UITextField+NUI.m in Sources */,
