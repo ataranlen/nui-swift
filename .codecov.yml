@@ -7,7 +7,7 @@ coverage:
   round: down
   range: "60...95"
   ignore:
-  - Demo/NUITests/*
+  - Demo/*
   status:
     patch:
       default:
