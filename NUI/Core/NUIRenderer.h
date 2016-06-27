@@ -10,7 +10,6 @@
 #import "NUIConstants.h"
 #import "NUIFileMonitor.h"
 #import "NUISettings.h"
-#import "NUIWindowRenderer.h"
 #import "UIView+NUI.h"
 
 @interface NUIRenderer : NSObject
