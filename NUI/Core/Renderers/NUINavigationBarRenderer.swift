@@ -40,9 +40,9 @@ class NUINavigationBarRenderer: NSObject {
         
         renderSizeDependentProperties(bar)
         
-        let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className) as? [String : AnyObject]
+        let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
-        if let titleTextAttributes = titleTextAttributes where !titleTextAttributes.isEmpty {
+        if !titleTextAttributes.isEmpty {
             bar.titleTextAttributes = titleTextAttributes
         }
     }

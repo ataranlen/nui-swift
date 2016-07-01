@@ -12,16 +12,16 @@ class NUITabBarItemRenderer: NSObject {
     
     static func render(item: UITabBarItem, withClass className: String) {
         
-        let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className) as? [String : AnyObject]
+        let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
-        if let titleTextAttributes = titleTextAttributes where !titleTextAttributes.isEmpty {
+        if !titleTextAttributes.isEmpty {
             item.setTitleTextAttributes(titleTextAttributes, forState: .Normal)
         }
         
         let selectedTextAttributes = NUIUtilities.titleTextAttributesForClass(className,
-                                                                              withSuffix: "selected") as? [String : AnyObject]
+                                                                              withSuffix: "selected")
         
-        if let selectedTextAttributes = selectedTextAttributes where !selectedTextAttributes.isEmpty {
+        if !selectedTextAttributes.isEmpty {
             item.setTitleTextAttributes(selectedTextAttributes, forState: .Selected)
         }
         

@@ -44,9 +44,9 @@ class NUISearchBarRenderer: NSObject {
         }
         
         let scopeBarClassName = "SegmentedControl:\(className)ScopeBar"
-        let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(scopeBarClassName) as? [String : AnyObject]
+        let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(scopeBarClassName)
         
-        if let titleTextAttributes = titleTextAttributes where !titleTextAttributes.isEmpty {
+        if !titleTextAttributes.isEmpty {
             bar.setScopeBarButtonTitleTextAttributes(titleTextAttributes, forState: .Normal)
         }
         

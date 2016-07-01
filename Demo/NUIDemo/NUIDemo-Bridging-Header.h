@@ -3,7 +3,6 @@
 //
 
 #import "NUIGraphics.h"
-#import "NUIUtilities.h"
 #import "NUIRenderer.h"
 #import "NUISettings.h"
 

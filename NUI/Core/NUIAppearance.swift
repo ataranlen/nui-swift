@@ -21,7 +21,7 @@ class NUIAppearance: NSObject {
         let uiClass = UIBarButtonItem.self
         let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
-        if let titleTextAttributes = titleTextAttributes as? [String : AnyObject] where !titleTextAttributes.isEmpty {
+        if !titleTextAttributes.isEmpty {
             uiClass.appearance().setTitleTextAttributes(titleTextAttributes, forState: .Normal)
         }
         

@@ -95,6 +95,7 @@
 		870C41DA1D0B7FA600B73A39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C41D91D0B7FA600B73A39 /* AppDelegate.swift */; };
 		871325B21D0C7A9E00907BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871325B11D0C7A9E00907BA5 /* Main.storyboard */; };
 		871C76501D0B833900A12CBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871C764E1D0B833900A12CBA /* Launch Screen.storyboard */; };
+		8730CA541D26FCFC0016CD76 /* NUIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */; };
 		87923D8B1D11737F001DCFAC /* NUIButtonRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */; };
 		87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */; };
 		87A4E8721D219BCF00A926C1 /* NUIViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */; };
@@ -121,7 +122,6 @@
 		89B940731671418200850A9A /* NUIRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9402A1671418100850A9A /* NUIRenderer.m */; };
 		89B940741671418200850A9A /* NUISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9402C1671418100850A9A /* NUISettings.m */; };
 		89B940751671418200850A9A /* NUIStyleParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9402E1671418100850A9A /* NUIStyleParser.m */; };
-		89B940761671418200850A9A /* NUIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940301671418100850A9A /* NUIUtilities.m */; };
 		89B940811671418200850A9A /* NUIStyle.nss in Resources */ = {isa = PBXBuildFile; fileRef = 89B940461671418100850A9A /* NUIStyle.nss */; };
 		89B940841671418200850A9A /* NUIViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B9404A1671418100850A9A /* NUIViewBackground.png */; };
 		ADC7D5BF3A3D33945DAE0E6F /* Pods_NUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7A82143441C74ECBC50656 /* Pods_NUITests.framework */; };
@@ -264,6 +264,7 @@
 		870C41D91D0B7FA600B73A39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		871325B11D0C7A9E00907BA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		871C764F1D0B833900A12CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIUtilities.swift; sourceTree = "<group>"; };
 		87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRenderer.swift; sourceTree = "<group>"; };
 		87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIToolbarRenderer.swift; sourceTree = "<group>"; };
 		87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIViewRenderer.swift; sourceTree = "<group>"; };
@@ -295,8 +296,6 @@
 		89B9402C1671418100850A9A /* NUISettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUISettings.m; sourceTree = "<group>"; };
 		89B9402D1671418100850A9A /* NUIStyleParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIStyleParser.h; sourceTree = "<group>"; };
 		89B9402E1671418100850A9A /* NUIStyleParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIStyleParser.m; sourceTree = "<group>"; };
-		89B9402F1671418100850A9A /* NUIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIUtilities.h; sourceTree = "<group>"; };
-		89B940301671418100850A9A /* NUIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIUtilities.m; sourceTree = "<group>"; };
 		89B940461671418100850A9A /* NUIStyle.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NUIStyle.nss; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		89B9404A1671418100850A9A /* NUIViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NUIViewBackground.png; sourceTree = "<group>"; };
 		945E0E35381989455733E516 /* Pods-NUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NUITests/Pods-NUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -667,8 +666,7 @@
 				89B9402E1671418100850A9A /* NUIStyleParser.m */,
 				4A77934C1675647900B5EE81 /* NUISwizzler.h */,
 				4A77934D1675647A00B5EE81 /* NUISwizzler.m */,
-				89B9402F1671418100850A9A /* NUIUtilities.h */,
-				89B940301671418100850A9A /* NUIUtilities.m */,
+				8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */,
 				3AE80CFA17E0EB290065FB3D /* NUIConstants.h */,
 				EAB69CA91885E1AE00358420 /* Parser */,
 				89B940311671418100850A9A /* Renderers */,
@@ -1077,7 +1075,6 @@
 				89B940741671418200850A9A /* NUISettings.m in Sources */,
 				87E2F35D1D11A79800E84AC2 /* NUILabelRenderer.swift in Sources */,
 				89B940751671418200850A9A /* NUIStyleParser.m in Sources */,
-				89B940761671418200850A9A /* NUIUtilities.m in Sources */,
 				87B215E81D11DA6B007D4DF7 /* NUINavigationItemRenderer.swift in Sources */,
 				EAB69D48188625E900358420 /* NUIStyleSheet.m in Sources */,
 				87D50A5C1D0CAD75008EFAEF /* NUIBarButtonItemRenderer.swift in Sources */,
@@ -1085,6 +1082,7 @@
 				4A779342167560FF00B5EE81 /* UIButton+NUI.m in Sources */,
 				87D50A5A1D0CA903008EFAEF /* NUIPageControlRenderer.swift in Sources */,
 				4A7793451675619500B5EE81 /* UITabBar+NUI.m in Sources */,
+				8730CA541D26FCFC0016CD76 /* NUIUtilities.swift in Sources */,
 				7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */,
 				EADA480F188F10270060F8BC /* NUIStyleSheetItem.m in Sources */,
 				4A77934B1675635100B5EE81 /* UITabBarItem+NUI.m in Sources */,

@@ -91,9 +91,7 @@ class NUIBarButtonItemRenderer: NSObject {
             }
         }
         
-        guard let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className) as? [String : AnyObject] else {
-            return
-        }
+        let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
         if !titleTextAttributes.isEmpty {
             item.setTitleTextAttributes(titleTextAttributes, forState: .Normal)
