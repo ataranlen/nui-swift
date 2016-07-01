@@ -68,7 +68,6 @@
 		4A779342167560FF00B5EE81 /* UIButton+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A779340167560FF00B5EE81 /* UIButton+NUI.m */; };
 		4A7793451675619500B5EE81 /* UITabBar+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7793441675619500B5EE81 /* UITabBar+NUI.m */; };
 		4A77934B1675635100B5EE81 /* UITabBarItem+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77934A1675635100B5EE81 /* UITabBarItem+NUI.m */; };
-		4A77934E1675647A00B5EE81 /* NUISwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77934D1675647A00B5EE81 /* NUISwizzler.m */; };
 		4A7793511675687C00B5EE81 /* UIBarButtonItem+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7793501675687C00B5EE81 /* UIBarButtonItem+NUI.m */; };
 		4A9965E5169FB56800DAA38A /* Blue.NUI.nss in Resources */ = {isa = PBXBuildFile; fileRef = 4A9965DE169FB56800DAA38A /* Blue.NUI.nss */; };
 		4A9965E6169FB56800DAA38A /* Default.NUI.nss in Resources */ = {isa = PBXBuildFile; fileRef = 4A9965DF169FB56800DAA38A /* Default.NUI.nss */; };
@@ -96,6 +95,7 @@
 		871325B21D0C7A9E00907BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871325B11D0C7A9E00907BA5 /* Main.storyboard */; };
 		871C76501D0B833900A12CBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871C764E1D0B833900A12CBA /* Launch Screen.storyboard */; };
 		8730CA541D26FCFC0016CD76 /* NUIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */; };
+		8730CA561D2709E80016CD76 /* NUISwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA551D2709E80016CD76 /* NUISwizzler.swift */; };
 		87923D8B1D11737F001DCFAC /* NUIButtonRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */; };
 		87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */; };
 		87A4E8721D219BCF00A926C1 /* NUIViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */; };
@@ -230,8 +230,6 @@
 		4A7793441675619500B5EE81 /* UITabBar+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+NUI.m"; sourceTree = "<group>"; };
 		4A7793491675635100B5EE81 /* UITabBarItem+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+NUI.h"; sourceTree = "<group>"; };
 		4A77934A1675635100B5EE81 /* UITabBarItem+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+NUI.m"; sourceTree = "<group>"; };
-		4A77934C1675647900B5EE81 /* NUISwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUISwizzler.h; sourceTree = "<group>"; };
-		4A77934D1675647A00B5EE81 /* NUISwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUISwizzler.m; sourceTree = "<group>"; };
 		4A77934F1675687C00B5EE81 /* UIBarButtonItem+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+NUI.h"; sourceTree = "<group>"; };
 		4A7793501675687C00B5EE81 /* UIBarButtonItem+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+NUI.m"; sourceTree = "<group>"; };
 		4A9965DE169FB56800DAA38A /* Blue.NUI.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Blue.NUI.nss; sourceTree = "<group>"; };
@@ -265,6 +263,7 @@
 		871325B11D0C7A9E00907BA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		871C764F1D0B833900A12CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIUtilities.swift; sourceTree = "<group>"; };
+		8730CA551D2709E80016CD76 /* NUISwizzler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISwizzler.swift; sourceTree = "<group>"; };
 		87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRenderer.swift; sourceTree = "<group>"; };
 		87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIToolbarRenderer.swift; sourceTree = "<group>"; };
 		87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIViewRenderer.swift; sourceTree = "<group>"; };
@@ -664,8 +663,7 @@
 				89B9402C1671418100850A9A /* NUISettings.m */,
 				89B9402D1671418100850A9A /* NUIStyleParser.h */,
 				89B9402E1671418100850A9A /* NUIStyleParser.m */,
-				4A77934C1675647900B5EE81 /* NUISwizzler.h */,
-				4A77934D1675647A00B5EE81 /* NUISwizzler.m */,
+				8730CA551D2709E80016CD76 /* NUISwizzler.swift */,
 				8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */,
 				3AE80CFA17E0EB290065FB3D /* NUIConstants.h */,
 				EAB69CA91885E1AE00358420 /* Parser */,
@@ -1086,7 +1084,6 @@
 				7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */,
 				EADA480F188F10270060F8BC /* NUIStyleSheetItem.m in Sources */,
 				4A77934B1675635100B5EE81 /* UITabBarItem+NUI.m in Sources */,
-				4A77934E1675647A00B5EE81 /* NUISwizzler.m in Sources */,
 				87BD7F691D20926B006A7ACA /* NUITextFieldRenderer.swift in Sources */,
 				4A7793511675687C00B5EE81 /* UIBarButtonItem+NUI.m in Sources */,
 				4A55F078167570C10056753C /* UIView+NUI.m in Sources */,
@@ -1120,6 +1117,7 @@
 				8703F4CA1D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift in Sources */,
 				4A38831516C7269F00DB99C2 /* UIWindow+NUI.m in Sources */,
 				870C41D41D0B502E00B73A39 /* ViewController.swift in Sources */,
+				8730CA561D2709E80016CD76 /* NUISwizzler.swift in Sources */,
 				87D50A581D0CA330008EFAEF /* NUIActivityIndicatorRenderer.swift in Sources */,
 				FC280DB916F127DE00B01664 /* UIProgressView+NUI.m in Sources */,
 				87BD7F6B1D20974F006A7ACA /* NUITextViewRenderer.swift in Sources */,

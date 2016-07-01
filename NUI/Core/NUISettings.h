@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "NUIConverter.h"
 #import "NUIStyleParser.h"
-#import "NUISwizzler.h"
 
 @interface NUISettings : NSObject {
     NSString *autoUpdatePath;
