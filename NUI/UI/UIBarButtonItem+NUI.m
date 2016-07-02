@@ -8,6 +8,8 @@
 
 #import "UIBarButtonItem+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIBarButtonItem (NUI)
 
 @dynamic nuiClass;

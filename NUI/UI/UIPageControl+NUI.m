@@ -8,6 +8,8 @@
 
 #import "UIPageControl+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIPageControl (NUI)
 
 - (void)initNUI

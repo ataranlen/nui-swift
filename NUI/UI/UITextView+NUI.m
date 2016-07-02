@@ -1,5 +1,7 @@
 #import "UITextView+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UITextView (NUI)
 
 - (void)initNUI

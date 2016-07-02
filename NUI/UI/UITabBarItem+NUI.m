@@ -8,6 +8,8 @@
 
 #import "UITabBarItem+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UITabBarItem (NUI)
 
 @dynamic nuiClass;

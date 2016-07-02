@@ -8,6 +8,8 @@
 
 #import "UISegmentedControl+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UISegmentedControl (NUI)
 
 - (void)initNUI

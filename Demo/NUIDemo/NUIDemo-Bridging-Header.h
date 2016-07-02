@@ -3,8 +3,9 @@
 //
 
 #import "NUIGraphics.h"
-#import "NUIRenderer.h"
 #import "NUISettings.h"
+#import "NUIConstants.h"
+#import "NUIFileMonitor.h"
 
 #import "UIButton+NUI.h"
 #import "UILabel+NUI.h"
@@ -12,3 +13,4 @@
 #import "UIBarButtonItem+NUI.h"
 #import "UINavigationBar+NUI.h"
 #import "UITabBarItem+NUI.h"
+#import "UIProgressView+NUI.h"

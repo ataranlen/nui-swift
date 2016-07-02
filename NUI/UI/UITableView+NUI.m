@@ -8,6 +8,8 @@
 
 #import "UITableView+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UITableView (NUI)
 
 - (void)initNUI

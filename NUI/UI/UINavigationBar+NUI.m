@@ -9,6 +9,8 @@
 #import "UINavigationBar+NUI.h"
 #import "UIBarButtonItem+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UINavigationBar (NUI)
 
 - (void)initNUI

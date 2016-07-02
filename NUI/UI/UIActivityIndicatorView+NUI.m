@@ -8,6 +8,8 @@
 
 #import "UIActivityIndicatorView+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIActivityIndicatorView (NUI)
 
 - (void)initNUI

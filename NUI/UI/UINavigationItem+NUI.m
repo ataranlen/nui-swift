@@ -8,6 +8,8 @@
 
 #import "UINavigationItem+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UINavigationItem (NUI)
 
 @dynamic nuiClass;

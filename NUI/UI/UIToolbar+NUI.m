@@ -9,6 +9,8 @@
 #import "UIToolbar+NUI.h"
 #import "UIBarButtonItem+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIToolbar (NUI)
 
 - (void)initNUI

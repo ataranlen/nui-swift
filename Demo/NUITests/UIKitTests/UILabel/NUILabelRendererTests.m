@@ -8,7 +8,12 @@
 
 #import <XCTest/XCTest.h>
 
-#import "NUIRenderer.h"
+#import "NUIConstants.h"
+#import "NUIFileMonitor.h"
+#import "NUISettings.h"
+#import "UIView+NUI.h"
+
+#import "NUIDemo-Swift.h"
 
 @interface NUILabelRendererTests : XCTestCase
 @property (strong, nonatomic) UILabel *sut;

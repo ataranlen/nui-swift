@@ -8,6 +8,8 @@
 
 #import "UISearchBar+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UISearchBar (NUI)
 
 - (void)initNUI

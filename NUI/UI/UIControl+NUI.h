@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-#import "NUIRenderer.h"
+#import "NUIConstants.h"
+#import "NUIFileMonitor.h"
+#import "NUISettings.h"
+#import "UIView+NUI.h"
 
 @interface UIControl (NUI)
 

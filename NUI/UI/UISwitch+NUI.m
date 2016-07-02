@@ -8,6 +8,8 @@
 
 #import "UISwitch+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UISwitch (NUI)
 
 - (void)initNUI

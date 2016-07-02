@@ -8,6 +8,8 @@
 
 #import "UILabel+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UILabel (NUI)
 
 - (void)initNUI

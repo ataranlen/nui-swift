@@ -8,6 +8,8 @@
 
 #import "UIProgressView+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIProgressView (NUI)
 
 - (void)initNUI

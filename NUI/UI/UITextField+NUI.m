@@ -8,6 +8,8 @@
 
 #import "UITextField+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UITextField (NUI)
 
 - (void)initNUI

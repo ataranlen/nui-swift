@@ -7,6 +7,8 @@
 
 #import "UIWindow+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIWindow (NUI)
 
 - (void)initNUI

@@ -8,6 +8,8 @@
 
 #import "UIButton+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIButton (NUI)
 
 - (void)initNUI

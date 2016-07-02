@@ -8,6 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
+#import "NUIConstants.h"
+#import "NUIFileMonitor.h"
+#import "NUISettings.h"
+#import "UIView+NUI.h"
+
 #import "UIButton+NUI.h"
 #import <FBSnapshotTestCase/UIImage+Compare.h>
 

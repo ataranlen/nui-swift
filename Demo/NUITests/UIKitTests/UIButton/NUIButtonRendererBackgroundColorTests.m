@@ -8,8 +8,13 @@
 
 #import <XCTest/XCTest.h>
 
+#import "NUIConstants.h"
+#import "NUIFileMonitor.h"
+#import "NUISettings.h"
+#import "UIView+NUI.h"
+
 #import "UIButton+NUI.h"
-#import "NUIRenderer.h"
+#import "NUIDemo-Swift.h"
 #import <UIImage_ColorFromImage/UIImage+ColorFromImage.h>
 
 static NSString * const NUIButtonBackgroundColorTestsStyleClass = @"ButtonWithColor";

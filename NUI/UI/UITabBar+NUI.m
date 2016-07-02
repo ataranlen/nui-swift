@@ -8,6 +8,8 @@
 
 #import "UITabBar+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UITabBar (NUI)
 
 - (void)initNUI

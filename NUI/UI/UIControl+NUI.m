@@ -8,6 +8,8 @@
 
 #import "UIControl+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIControl (NUI)
 
 - (void)initNUI

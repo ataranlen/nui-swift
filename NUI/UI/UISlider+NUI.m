@@ -8,6 +8,8 @@
 
 #import "UISlider+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UISlider (NUI)
 
 - (void)initNUI

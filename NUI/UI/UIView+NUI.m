@@ -8,6 +8,8 @@
 
 #import "UIView+NUI.h"
 
+#import "NUIDemo-Swift.h"
+
 @implementation UIView (NUI)
 
 @dynamic nuiClass;
