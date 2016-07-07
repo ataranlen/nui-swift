@@ -34,7 +34,7 @@ class NUINavigationBarRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("title-vertical-offset", withClass: className) {
-            let offset = CGFloat(NUISettings.getFloat("title-vertical-offset", withClass: className))
+            let offset = CGFloat(NUISettings.getFloat("title-vertical-offset", withClass: className)!)
             bar.setTitleVerticalPositionAdjustment(offset, forBarMetrics: .Default)
         }
         
@@ -59,9 +59,9 @@ class NUINavigationBarRenderer: NSObject {
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
             let frame = bar.bounds
-            let topColor = NUISettings.getColor("background-color-top", withClass: className)
-            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor, bottom: bottomColor,frame: frame)
+            let topColor = NUISettings.getColor("background-color-top", withClass: className)!
+            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor,frame: frame)
             
             bar.setBackgroundImage(gradientImage, forBarMetrics: .Default)
             

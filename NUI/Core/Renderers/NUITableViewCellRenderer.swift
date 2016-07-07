@@ -50,9 +50,9 @@ class NUITableViewCellRenderer: NSObject {
         
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
-            let topColor = NUISettings.getColor("background-color-top", withClass: className)
-            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor, bottom: bottomColor, frame: cell.bounds)
+            let topColor = NUISettings.getColor("background-color-top", withClass: className)!
+            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: cell.bounds)
             
             cell.backgroundView = UIImageView(image: gradientImage)
         }
@@ -66,9 +66,9 @@ class NUITableViewCellRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("background-color-top-selected", withClass: className) {
-            let topColor = NUISettings.getColor("background-color-top-selected", withClass: className)
-            let bottomColor = NUISettings.getColor("background-color-bottom-selected", withClass: className)
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor, bottom: bottomColor, frame: cell.bounds)
+            let topColor = NUISettings.getColor("background-color-top-selected", withClass: className)!
+            let bottomColor = NUISettings.getColor("background-color-bottom-selected", withClass: className)!
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: cell.bounds)
             
             cell.selectedBackgroundView = UIImageView(image: gradientImage)
         }

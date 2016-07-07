@@ -2,8 +2,7 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-#import "NUIGraphics.h"
-#import "NUISettings.h"
+#import "NUIStyleParser.h"
 #import "NUIConstants.h"
 #import "NUIFileMonitor.h"
 

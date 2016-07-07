@@ -19,12 +19,10 @@
 #import "NUIParserDelegate.h"
 #import "NUIStyleSheet.h"
 #import "NUIRuleSet.h"
-#import "NUISettings.h"
 #import "NUIDefinition.h"
 
 #import "NUIConstants.h"
 #import "NUIFileMonitor.h"
-#import "NUISettings.h"
 #import "UIView+NUI.h"
 
 #import "NUIDemo-Swift.h"

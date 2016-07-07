@@ -23,7 +23,7 @@ class NUITextViewRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("padding", withClass: className) {
-            textView.contentInset = NUISettings.getEdgeInsets("padding", withClass: className)
+            textView.contentInset = NUISettings.getEdgeInsets("padding", withClass: className)!
         }
         
         NUITextInputTraitsRenderer.renderKeyboard(textView, withClass: className)

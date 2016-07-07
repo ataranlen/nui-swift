@@ -26,9 +26,9 @@ class NUITextFieldRenderer: NSObject {
         
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
-            let topColor = NUISettings.getColor("background-color-top", withClass: className)
-            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor, bottom: bottomColor, frame: textField.bounds)
+            let topColor = NUISettings.getColor("background-color-top", withClass: className)!
+            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: textField.bounds)
             
             textField.background = gradientImage
         }

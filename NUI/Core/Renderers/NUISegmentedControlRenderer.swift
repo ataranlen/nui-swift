@@ -32,7 +32,7 @@ class NUISegmentedControlRenderer: NSObject {
             let normalImage = NUIGraphics.roundedRectImageWithClass(className, layer: layer)
             
             if NUISettings.hasProperty("background-color-selected", withClass: className) {
-                layer.backgroundColor = NUISettings.getColor("background-color-selected", withClass: className).CGColor
+                layer.backgroundColor = NUISettings.getColor("background-color-selected", withClass: className)!.CGColor
             }
             
             let selectedImage = NUIGraphics.roundedRectImageWithClass(className, layer: layer)

@@ -37,7 +37,7 @@ class NUIUtilities: NSObject {
             }
             
             if NUISettings.hasProperty(textShadowOffsetSelector, withClass: className) {
-                shadow.shadowOffset = NUISettings.getSize(textShadowOffsetSelector, withClass: className)
+                shadow.shadowOffset = NUISettings.getSize(textShadowOffsetSelector, withClass: className)!
             }
             
             titleTextAttributes[NSShadowAttributeName] = shadow

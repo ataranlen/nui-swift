@@ -22,9 +22,9 @@ class NUISearchBarRenderer: NSObject {
         
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
-            let topColor = NUISettings.getColor("background-color-top", withClass: className)
-            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor, bottom: bottomColor, frame: bar.bounds)
+            let topColor = NUISettings.getColor("background-color-top", withClass: className)!
+            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: bar.bounds)
             
             bar.backgroundImage = gradientImage
         }
@@ -58,7 +58,7 @@ class NUISearchBarRenderer: NSObject {
             
             if NUISettings.hasProperty("background-color-selected", withClass: scopeBarClassName) {
                 layer.backgroundColor = NUISettings.getColor("background-color-selected",
-                                                             withClass: scopeBarClassName).CGColor
+                                                             withClass: scopeBarClassName)!.CGColor
             }
             
             let selectedImage = NUIGraphics.roundedRectImageWithClass(scopeBarClassName, layer: layer)

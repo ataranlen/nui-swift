@@ -16,7 +16,7 @@ class NUIViewRenderer: NSObject {
             if NUISettings.hasProperty("background-repeat", withClass: className) &&
                 !NUISettings.getBoolean("background-repeat", withClass: className){
                 
-                view.layer.contents = NUISettings.getImage("background-image", withClass: className).CGImage
+                view.layer.contents = NUISettings.getImage("background-image", withClass: className)!.CGImage
                 
             } else {
                 view.backgroundColor = NUISettings.getColorFromImage("background-image", withClass: className)
@@ -39,15 +39,15 @@ class NUIViewRenderer: NSObject {
         let layer = view.layer
         
         if NUISettings.hasProperty("border-color", withClass: className) {
-            layer.borderColor = NUISettings.getColor("border-color", withClass: className).CGColor
+            layer.borderColor = NUISettings.getColor("border-color", withClass: className)!.CGColor
         }
         
         if NUISettings.hasProperty("border-width", withClass: className) {
-            layer.borderWidth = CGFloat(NUISettings.getFloat("border-width", withClass: className))
+            layer.borderWidth = CGFloat(NUISettings.getFloat("border-width", withClass: className)!)
         }
         
         if NUISettings.hasProperty("corner-radius", withClass: className) {
-            layer.cornerRadius = CGFloat(NUISettings.getFloat("corner-radius", withClass: className))
+            layer.cornerRadius = CGFloat(NUISettings.getFloat("corner-radius", withClass: className)!)
             layer.masksToBounds = true
         }
     }
@@ -57,19 +57,19 @@ class NUIViewRenderer: NSObject {
         let layer = view.layer
         
         if NUISettings.hasProperty("shadow-radius", withClass: className) {
-            layer.shadowRadius = CGFloat(NUISettings.getFloat("shadow-radius", withClass: className))
+            layer.shadowRadius = CGFloat(NUISettings.getFloat("shadow-radius", withClass: className)!)
         }
         
         if NUISettings.hasProperty("shadow-offset", withClass: className) {
-            layer.shadowOffset = NUISettings.getSize("shadow-offset", withClass: className)
+            layer.shadowOffset = NUISettings.getSize("shadow-offset", withClass: className)!
         }
         
         if NUISettings.hasProperty("shadow-color", withClass: className) {
-            layer.shadowColor = NUISettings.getColor("shadow-color", withClass: className).CGColor
+            layer.shadowColor = NUISettings.getColor("shadow-color", withClass: className)!.CGColor
         }
         
         if NUISettings.hasProperty("shadow-opacity", withClass: className) {
-            layer.shadowOpacity = NUISettings.getFloat("shadow-opacity", withClass: className)
+            layer.shadowOpacity = NUISettings.getFloat("shadow-opacity", withClass: className)!
         }
     }
     
@@ -77,12 +77,12 @@ class NUIViewRenderer: NSObject {
         
         var height = view.frame.size.height
         if NUISettings.hasProperty("height", withClass: className) {
-            height = CGFloat(NUISettings.getFloat("height", withClass: className))
+            height = CGFloat(NUISettings.getFloat("height", withClass: className)!)
         }
         
         var width = view.frame.size.width
         if NUISettings.hasProperty("width", withClass: className) {
-            width = CGFloat(NUISettings.getFloat("width", withClass: className))
+            width = CGFloat(NUISettings.getFloat("width", withClass: className)!)
         }
         
         if height != view.frame.size.height || width != view.frame.size.width {

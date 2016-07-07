@@ -51,7 +51,7 @@ class NUILabelRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("text-alpha", withClass: className) {
-            label.alpha = CGFloat(NUISettings.getFloat("text-alpha", withClass: className))
+            label.alpha = CGFloat(NUISettings.getFloat("text-alpha", withClass: className)!)
         }
         
         if NUISettings.hasProperty("text-auto-fit", withClass: className) {
@@ -63,11 +63,11 @@ class NUILabelRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("text-shadow-offset", withClass: className) {
-            label.shadowOffset = NUISettings.getSize("text-shadow-offset", withClass: className)
+            label.shadowOffset = NUISettings.getSize("text-shadow-offset", withClass: className)!
         }
         
         if NUISettings.hasProperty("text-line-clamp", withClass: className) {
-            label.numberOfLines = NUISettings.getInteger("text-line-clamp", withClass: className)
+            label.numberOfLines = NUISettings.getInteger("text-line-clamp", withClass: className)!
         }
     }
     
@@ -82,7 +82,7 @@ class NUILabelRenderer: NSObject {
             return text
         }
             
-        guard let transform = NUISettings.get("text-transform", withClass: className) as? String else {
+        guard let transform = NUISettings.get("text-transform", withClass: className) else {
             return text
         }
         

@@ -10,11 +10,12 @@
 
 #import "NUIConstants.h"
 #import "NUIFileMonitor.h"
-#import "NUISettings.h"
 #import "UIView+NUI.h"
 
 #import "UIButton+NUI.h"
 #import <FBSnapshotTestCase/UIImage+Compare.h>
+
+#import "NUIDemo-Swift.h"
 
 static NSString * const NUIButtonSubdirectoryImageTestsStyleClass = @"ButtonWithImageFromSubdirectory";
 

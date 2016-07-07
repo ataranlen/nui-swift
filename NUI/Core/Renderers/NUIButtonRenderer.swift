@@ -32,7 +32,7 @@ class NUIButtonRenderer: NSObject {
         
         // MARK: Set padding
         if NUISettings.hasProperty("padding", withClass: className) {
-            button.titleEdgeInsets = NUISettings.getEdgeInsets("padding", withClass: className)
+            button.titleEdgeInsets = NUISettings.getEdgeInsets("padding", withClass: className)!
         }
         
         // MARK: Set background color
@@ -72,9 +72,9 @@ class NUIButtonRenderer: NSObject {
         
         // MARK: Set background gradient
         if NUISettings.hasProperty("background-color-top", withClass: className) {
-            let topColor = NUISettings.getColor("background-color-top", withClass: className)
-            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)
-            let gradientLayer = NUIGraphics.gradientLayerWithTop(topColor, bottom: bottomColor, frame: button.bounds)
+            let topColor = NUISettings.getColor("background-color-top", withClass: className)!
+            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
+            let gradientLayer = NUIGraphics.gradientLayerWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: button.bounds)
             
             if button.gradientLayer != nil {
                 button.layer.replaceSublayer(button.gradientLayer, with: gradientLayer)
@@ -221,12 +221,12 @@ class NUIButtonRenderer: NSObject {
         
         // MARK: Set title insets
         if NUISettings.hasProperty("title-insets", withClass: className) {
-            button.titleEdgeInsets = NUISettings.getEdgeInsets("title-insets", withClass: className)
+            button.titleEdgeInsets = NUISettings.getEdgeInsets("title-insets", withClass: className)!
         }
         
         // MARK: Set content insets
         if NUISettings.hasProperty("title-insets", withClass: className) {
-            button.contentEdgeInsets = NUISettings.getEdgeInsets("content-insets", withClass: className)
+            button.contentEdgeInsets = NUISettings.getEdgeInsets("content-insets", withClass: className)!
         }
         
         NUIViewRenderer.renderBorder(button, withClass: className)
@@ -236,7 +236,7 @@ class NUIButtonRenderer: NSObject {
         if NUIViewRenderer.hasShadowProperties(button, withClass: className) &&
             NUISettings.hasProperty("corner-radius", withClass: className) {
             
-            let radius = CGFloat(NUISettings.getFloat("corner-radius", withClass: className))
+            let radius = CGFloat(NUISettings.getFloat("corner-radius", withClass: className)!)
             
             for subview in button.subviews {
                 if !(subview is UILabel) {

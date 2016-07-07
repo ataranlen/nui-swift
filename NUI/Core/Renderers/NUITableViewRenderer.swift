@@ -25,7 +25,7 @@ class NUITableViewRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("row-height", withClass: className) {
-            tableView.rowHeight = CGFloat(NUISettings.getFloat("row-height", withClass: className))
+            tableView.rowHeight = CGFloat(NUISettings.getFloat("row-height", withClass: className)!)
         }
         
         renderSizeDependentProperties(tableView, withClass: className)
@@ -39,9 +39,9 @@ class NUITableViewRenderer: NSObject {
         
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
-            let topColor = NUISettings.getColor("background-color-top", withClass: className)
-            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor, bottom: bottomColor, frame: tableView.bounds)
+            let topColor = NUISettings.getColor("background-color-top", withClass: className)!
+            let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: tableView.bounds)
             
             tableView.backgroundView = UIImageView(image: gradientImage)
         }

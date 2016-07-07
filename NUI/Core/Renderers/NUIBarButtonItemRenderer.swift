@@ -30,9 +30,9 @@ class NUIBarButtonItemRenderer: NSObject {
             
             if NUISettings.hasProperty("background-color-top", withClass: className) {
                 
-                let topColor = NUISettings.getColor("background-color-top", withClass: className)
-                let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)
-                let gradientLayer = NUIGraphics.gradientLayerWithTop(topColor, bottom: bottomColor, frame: layer.frame)
+                let topColor = NUISettings.getColor("background-color-top", withClass: className)!
+                let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
+                let gradientLayer = NUIGraphics.gradientLayerWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: layer.frame)
                 
                 if item.gradientLayer != nil {
                     layer.replaceSublayer(item.gradientLayer, with: gradientLayer)
@@ -44,15 +44,15 @@ class NUIBarButtonItemRenderer: NSObject {
             }
             
             if NUISettings.hasProperty("background-color", withClass: className) {
-                layer.backgroundColor = NUISettings.getColor("background-color", withClass: className).CGColor
+                layer.backgroundColor = NUISettings.getColor("background-color", withClass: className)!.CGColor
             }
             
             if NUISettings.hasProperty("border-color", withClass: className) {
-                layer.borderColor = NUISettings.getColor("border-color", withClass: className).CGColor
+                layer.borderColor = NUISettings.getColor("border-color", withClass: className)!.CGColor
             }
             
             if NUISettings.hasProperty("border-width", withClass: className) {
-                layer.borderWidth = CGFloat(NUISettings.getFloat("border-width", withClass: className))
+                layer.borderWidth = CGFloat(NUISettings.getFloat("border-width", withClass: className)!)
             }
             
             let cornerRadius = NUISettings.getFloat("corner-radius", withClass: className)
@@ -61,16 +61,16 @@ class NUIBarButtonItemRenderer: NSObject {
             if cornerRadius < 5 {
                 insetLength = 5
             }
-            insetLength += 3
+            insetLength = insetLength! + 3.0
             
             if NUISettings.hasProperty("corner-radius", withClass: className) {
-                layer.cornerRadius = CGFloat(NUISettings.getFloat("corner-radius", withClass: className))
+                layer.cornerRadius = CGFloat(NUISettings.getFloat("corner-radius", withClass: className)!)
             }
             
-            let insets = UIEdgeInsets(top: CGFloat(insetLength),
-                                      left: CGFloat(insetLength),
-                                      bottom: CGFloat(insetLength),
-                                      right: CGFloat(insetLength))
+            let insets = UIEdgeInsets(top: CGFloat(insetLength!),
+                                      left: CGFloat(insetLength!),
+                                      bottom: CGFloat(insetLength!),
+                                      right: CGFloat(insetLength!))
             
             var image = NUIGraphics.caLayerToUIImage(layer)
             
@@ -82,7 +82,7 @@ class NUIBarButtonItemRenderer: NSObject {
                 let highlightedLayer = layer
                 
                 highlightedLayer.backgroundColor = NUISettings.getColor("background-color-highlighted",
-                    withClass: className).CGColor
+                    withClass: className)!.CGColor
                 
                 var highlightedImage = NUIGraphics.caLayerToUIImage(highlightedLayer)
                 highlightedImage = highlightedImage.resizableImageWithCapInsets(insets, resizingMode: .Stretch)

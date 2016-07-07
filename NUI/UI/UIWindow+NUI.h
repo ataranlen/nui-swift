@@ -9,7 +9,6 @@
 #import <objc/runtime.h>
 #import "NUIConstants.h"
 #import "NUIFileMonitor.h"
-#import "NUISettings.h"
 #import "UIView+NUI.h"
 
 @interface UIWindow (NUI)

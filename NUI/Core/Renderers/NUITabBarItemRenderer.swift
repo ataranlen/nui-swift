@@ -26,19 +26,19 @@ class NUITabBarItemRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("text-offset", withClass: className) {
-            item.titlePositionAdjustment = NUISettings.getOffset("text-offset", withClass: className)
+            item.titlePositionAdjustment = NUISettings.getOffset("text-offset", withClass: className)!
         }
         
         if NUISettings.hasProperty("finished-image", withClass: className) {
             
-            let unselectedImage = NUISettings.getImage("finished-image", withClass: className)
+            let unselectedImage = NUISettings.getImage("finished-image", withClass: className)!
                                              .imageWithRenderingMode(.AlwaysOriginal)
             item.image = unselectedImage
         }
         
         if NUISettings.hasProperty("finished-image-selected", withClass: className) {
             
-            let selectedImage = NUISettings.getImage("finished-image-selected", withClass: className)
+            let selectedImage = NUISettings.getImage("finished-image-selected", withClass: className)!
                                            .imageWithRenderingMode(.AlwaysOriginal)
             
             item.selectedImage = selectedImage

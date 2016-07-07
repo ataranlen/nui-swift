@@ -350,7 +350,7 @@ class NUIRenderer: NSObject {
     
     static func stylesheetFileChanged() {
         
-        NUISettings.loadStylesheetByPath(NUISettings.autoUpdatePath())
+        NUISettings.loadStylesheetByPath(NUISettings.autoUpdatePath()!)
         rerender()
         CATransaction.flush()
     }
