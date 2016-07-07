@@ -22,7 +22,6 @@
 #import "NUIDefinition.h"
 
 #import "NUIConstants.h"
-#import "NUIFileMonitor.h"
 #import "UIView+NUI.h"
 
 #import "NUIDemo-Swift.h"

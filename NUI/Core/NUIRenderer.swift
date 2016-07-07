@@ -326,7 +326,7 @@ class NUIRenderer: NSObject {
                 
                 if NUISettings.autoUpdateIsEnabled() {
                     
-                    NUIFileMonitor.watch(NUISettings.autoUpdatePath()) {
+                    NUIFileMonitor.watch(NUISettings.autoUpdatePath()!) {
                         dispatch_async(dispatch_get_main_queue()) {
                             stylesheetFileChanged()
                         }
