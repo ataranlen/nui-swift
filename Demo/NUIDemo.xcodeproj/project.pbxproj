@@ -63,7 +63,6 @@
 		4A55F08216758E4E0056753C /* UINavigationItem+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A55F08116758E4D0056753C /* UINavigationItem+NUI.m */; };
 		4A55F08516758E9D0056753C /* UISegmentedControl+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A55F08416758E9D0056753C /* UISegmentedControl+NUI.m */; };
 		4A55F08816758EDA0056753C /* UITableViewCell+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A55F08716758EDA0056753C /* UITableViewCell+NUI.m */; };
-		4A744B19169904520068F3CF /* NUIFileMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A744B18169904500068F3CF /* NUIFileMonitor.m */; };
 		4A779342167560FF00B5EE81 /* UIButton+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A779340167560FF00B5EE81 /* UIButton+NUI.m */; };
 		4A7793451675619500B5EE81 /* UITabBar+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7793441675619500B5EE81 /* UITabBar+NUI.m */; };
 		4A77934B1675635100B5EE81 /* UITabBarItem+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77934A1675635100B5EE81 /* UITabBarItem+NUI.m */; };
@@ -221,8 +220,6 @@
 		4A55F08416758E9D0056753C /* UISegmentedControl+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+NUI.m"; sourceTree = "<group>"; };
 		4A55F08616758ED90056753C /* UITableViewCell+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+NUI.h"; sourceTree = "<group>"; };
 		4A55F08716758EDA0056753C /* UITableViewCell+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+NUI.m"; sourceTree = "<group>"; };
-		4A744B171699044F0068F3CF /* NUIFileMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIFileMonitor.h; sourceTree = "<group>"; };
-		4A744B18169904500068F3CF /* NUIFileMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIFileMonitor.m; sourceTree = "<group>"; };
 		4A779340167560FF00B5EE81 /* UIButton+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NUI.m"; sourceTree = "<group>"; };
 		4A779341167560FF00B5EE81 /* UIButton+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NUI.h"; sourceTree = "<group>"; };
 		4A7793431675619500B5EE81 /* UITabBar+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+NUI.h"; sourceTree = "<group>"; };
@@ -649,8 +646,6 @@
 			children = (
 				87A4E8771D21B10100A926C1 /* NUIAppearance.swift */,
 				87082CBD1D2C60C800F2E613 /* NUIConverter.swift */,
-				4A744B171699044F0068F3CF /* NUIFileMonitor.h */,
-				4A744B18169904500068F3CF /* NUIFileMonitor.m */,
 				87F8B57F1D2EFDB800FBBB70 /* NUIFileMonitor.swift */,
 				87F8B57B1D2E9BAD00FBBB70 /* NUIGraphics.swift */,
 				8730CA571D2711730016CD76 /* NUIRenderer.swift */,
@@ -1189,7 +1184,6 @@
 				870C41D81D0B77DF00B73A39 /* ProgrammaticallyCreatedViewController.swift in Sources */,
 				87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */,
 				B51BC28A169724A3004A38F8 /* UISwitch+NUI.m in Sources */,
-				4A744B19169904520068F3CF /* NUIFileMonitor.m in Sources */,
 				D983DEE8169DC05300A3A180 /* UIToolbar+NUI.m in Sources */,
 				87BD7F671D208C51006A7ACA /* NUITableViewCellRenderer.swift in Sources */,
 				87F8B57C1D2E9BAD00FBBB70 /* NUIGraphics.swift in Sources */,
