@@ -33,6 +33,7 @@ before_install:
   - export LANG=en_US.UTF-8
   - rvm install 2.2
   - rvm use 2.2
+  - sudo gem install bundler
   - sudo gem install xcpretty --no-rdoc --no-ri --no-document
   - sudo gem install cocoapods --no-rdoc --no-ri --no-document
   - pod install --project-directory=Demo --repo-update
