@@ -37,6 +37,6 @@ before_install:
   - sudo gem install cocoapods --no-rdoc --no-ri --no-document
   - pod install --project-directory=Demo --repo-update
 script:
-  - travis_retry "set -o pipefail && xcodebuild -workspace Demo/NUIDemo.xcworkspace -scheme NUITests -destination \"platform=iOS Simulator,name=$DEVICE,OS=$VERSION\" clean test | xcpretty"
+  - travis_retry sh -c "set -o pipefail && xcodebuild -workspace Demo/NUIDemo.xcworkspace -scheme NUITests -destination \"platform=iOS Simulator,name=$DEVICE,OS=$VERSION\" clean test | xcpretty"
 after_success:
   - bash <(curl -s https://codecov.io/bash)
