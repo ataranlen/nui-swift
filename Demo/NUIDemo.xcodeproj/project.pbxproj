@@ -121,7 +121,7 @@
 		87F8B57C1D2E9BAD00FBBB70 /* NUIGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8B57B1D2E9BAD00FBBB70 /* NUIGraphics.swift */; };
 		87F8B57E1D2ED78500FBBB70 /* UITextField+NUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8B57D1D2ED78500FBBB70 /* UITextField+NUI.swift */; };
 		87F8B5801D2EFDB800FBBB70 /* NUIFileMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8B57F1D2EFDB800FBBB70 /* NUIFileMonitor.swift */; };
-		89B940751671418200850A9A /* NUIStyleParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9402E1671418100850A9A /* NUIStyleParser.m */; };
+		87F8B5821D30128600FBBB70 /* NUIStyleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8B5811D30128600FBBB70 /* NUIStyleParser.swift */; };
 		89B940811671418200850A9A /* NUIStyle.nss in Resources */ = {isa = PBXBuildFile; fileRef = 89B940461671418100850A9A /* NUIStyle.nss */; };
 		89B940841671418200850A9A /* NUIViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B9404A1671418100850A9A /* NUIViewBackground.png */; };
 		ADC7D5BF3A3D33945DAE0E6F /* Pods_NUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7A82143441C74ECBC50656 /* Pods_NUITests.framework */; };
@@ -287,8 +287,7 @@
 		87F8B57B1D2E9BAD00FBBB70 /* NUIGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIGraphics.swift; sourceTree = "<group>"; };
 		87F8B57D1D2ED78500FBBB70 /* UITextField+NUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NUI.swift"; sourceTree = "<group>"; };
 		87F8B57F1D2EFDB800FBBB70 /* NUIFileMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIFileMonitor.swift; sourceTree = "<group>"; };
-		89B9402D1671418100850A9A /* NUIStyleParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIStyleParser.h; sourceTree = "<group>"; };
-		89B9402E1671418100850A9A /* NUIStyleParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIStyleParser.m; sourceTree = "<group>"; };
+		87F8B5811D30128600FBBB70 /* NUIStyleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIStyleParser.swift; sourceTree = "<group>"; };
 		89B940461671418100850A9A /* NUIStyle.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NUIStyle.nss; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		89B9404A1671418100850A9A /* NUIViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NUIViewBackground.png; sourceTree = "<group>"; };
 		945E0E35381989455733E516 /* Pods-NUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NUITests/Pods-NUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -650,8 +649,7 @@
 				87F8B57B1D2E9BAD00FBBB70 /* NUIGraphics.swift */,
 				8730CA571D2711730016CD76 /* NUIRenderer.swift */,
 				87F8B5791D2D84E500FBBB70 /* NUISettings.swift */,
-				89B9402D1671418100850A9A /* NUIStyleParser.h */,
-				89B9402E1671418100850A9A /* NUIStyleParser.m */,
+				87F8B5811D30128600FBBB70 /* NUIStyleParser.swift */,
 				8730CA551D2709E80016CD76 /* NUISwizzler.swift */,
 				8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */,
 				3AE80CFA17E0EB290065FB3D /* NUIConstants.h */,
@@ -1152,7 +1150,6 @@
 				EAB69D43188625E900358420 /* NUIDeclaration.m in Sources */,
 				87A4E8741D21A37900A926C1 /* NUIWindowRenderer.swift in Sources */,
 				87E2F35D1D11A79800E84AC2 /* NUILabelRenderer.swift in Sources */,
-				89B940751671418200850A9A /* NUIStyleParser.m in Sources */,
 				87B215E81D11DA6B007D4DF7 /* NUINavigationItemRenderer.swift in Sources */,
 				EAB69D48188625E900358420 /* NUIStyleSheet.m in Sources */,
 				87D50A5C1D0CAD75008EFAEF /* NUIBarButtonItemRenderer.swift in Sources */,
@@ -1191,6 +1188,7 @@
 				D983DF1C169DC84600A3A180 /* UISlider+NUI.m in Sources */,
 				4ADA71C616A0F15C00BDCF81 /* UISearchBar+NUI.m in Sources */,
 				8703F4CE1D19C1B0008B6DC9 /* NUISwitchRenderer.swift in Sources */,
+				87F8B5821D30128600FBBB70 /* NUIStyleParser.swift in Sources */,
 				87E2F35F1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift in Sources */,
 				D8E7168516B9980300686854 /* UIControl+NUI.m in Sources */,
 				87F8B57E1D2ED78500FBBB70 /* UITextField+NUI.swift in Sources */,

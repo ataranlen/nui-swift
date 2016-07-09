@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Tom Benner. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #pragma mark - Common Classes
 
 static NSString * const kNUIClassNone               = @"none";

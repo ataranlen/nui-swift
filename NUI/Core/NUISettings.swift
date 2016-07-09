@@ -26,7 +26,7 @@ class NUISettings: NSObject {
         instance._stylesheetOrientation = stylesheetOrientationFromInterfaceOrientation(orientation)
         
         let parser = NUIStyleParser()
-        instance._styles = (parser.getStylesFromFile(name) as [NSObject : AnyObject]) as! [String : [String : String]]
+        instance._styles = parser.getStylesFromFile(name)
         
         NUIAppearance.initDefault()
     }
@@ -37,14 +37,14 @@ class NUISettings: NSObject {
         
         instance._additionalStylesheetNames.append(name)
         let parser = NUIStyleParser()
-        instance.appendStyles(parser.getStylesFromFile(name) as [NSObject : AnyObject] as! [String : [String : String]])
+        instance.appendStyles(parser.getStylesFromFile(name))
     }
     
     static func loadStylesheetByPath(path: String) {
         
         instance = getInstance()
         let parser = NUIStyleParser()
-        instance._styles = (parser.getStylesFromFile(path) as [NSObject : AnyObject]) as! [String : [String : String]]
+        instance._styles = parser.getStylesFromFile(path)
     }
     
     static func reloadStylesheets() {
@@ -52,10 +52,10 @@ class NUISettings: NSObject {
         instance = getInstance()
         
         let parser = NUIStyleParser()
-        instance._styles = (parser.getStylesFromFile(instance._stylesheetName) as [NSObject : AnyObject]) as! [String : [String : String]]
+        instance._styles = parser.getStylesFromFile(instance._stylesheetName!)
     
         for name in instance._additionalStylesheetNames {
-            let styles = (parser.getStylesFromFile(name) as [NSObject : AnyObject]) as! [String : [String : String]]
+            let styles = parser.getStylesFromFile(name)
             instance.appendStyles(styles)
         }
         

@@ -60,7 +60,6 @@ class NUIGraphics: NSObject {
         CGPathAddLineToPoint(path, nil, dWidth, dHeight - cornerRadius)
         
         shape.path = path
-        // ???: CFRelease(path)
         
         let insets = UIEdgeInsets(top: 1, left: arrowWidth + 5, bottom: 1, right: cornerRadius + 5)
         let image = caLayerToUIImage(shape)
