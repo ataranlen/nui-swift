@@ -31,11 +31,13 @@ matrix:
       env: DEVICE="iPad Pro" VERSION=9.3
 before_install:
   - export LANG=en_US.UTF-8
-  - rvm get stable
+  - rvm install 2.2
+  - rvm use 2.2
+  - sudo gem install bundler
   - sudo gem install xcpretty --no-rdoc --no-ri --no-document
   - sudo gem install cocoapods --no-rdoc --no-ri --no-document
   - pod install --project-directory=Demo --repo-update
 script:
-  - travis_retry "set -o pipefail && xcodebuild -workspace Demo/NUIDemo.xcworkspace -scheme NUITests -destination "platform=iOS Simulator,name=$DEVICE,OS=$VERSION" clean test | xcpretty"
+  - travis_retry sh -c "set -o pipefail && xcodebuild -workspace Demo/NUIDemo.xcworkspace -scheme NUITests -destination \"platform=iOS Simulator,name=$DEVICE,OS=$VERSION\" clean test | xcpretty"
 after_success:
   - bash <(curl -s https://codecov.io/bash)
