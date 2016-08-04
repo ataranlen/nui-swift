@@ -1,5 +1,5 @@
 //
-//  NUITextViewRendererTests.swift
+//  NUITextFieldRendererTextInputTraitsTests.swift
 //  NUIDemo
 //
 //  Created by Sergej Jaskiewicz on 08/04/16.
@@ -9,20 +9,24 @@
 import XCTest
 @testable import NUIDemo
 
-class NUITextViewRendererTests: XCTestCase {
+class NUITextFieldRendererTextInputTraitsTests: XCTestCase {
     
-    var sut: UITextView!
+    var sut: UITextField!
     
     override func setUp() {
         super.setUp()
         
         NUISettings.initWithStylesheet("TestTheme.NUI")
-        let frame = CGRect(x: 0, y: 0, width: 100, height: 30)
-        sut = UITextView(frame: frame)
+        let frame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 30)
+        sut = UITextField(frame: frame)
         sut.applyNUI()
     }
     
     func testSetKeyboardAppearance() {
         XCTAssertEqual(sut.keyboardAppearance, .dark, "NUI should set keyboardAppearance")
+    }
+    
+    func testSetTintColor() {
+        XCTAssertEqual(sut.tintColor, .red, "NUI should set textfield tint-color")
     }
 }
