@@ -15,17 +15,12 @@ class NUIActivityIndicatorRendererTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
         NUISettings.initWithStylesheet("TestTheme.NUI")
-        self.sut = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        sut = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         sut.applyNUI()
     }
-    
-    override func tearDown() {
-        self.sut = nil
-        super.tearDown()
-    }
-    // color (Color)
-    
+
     func testSetColor() {
         XCTAssertEqual(sut.color, .red, "NUI should set color activity indicator color")
     }

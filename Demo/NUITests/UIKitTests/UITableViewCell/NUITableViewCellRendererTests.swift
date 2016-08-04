@@ -15,18 +15,14 @@ class NUITableViewCellRendererTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
         NUISettings.initWithStylesheet("TestTheme.NUI")
-        self.sut = UITableViewCell(style: .default, reuseIdentifier: "test")
+        sut = UITableViewCell(style: .default, reuseIdentifier: "test")
         sut.applyNUI()
     }
     
-    override func tearDown() {
-        self.sut = nil
-        super.tearDown()
-    }
-    
     func testContentViewBackgroundColor() {
-        XCTAssertEqual(self.sut.contentView.backgroundColor, .orange, "NUI should set content view background color")
+        XCTAssertEqual(sut.contentView.backgroundColor, .orange, "NUI should set content view background color")
     }
     
     func testTintColor() {

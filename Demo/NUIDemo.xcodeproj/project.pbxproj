@@ -75,7 +75,6 @@
 		4A9965EA169FB56800DAA38A /* SkyBlue.NUI.nss in Resources */ = {isa = PBXBuildFile; fileRef = 4A9965E3169FB56800DAA38A /* SkyBlue.NUI.nss */; };
 		4A9965EB169FB56800DAA38A /* Switchboard.NUI.nss in Resources */ = {isa = PBXBuildFile; fileRef = 4A9965E4169FB56800DAA38A /* Switchboard.NUI.nss */; };
 		4ADA71C616A0F15C00BDCF81 /* UISearchBar+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA71C516A0F15C00BDCF81 /* UISearchBar+NUI.m */; };
-		4E6135711C968D520005CA52 /* NUITextViewRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6135701C968D520005CA52 /* NUITextViewRendererTests.m */; };
 		4E860DDA1C964897006F3B0E /* NUITextFieldRendererTextInputTraitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E860DD91C964897006F3B0E /* NUITextFieldRendererTextInputTraitsTests.m */; };
 		5B5888C31992BD15005F1ACB /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5888C21992BD15005F1ACB /* Assets */; };
 		5B5888C41992BD1C005F1ACB /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5888C21992BD15005F1ACB /* Assets */; };
@@ -83,6 +82,7 @@
 		7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */; };
 		87009B7E1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87009B7D1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift */; };
 		87009B801D53C86600519650 /* NUITableViewCellRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87009B7F1D53C86600519650 /* NUITableViewCellRendererTests.swift */; };
+		87009B841D53CA2C00519650 /* NUITextViewRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87009B831D53CA2C00519650 /* NUITextViewRendererTests.swift */; };
 		8703F4CA1D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703F4C91D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift */; };
 		8703F4CC1D19C003008B6DC9 /* NUISliderRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703F4CB1D19C003008B6DC9 /* NUISliderRenderer.swift */; };
 		8703F4CE1D19C1B0008B6DC9 /* NUISwitchRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703F4CD1D19C1B0008B6DC9 /* NUISwitchRenderer.swift */; };
@@ -237,7 +237,6 @@
 		4A9965E4169FB56800DAA38A /* Switchboard.NUI.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Switchboard.NUI.nss; sourceTree = "<group>"; };
 		4ADA71C416A0F15C00BDCF81 /* UISearchBar+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+NUI.h"; sourceTree = "<group>"; };
 		4ADA71C516A0F15C00BDCF81 /* UISearchBar+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+NUI.m"; sourceTree = "<group>"; };
-		4E6135701C968D520005CA52 /* NUITextViewRendererTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NUITextViewRendererTests.m; path = UITextView/NUITextViewRendererTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4E860DD91C964897006F3B0E /* NUITextFieldRendererTextInputTraitsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NUITextFieldRendererTextInputTraitsTests.m; path = UITextField/NUITextFieldRendererTextInputTraitsTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5B5888C21992BD15005F1ACB /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		5B5888C51992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIButtonRendererSubdirectoryImageTests.m; sourceTree = "<group>"; };
@@ -247,8 +246,9 @@
 		7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+NUI.m"; sourceTree = "<group>"; };
 		80CA9B780E980B9CA99F0367 /* Pods-NUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUIDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NUIDemo/Pods-NUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		87009B7C1D53C50900519650 /* NUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NUITests-Bridging-Header.h"; path = "UIKitTests/NUITests-Bridging-Header.h"; sourceTree = "<group>"; };
-		87009B7D1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIActivityIndicatorRendererTests.swift; sourceTree = "<group>"; };
-		87009B7F1D53C86600519650 /* NUITableViewCellRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUITableViewCellRendererTests.swift; sourceTree = "<group>"; };
+		87009B7D1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NUIActivityIndicatorRendererTests.swift; path = UIActivityIndicatorView/NUIActivityIndicatorRendererTests.swift; sourceTree = "<group>"; };
+		87009B7F1D53C86600519650 /* NUITableViewCellRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NUITableViewCellRendererTests.swift; path = UITableViewCell/NUITableViewCellRendererTests.swift; sourceTree = "<group>"; };
+		87009B831D53CA2C00519650 /* NUITextViewRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NUITextViewRendererTests.swift; path = UITextView/NUITextViewRendererTests.swift; sourceTree = "<group>"; };
 		8703F4C91D19AD5B008B6DC9 /* NUISegmentedControlRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISegmentedControlRenderer.swift; sourceTree = "<group>"; };
 		8703F4CB1D19C003008B6DC9 /* NUISliderRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISliderRenderer.swift; sourceTree = "<group>"; };
 		8703F4CD1D19C1B0008B6DC9 /* NUISwitchRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISwitchRenderer.swift; sourceTree = "<group>"; };
@@ -600,7 +600,7 @@
 		4E61356F1C968D260005CA52 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
-				4E6135701C968D520005CA52 /* NUITextViewRendererTests.m */,
+				87009B831D53CA2C00519650 /* NUITextViewRendererTests.swift */,
 			);
 			name = UITextView;
 			sourceTree = "<group>";
@@ -1115,6 +1115,7 @@
 				87009B7E1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift in Sources */,
 				0E55162719388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m in Sources */,
 				0E55161D1938891000B293B7 /* NUIButtonRendererTests.m in Sources */,
+				87009B841D53CA2C00519650 /* NUITextViewRendererTests.swift in Sources */,
 				0EE34299193A116700306AC7 /* NUIControlRendererTests.m in Sources */,
 				0E3F5E05193C6D90003F6A77 /* NUINavigationBarRendererGradientTest.m in Sources */,
 				4E860DDA1C964897006F3B0E /* NUITextFieldRendererTextInputTraitsTests.m in Sources */,
@@ -1128,7 +1129,6 @@
 				0EA8AA88193DBB5500E1BD29 /* NUITabBarRendererTests.m in Sources */,
 				0E3F5E08193C76C3003F6A77 /* NUIProgressViewRendererTests.m in Sources */,
 				0EA8AA85193DB62900E1BD29 /* NUISwitchRendererTests.m in Sources */,
-				4E6135711C968D520005CA52 /* NUITextViewRendererTests.m in Sources */,
 				0EA8AA8A193DBD3200E1BD29 /* NUITabBarRendererGradientTests.m in Sources */,
 				87009B801D53C86600519650 /* NUITableViewCellRendererTests.swift in Sources */,
 				0E55162E1938D5FD00B293B7 /* UIBarButtonRendererBackgroundColorTests.m in Sources */,
