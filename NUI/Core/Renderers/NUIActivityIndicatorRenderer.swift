@@ -10,7 +10,7 @@ import UIKit
 
 class NUIActivityIndicatorRenderer: NSObject {
     
-    static func render(activityIndicator: UIActivityIndicatorView, withClass className: String) {
+    static func render(_ activityIndicator: UIActivityIndicatorView, withClass className: String) {
         
         // Set activity indicator color
         if NUISettings.hasProperty("color", withClass: className) {

@@ -10,7 +10,7 @@ import UIKit
 
 class NUITableViewRenderer: NSObject {
     
-    static func render(tableView: UITableView, withClass className: String) {
+    static func render(_ tableView: UITableView, withClass className: String) {
     
         if NUISettings.hasProperty("background-color", withClass: className) {
             tableView.backgroundColor = NUISettings.getColor("background-color", withClass: className)
@@ -31,17 +31,17 @@ class NUITableViewRenderer: NSObject {
         renderSizeDependentProperties(tableView, withClass: className)
     }
     
-    static func sizeDidChange(tableView: UITableView) {
+    static func sizeDidChange(_ tableView: UITableView) {
         renderSizeDependentProperties(tableView, withClass: tableView.nuiClass)
     }
     
-    static func renderSizeDependentProperties(tableView: UITableView, withClass className: String) {
+    static func renderSizeDependentProperties(_ tableView: UITableView, withClass className: String) {
         
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
             let topColor = NUISettings.getColor("background-color-top", withClass: className)!
             let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: tableView.bounds)
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.cgColor, bottom: bottomColor.cgColor, frame: tableView.bounds)
             
             tableView.backgroundView = UIImageView(image: gradientImage)
         }

@@ -11,7 +11,7 @@ import UIKit
 class NUIConverter: NSObject {
     
     // TODO: Try not to use NSString
-    static func toBoolean(value: String) -> Bool {
+    static func toBoolean(_ value: String) -> Bool {
         if value == "true" {
             return true
         } else if value == "false" {
@@ -21,18 +21,18 @@ class NUIConverter: NSObject {
     }
     
     // TODO: Try not to use NSString
-    static func toFloat(value: String) -> Float? {
+    static func toFloat(_ value: String) -> Float? {
         return (value as NSString).floatValue
     }
     
     // TODO: Try not to use NSString
-    static func toInteger(value: String) -> Int? {
+    static func toInteger(_ value: String) -> Int? {
         return (value as NSString).integerValue
     }
     
-    static func toSize(value: String) -> CGSize? {
+    static func toSize(_ value: String) -> CGSize? {
         
-        let strings = value.componentsSeparatedByString(" , ").map { Double($0) }
+        let strings = value.components(separatedBy: " , ").map { Double($0) }
         
         guard let width = strings[0],
               let height = strings[1] else { return nil }
@@ -40,20 +40,20 @@ class NUIConverter: NSObject {
         return CGSize(width: width, height: height)
     }
     
-    static func toOffset(value: String) -> UIOffset? {
+    static func toOffset(_ value: String) -> UIOffset? {
         
         guard let size = toSize(value) else { return nil }
         return UIOffset(horizontal: size.width, vertical: size.height)
     }
     
-    static func toEdgeInsets(value: String) -> UIEdgeInsets? {
+    static func toEdgeInsets(_ value: String) -> UIEdgeInsets? {
         
-        let values = value.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).filter {
+        let values = value.components(separatedBy: .whitespaces).filter {
             $0 != ""
         }
         
         // edges will contain a CSS-like ordering of edges (top, right, bottom, left)
-        var edges = [String](count: 4, repeatedValue: "")
+        var edges = [String](repeating: "", count: 4)
         
         switch values.count {
         case 1:
@@ -79,69 +79,68 @@ class NUIConverter: NSObject {
                             right: CGFloat(right))
     }
     
-    static func toBorderStyle(value: String) -> UITextBorderStyle {
+    static func toBorderStyle(_ value: String) -> UITextBorderStyle {
         switch value {
         case "line":
-            return .Line
+            return .line
         case "bezel":
-            return .Bezel
+            return .bezel
         case "rounded":
-            return .RoundedRect
+            return .roundedRect
         default:
-            return .None
+            return .none
         }
     }
     
-    static func toSeparatorStyle(value: String) -> UITableViewCellSeparatorStyle {
+    static func toSeparatorStyle(_ value: String) -> UITableViewCellSeparatorStyle {
         switch value {
         case "single-line":
-            return .SingleLine
+            return .singleLine
         case "single-line-etched":
-            return .SingleLineEtched
+            return .singleLineEtched
         default:
-            return .None
+            return .none
         }
     }
     
-    static func toColor(value: String) -> UIColor? {
+    static func toColor(_ value: String) -> UIColor? {
         switch value {
         case "black":
-            return UIColor.blackColor()
+            return .black
         case "darkGray":
-            return UIColor.darkGrayColor()
+            return .darkGray
         case "lightGray":
-            return UIColor.lightGrayColor()
+            return .lightGray
         case "white":
-            return UIColor.whiteColor()
+            return .white
         case "gray":
-            return UIColor.grayColor()
+            return .gray
         case "red":
-            return UIColor.redColor()
+            return .red
         case "green":
-            return UIColor.greenColor()
+            return .green
         case "blue":
-            return UIColor.blueColor()
+            return .blue
         case "cyan":
-            return UIColor.cyanColor()
+            return .cyan
         case "yellow":
-            return UIColor.yellowColor()
+            return .yellow
         case "magenta":
-            return UIColor.magentaColor()
+            return .magenta
         case "orange":
-            return UIColor.orangeColor()
+            return .orange
         case "purple":
-            return UIColor.purpleColor()
+            return .purple
         case "brown":
-            return UIColor.brownColor()
+            return .brown
         case "clear":
-            return UIColor.clearColor()
+            return .clear
         default:
             break
         }
         
         // Remove all whitespace.
-        let cString = value.componentsSeparatedByCharactersInSet(
-            NSCharacterSet.whitespaceAndNewlineCharacterSet()).reduce("", combine: +).uppercaseString
+        let cString = value.components(separatedBy: NSCharacterSet.whitespacesAndNewlines).reduce("", +).uppercased()
         
         let hexStrings = getCapturedStrings(cString, withPattern: "(?:0X|#)([0-9A-F]{6})")
         
@@ -151,7 +150,7 @@ class NUIConverter: NSObject {
         
         if let hexStrings = hexStrings {
             var c: UInt32 = 0
-            NSScanner(string: hexStrings[1]).scanHexInt(&c)
+            Scanner(string: hexStrings[1]).scanHexInt32(&c)
             
             color = UIColor(red: CGFloat((c >> 16) & 0xFF) / 255.0,
                             green: CGFloat((c >> 8) & 0xFF) / 255.0,
@@ -192,21 +191,21 @@ class NUIConverter: NSObject {
      periods (.) are treated as unscaled floats. Integer values
      are normalized by 255.
      */
-    static func parseColorComponent(value: String) -> CGFloat? {
+    static func parseColorComponent(_ value: String) -> CGFloat? {
         guard let floatValue = Float(value) else { return nil }
-        if value.rangeOfString(".") != nil {
+        if value.range(of: ".") != nil {
             return CGFloat(floatValue)
         } else {
             return CGFloat(floatValue) / 255.0
         }
     }
     
-    static func toColorFromImageName(value: String) -> UIColor? {
+    static func toColorFromImageName(_ value: String) -> UIColor? {
         guard let image = toImageFromImageName(value) else { return nil }
         return UIColor(patternImage: image)
     }
     
-    static func toImageFromColorName(value: String) -> UIImage? {
+    static func toImageFromColorName(_ value: String) -> UIImage? {
         guard let color = toColor(value) else { return nil }
         
         var alpha: CGFloat = 1.0
@@ -221,55 +220,55 @@ class NUIConverter: NSObject {
         return image
     }
     
-    static func toImageFromImageName(value: String) -> UIImage? {
+    static func toImageFromImageName(_ value: String) -> UIImage? {
         return UIImage(named: value)
     }
     
-    static func toTextAlignment(value: String) -> NSTextAlignment {
+    static func toTextAlignment(_ value: String) -> NSTextAlignment {
         switch value {
         case "center":
-            return .Center
+            return .center
         case "right":
-            return .Right
+            return .right
         default:
-            return .Left
+            return .left
         }
     }
     
-    static func toControlContentHorizontalAlignment(value: String) -> UIControlContentHorizontalAlignment {
+    static func toControlContentHorizontalAlignment(_ value: String) -> UIControlContentHorizontalAlignment {
         switch value {
         case "center":
-            return .Center
+            return .center
         case "right":
-            return .Right
+            return .right
         case "fill":
-            return .Fill
+            return .fill
         default:
-            return .Left
+            return .left
         }
     }
     
-    static func toControlContentVerticalAlignment(value: String) -> UIControlContentVerticalAlignment {
+    static func toControlContentVerticalAlignment(_ value: String) -> UIControlContentVerticalAlignment {
         switch value {
         case "center":
-            return .Center
+            return .center
         case "bottom":
-            return .Bottom
+            return .bottom
         case "fill":
-            return .Fill
+            return .fill
         default:
-            return .Top
+            return .top
         }
     }
     
-    static func toKeyboardAppearance(value: String) -> UIKeyboardAppearance {
+    static func toKeyboardAppearance(_ value: String) -> UIKeyboardAppearance {
         switch value {
         case "dark":
-            return .Dark
+            return .dark
         case "light":
-            return .Light
+            return .light
         default:
-            return .Default
+            return .default
         }
     }
     
@@ -278,17 +277,17 @@ class NUIConverter: NSObject {
      any captured groups into an array. Unmatched captured groups are represented
      by an empty string instances in the returned array.
      */
-    static func getCapturedStrings(content: String, withPattern pattern: String) -> [String]? {
+    static func getCapturedStrings(_ content: String, withPattern pattern: String) -> [String]? {
         
         var regex: NSRegularExpression
         
         do {
-            regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions(rawValue: 0))
+            regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
         } catch {
             return nil
         }
         
-        guard let result = regex.firstMatchInString(content, options: NSMatchingOptions(rawValue: 0),
+        guard let result = regex.firstMatch(in: content, options: NSRegularExpression.MatchingOptions(rawValue: 0),
                                                     range: NSRange(location: 0, length: content.characters.count))
             else { return nil }
         
@@ -296,13 +295,13 @@ class NUIConverter: NSObject {
         
         for i in 0...regex.numberOfCaptureGroups {
             
-            let capturedRange = result.rangeAtIndex(i).toRange()
+            let capturedRange = result.rangeAt(i).toRange()
             
             if let capturedRange = capturedRange {
                 
-                let start = content.startIndex.advancedBy(capturedRange.startIndex)
-                let end = content.startIndex.advancedBy(capturedRange.endIndex)
-                capturedStrings.append(content.substringWithRange(start..<end))
+                let start = content.characters.index(content.startIndex, offsetBy: capturedRange.lowerBound)
+                let end = content.characters.index(content.startIndex, offsetBy: capturedRange.upperBound)
+                capturedStrings.append(content.substring(with: start..<end))
                 
             } else {
                 capturedStrings.append("")

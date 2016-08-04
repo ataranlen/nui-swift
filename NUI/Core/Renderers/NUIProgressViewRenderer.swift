@@ -10,12 +10,12 @@ import UIKit
 
 class NUIProgressViewRenderer: NSObject {
     
-    static func render(progressView: UIProgressView) {
+    static func render(_ progressView: UIProgressView) {
         
         render(progressView, withClass: "Progress")
     }
     
-    static func render(progressView: UIProgressView, withClass className: String) {
+    static func render(_ progressView: UIProgressView, withClass className: String) {
         
         if NUISettings.hasProperty("progress-tint-color", withClass: className) {
             progressView.progressTintColor = NUISettings.getColor("progress-tint-color", withClass: className)

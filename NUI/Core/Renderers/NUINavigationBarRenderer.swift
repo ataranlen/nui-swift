@@ -10,7 +10,7 @@ import UIKit
 
 class NUINavigationBarRenderer: NSObject {
     
-    static func render(bar: UINavigationBar, withClass className: String) {
+    static func render(_ bar: UINavigationBar, withClass className: String) {
         
         if NUISettings.hasProperty("bar-tint-color", withClass: className) {
             bar.barTintColor = NUISettings.getColor("bar-tint-color", withClass: className)
@@ -26,7 +26,7 @@ class NUINavigationBarRenderer: NSObject {
         
         if NUISettings.hasProperty("background-image", withClass: className) {
             bar.setBackgroundImage(NUISettings.getImage("background-image", withClass: className),
-                                   forBarMetrics: .Default)
+                                   for: .default)
         }
         
         if NUISettings.hasProperty("shadow-image", withClass: className) {
@@ -35,7 +35,7 @@ class NUINavigationBarRenderer: NSObject {
         
         if NUISettings.hasProperty("title-vertical-offset", withClass: className) {
             let offset = CGFloat(NUISettings.getFloat("title-vertical-offset", withClass: className)!)
-            bar.setTitleVerticalPositionAdjustment(offset, forBarMetrics: .Default)
+            bar.setTitleVerticalPositionAdjustment(offset, for: .default)
         }
         
         renderSizeDependentProperties(bar)
@@ -47,23 +47,23 @@ class NUINavigationBarRenderer: NSObject {
         }
     }
     
-    static func sizeDidChange(bar: UINavigationBar) {
+    static func sizeDidChange(_ bar: UINavigationBar) {
         
         renderSizeDependentProperties(bar)
     }
     
-    static func renderSizeDependentProperties(bar: UINavigationBar) {
+    static func renderSizeDependentProperties(_ bar: UINavigationBar) {
         
-        let className = bar.nuiClass
+        let className = bar.nuiClass!
         
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
             let frame = bar.bounds
             let topColor = NUISettings.getColor("background-color-top", withClass: className)!
             let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor,frame: frame)
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.cgColor, bottom: bottomColor.cgColor,frame: frame)
             
-            bar.setBackgroundImage(gradientImage, forBarMetrics: .Default)
+            bar.setBackgroundImage(gradientImage, for: .default)
             
         }
     }

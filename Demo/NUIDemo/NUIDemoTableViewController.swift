@@ -20,17 +20,17 @@ class NUIDemoTableViewController: UITableViewController {
     ]
     
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demoItems.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("NUIDemoCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NUIDemoCell", for: indexPath)
         
         let item = demoItems[indexPath.row]
         

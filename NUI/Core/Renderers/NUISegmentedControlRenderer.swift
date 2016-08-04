@@ -10,19 +10,19 @@ import UIKit
 
 class NUISegmentedControlRenderer: NSObject {
     
-    static func render(control: UISegmentedControl, withClass className: String) {
+    static func render(_ control: UISegmentedControl, withClass className: String) {
         
         NUIViewRenderer.renderSize(control, withClass: className)
         
         if NUISettings.hasProperty("background-image", withClass: className) {
             
             let backgroundImage = NUISettings.getImage("background-image", withClass: className)
-            control.setBackgroundImage(backgroundImage, forState: .Normal, barMetrics: .Default)
+            control.setBackgroundImage(backgroundImage, for: UIControlState(), barMetrics: .default)
             
             if NUISettings.hasProperty("background-image-selected", withClass: className) {
                 
                 let backgroundImageSelected = NUISettings.getImage("background-image-selected", withClass: className)
-                control.setBackgroundImage(backgroundImageSelected, forState: .Selected, barMetrics: .Default)
+                control.setBackgroundImage(backgroundImageSelected, for: .selected, barMetrics: .default)
             }
             
         } else if NUISettings.hasProperty("background-color", withClass: className) ||
@@ -32,20 +32,20 @@ class NUISegmentedControlRenderer: NSObject {
             let normalImage = NUIGraphics.roundedRectImageWithClass(className, layer: layer)
             
             if NUISettings.hasProperty("background-color-selected", withClass: className) {
-                layer.backgroundColor = NUISettings.getColor("background-color-selected", withClass: className)!.CGColor
+                layer.backgroundColor = NUISettings.getColor("background-color-selected", withClass: className)!.cgColor
             }
             
             let selectedImage = NUIGraphics.roundedRectImageWithClass(className, layer: layer)
             
-            control.setBackgroundImage(normalImage, forState: .Normal, barMetrics: .Default)
-            control.setBackgroundImage(selectedImage, forState: .Selected, barMetrics: .Default)
+            control.setBackgroundImage(normalImage, for: UIControlState(), barMetrics: .default)
+            control.setBackgroundImage(selectedImage, for: .selected, barMetrics: .default)
             
             if NUISettings.hasProperty("border-color", withClass: className) {
                 let dividerColor = NUISettings.getImageFromColor("border-color", withClass: className)
                 control.setDividerImage(dividerColor,
-                                        forLeftSegmentState: .Normal,
-                                        rightSegmentState: .Normal,
-                                        barMetrics: .Default)
+                                        forLeftSegmentState: UIControlState(),
+                                        rightSegmentState: UIControlState(),
+                                        barMetrics: .default)
             }
         }
     
@@ -54,16 +54,16 @@ class NUISegmentedControlRenderer: NSObject {
             
             let dividerImage = NUISettings.getImage("divider-image", withClass: className)
             control.setDividerImage(dividerImage,
-                                    forLeftSegmentState: .Normal,
-                                    rightSegmentState: .Normal,
-                                    barMetrics: .Default)
+                                    forLeftSegmentState: UIControlState(),
+                                    rightSegmentState: UIControlState(),
+                                    barMetrics: .default)
         } else if NUISettings.hasProperty("divider-color", withClass: className) {
             
             let dividerColor = NUISettings.getImageFromColor("divider-color", withClass: className)
             control.setDividerImage(dividerColor,
-                                    forLeftSegmentState: .Normal,
-                                    rightSegmentState: .Normal,
-                                    barMetrics: .Default)
+                                    forLeftSegmentState: UIControlState(),
+                                    rightSegmentState: UIControlState(),
+                                    barMetrics: .default)
         }
         
         // Set background tint color
@@ -74,7 +74,7 @@ class NUISegmentedControlRenderer: NSObject {
         var titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
         if !titleTextAttributes.isEmpty {
-            control.setTitleTextAttributes(titleTextAttributes, forState: .Normal)
+            control.setTitleTextAttributes(titleTextAttributes, for: UIControlState())
         }
         
         let selectedSegmentAttributeOverrides = NUIUtilities.titleTextAttributesForClass(className, withSuffix: "selected")
@@ -85,7 +85,7 @@ class NUISegmentedControlRenderer: NSObject {
                 titleTextAttributes.updateValue(value, forKey: key)
             }
             
-            control.setTitleTextAttributes(titleTextAttributes, forState: .Selected)
+            control.setTitleTextAttributes(titleTextAttributes, for: .selected)
         }
     }
 }

@@ -10,20 +10,20 @@ import NUIParse
 
 class NUIStyleParser: NSObject {
     
-    func getStylesFromFile(fileName: String) -> [String : [String : String]] {
+    func getStylesFromFile(_ fileName: String) -> [String : [String : String]] {
         
-        let path: String! = NSBundle.mainBundle().pathForResource(fileName, ofType: "nss")
+        let path: String! = Bundle.main.path(forResource: fileName, ofType: "nss")
         assert(path != nil, "File \(fileName).nss doesn't exist.")
         return getStylesFromPath(path)
     }
     
-    func getStylesFromPath(path: String) -> [String : [String : String]] {
-        let content = try! String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+    func getStylesFromPath(_ path: String) -> [String : [String : String]] {
+        let content = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
         let stylesheet = parse(content)
         return consolidateRuleSets(stylesheet!)
     }
     
-    func consolidateRuleSets(styleSheet: NUIStyleSheet) -> [String : [String : String]] {
+    func consolidateRuleSets(_ styleSheet: NUIStyleSheet) -> [String : [String : String]] {
         
         NUIRenderer.setRerenderOnOrientationChange(false)
         
@@ -54,7 +54,7 @@ class NUIStyleParser: NSObject {
         return consolidatedRuleSets
     }
     
-    func mergeRuleSetIntoConsolidatedRuleSet(ruleSet: NUIRuleSet,
+    func mergeRuleSetIntoConsolidatedRuleSet(_ ruleSet: NUIRuleSet,
                                              consolidatedRuleSet: [String : String],
                                              definitions: [String : String]) -> [String : String] {
         
@@ -67,7 +67,7 @@ class NUIStyleParser: NSObject {
                 let variable = value
                 
                 if definitions[variable] == nil {
-                    NSException.raise("Undefined variable",
+                    NSException.raise("Undefined variable" as NSExceptionName,
                                       format: "Variable %@ is not defined",
                                       arguments: getVaList([value]))
                 }
@@ -79,7 +79,7 @@ class NUIStyleParser: NSObject {
         return consolidatedRuleSet
     }
     
-    func mediaOptionsSatisified(mediaOptions: [String : String]?) -> Bool {
+    func mediaOptionsSatisified(_ mediaOptions: [String : String]?) -> Bool {
         
         guard let mediaOptions = mediaOptions else { return true }
         
@@ -90,7 +90,7 @@ class NUIStyleParser: NSObject {
         if let mediaDevice = mediaOptions["device"] {
             
             if DeviceHolder.device == nil {
-                DeviceHolder.device = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Pad) ? "ipad" : "iphone"
+                DeviceHolder.device = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad) ? "ipad" : "iphone"
             }
             
             if mediaDevice != DeviceHolder.device {
@@ -110,16 +110,16 @@ class NUIStyleParser: NSObject {
         return false
     }
     
-    func parse(styles: String) -> NUIStyleSheet? {
+    func parse(_ styles: String) -> NUIStyleSheet? {
         
         let tokenizer = NUIPTokeniser()
         
-        let idCharacters = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyz" +
+        let idCharacters = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz" +
                                                               "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
                                                               "0123456789" +
                                                               "-_\\/.")
         
-        let initialIdCharacters = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyz" +
+        let initialIdCharacters = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz" +
                                                                      "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
                                                                      "0123456789" +
                                                                      "#@-_\\.")
@@ -127,7 +127,7 @@ class NUIStyleParser: NSObject {
         let recognizers: [NUIPTokenRecogniser] = [
             
             NUIPWhiteSpaceRecogniser.whiteSpaceRecogniser() as! NUIPWhiteSpaceRecogniser,
-            NUIPQuotedRecogniser.quotedRecogniserWithStartQuote("/*",
+            NUIPQuotedRecogniser.quotedRecogniser(withStartQuote: "/*",
                 endQuote: "*/", name: "Comment") as! NUIPQuotedRecogniser,
             NUIPKeywordRecogniser(keyword: "@media"),
             NUIPKeywordRecogniser(keyword: "and"),
@@ -142,7 +142,7 @@ class NUIStyleParser: NSObject {
         ]
         
         for recognizer in recognizers {
-            tokenizer.addTokenRecogniser(recognizer)
+            tokenizer.add(recognizer)
         }
         
         let tokenizerDelegate = NUITokeniserDelegate()

@@ -16,12 +16,12 @@ class NUISettings: NSObject {
         initWithStylesheet("NUIStyle")
     }
     
-    static func initWithStylesheet(name: String) {
+    static func initWithStylesheet(_ name: String) {
         
         instance = getInstance()
         instance._stylesheetName = name
         
-        let orientation = UIApplication.sharedApplication().statusBarOrientation
+        let orientation = UIApplication.shared.statusBarOrientation
         
         instance._stylesheetOrientation = stylesheetOrientationFromInterfaceOrientation(orientation)
         
@@ -31,7 +31,7 @@ class NUISettings: NSObject {
         NUIAppearance.initDefault()
     }
     
-    static func appendStylesheet(name: String) {
+    static func appendStylesheet(_ name: String) {
         
         instance = getInstance()
         
@@ -40,7 +40,7 @@ class NUISettings: NSObject {
         instance.appendStyles(parser.getStylesFromFile(name))
     }
     
-    static func loadStylesheetByPath(path: String) {
+    static func loadStylesheetByPath(_ path: String) {
         
         instance = getInstance()
         let parser = NUIStyleParser()
@@ -62,7 +62,7 @@ class NUISettings: NSObject {
         
     }
     
-    static func reloadStylesheetsOnOrientationChange(orientation: UIInterfaceOrientation) -> Bool {
+    static func reloadStylesheetsOnOrientationChange(_ orientation: UIInterfaceOrientation) -> Bool {
         
         instance = getInstance()
         
@@ -87,17 +87,17 @@ class NUISettings: NSObject {
         return instance._autoUpdatePath
     }
     
-    static func setAutoUpdatePath(path: String) {
+    static func setAutoUpdatePath(_ path: String) {
         instance = getInstance()
         instance._autoUpdatePath = path
     }
     
-    static func hasProperty(property: String, withExplicitClass className: String) -> Bool {
+    static func hasProperty(_ property: String, withExplicitClass className: String) -> Bool {
         instance = getInstance()
         return instance._styles[className]?[property] != nil
     }
     
-    static func hasProperty(property: String, withClass className: String) -> Bool {
+    static func hasProperty(_ property: String, withClass className: String) -> Bool {
         
         let classes = getClasses(className)
         for inheritedClass in classes where hasProperty(property, withExplicitClass: inheritedClass) {
@@ -107,17 +107,17 @@ class NUISettings: NSObject {
         return false
     }
     
-    static func hasFontPropertiesWithClass(className: String) -> Bool {
+    static func hasFontPropertiesWithClass(_ className: String) -> Bool {
         return hasProperty("font-name", withClass: className) ||
                hasProperty("font-size", withClass: className)
     }
     
-    static func get(property: String, withExplicitClass className: String) -> String? {
+    static func get(_ property: String, withExplicitClass className: String) -> String? {
         instance = getInstance()
         return instance._styles[className]?[property]
     }
     
-    static func get(property: String, withClass className: String) -> String? {
+    static func get(_ property: String, withClass className: String) -> String? {
         
         let classes = getClasses(className)
         for inheritedClass in classes where hasProperty(property, withExplicitClass: inheritedClass) {
@@ -126,67 +126,67 @@ class NUISettings: NSObject {
         return nil
     }
     
-    static func getBoolean(property: String, withClass className: String) -> Bool {
+    static func getBoolean(_ property: String, withClass className: String) -> Bool {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toBoolean(propertyValue)
         }
         return false
     }
     
-    static func getFloat(property: String, withClass className: String) -> Float? {
+    static func getFloat(_ property: String, withClass className: String) -> Float? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toFloat(propertyValue)
         }
         return nil
     }
     
-    static func getInteger(property: String, withClass className: String) -> Int? {
+    static func getInteger(_ property: String, withClass className: String) -> Int? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toInteger(propertyValue)
         }
         return nil
     }
     
-    static func getSize(property: String, withClass className: String) -> CGSize? {
+    static func getSize(_ property: String, withClass className: String) -> CGSize? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toSize(propertyValue)
         }
         return nil
     }
     
-    static func getOffset(property: String, withClass className: String) -> UIOffset? {
+    static func getOffset(_ property: String, withClass className: String) -> UIOffset? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toOffset(propertyValue)
         }
         return nil
     }
     
-    static func getEdgeInsets(property: String, withClass className: String) -> UIEdgeInsets? {
+    static func getEdgeInsets(_ property: String, withClass className: String) -> UIEdgeInsets? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toEdgeInsets(propertyValue)
         }
         return nil
     }
     
-    static func getBorderStyle(property: String, withClass className: String) -> UITextBorderStyle {
+    static func getBorderStyle(_ property: String, withClass className: String) -> UITextBorderStyle {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toBorderStyle(propertyValue)
         }
-        return .None
+        return .none
     }
     
-    static func getSeparatorStyle(property: String, withClass className: String) -> UITableViewCellSeparatorStyle {
+    static func getSeparatorStyle(_ property: String, withClass className: String) -> UITableViewCellSeparatorStyle {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toSeparatorStyle(propertyValue)
         }
-        return .None
+        return .none
     }
     
-    static func getFontWithClass(className: String) -> UIFont? {
+    static func getFontWithClass(_ className: String) -> UIFont? {
         return getFontWithClass(className, baseFont: nil)
     }
     
-    static func getFontWithClass(className: String, baseFont: UIFont?) -> UIFont {
+    static func getFontWithClass(_ className: String, baseFont: UIFont?) -> UIFont {
         
         var fontSize: CGFloat
         var font: UIFont?
@@ -194,7 +194,7 @@ class NUISettings: NSObject {
         if let _fontSize = getFloat("font-size", withClass: className) {
             fontSize = CGFloat(_fontSize)
         } else {
-            fontSize = baseFont?.pointSize ?? UIFont.systemFontSize()
+            fontSize = baseFont?.pointSize ?? UIFont.systemFontSize
         }
         
         if let fontName = get("font-name", withClass: className) {
@@ -202,19 +202,19 @@ class NUISettings: NSObject {
             if #available(iOS 8.2, *) {
                 switch fontName {
                 case "blackSystem":
-                    font = UIFont.systemFontOfSize(fontSize, weight: UIFontWeightBlack)
+                    font = UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightBlack)
                 case "heavySystem":
-                    font = UIFont.systemFontOfSize(fontSize, weight: UIFontWeightHeavy)
+                    font = UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightHeavy)
                 case "lightSystem":
-                    font = UIFont.systemFontOfSize(fontSize, weight: UIFontWeightLight)
+                    font = UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightLight)
                 case "mediumSystem":
-                    font = UIFont.systemFontOfSize(fontSize, weight: UIFontWeightMedium)
+                    font = UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightMedium)
                 case "semiboldSystem":
-                    font = UIFont.systemFontOfSize(fontSize, weight: UIFontWeightSemibold)
+                    font = UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightSemibold)
                 case "thinSystem":
-                    font = UIFont.systemFontOfSize(fontSize, weight: UIFontWeightThin)
+                    font = UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightThin)
                 case "ultraLightSystem":
-                    font = UIFont.systemFontOfSize(fontSize, weight: UIFontWeightUltraLight)
+                    font = UIFont.systemFont(ofSize: fontSize, weight: UIFontWeightUltraLight)
                 default:
                     break
                 }
@@ -223,11 +223,11 @@ class NUISettings: NSObject {
             if font == nil {
                 switch fontName {
                 case "system":
-                    font = UIFont.systemFontOfSize(fontSize)
+                    font = UIFont.systemFont(ofSize: fontSize)
                 case "boldSystem":
-                    font = UIFont.boldSystemFontOfSize(fontSize)
+                    font = UIFont.boldSystemFont(ofSize: fontSize)
                 case "italicSystem":
-                    font = UIFont.italicSystemFontOfSize(fontSize)
+                    font = UIFont.italicSystemFont(ofSize: fontSize)
                 default:
                     font = UIFont(name: fontName, size: fontSize)
                 }
@@ -235,80 +235,80 @@ class NUISettings: NSObject {
         }
         
         if font == nil {
-            font = baseFont?.fontWithSize(fontSize) ?? UIFont.systemFontOfSize(fontSize)
+            font = baseFont?.withSize(fontSize) ?? UIFont.systemFont(ofSize: fontSize)
         }
         
         return font!
     }
     
-    static func getColor(property: String, withClass className: String) -> UIColor? {
+    static func getColor(_ property: String, withClass className: String) -> UIColor? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toColor(propertyValue)
         }
         return nil
     }
     
-    static func getColorFromImage(property: String, withClass className: String) -> UIColor? {
+    static func getColorFromImage(_ property: String, withClass className: String) -> UIColor? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toColorFromImageName(propertyValue)
         }
         return nil
     }
     
-    static func getImageFromColor(property: String, withClass className: String) -> UIImage? {
+    static func getImageFromColor(_ property: String, withClass className: String) -> UIImage? {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toImageFromColorName(propertyValue)
         }
         return nil
     }
     
-    static func getImage(property: String, withClass className: String) -> UIImage? {
+    static func getImage(_ property: String, withClass className: String) -> UIImage? {
         
         guard let propertyValue = get(property, withClass: className) else { return nil }
         guard let image = NUIConverter.toImageFromImageName(propertyValue) else { return nil }
         let insetsProperty = property + "-insets"
         guard let insets = getEdgeInsets(insetsProperty, withClass: className) else { return image }
         
-        return image.resizableImageWithCapInsets(insets)
+        return image.resizableImage(withCapInsets: insets)
     }
     
-    static func getTextAlignment(property: String, withClass className: String) -> NSTextAlignment {
+    static func getTextAlignment(_ property: String, withClass className: String) -> NSTextAlignment {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toTextAlignment(propertyValue)
         }
-        return .Left
+        return .left
     }
     
     static func getControlContentHorizontalAlignment(
-        property: String, withClass className: String) -> UIControlContentHorizontalAlignment {
+        _ property: String, withClass className: String) -> UIControlContentHorizontalAlignment {
         
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toControlContentHorizontalAlignment(propertyValue)
         }
-        return .Left
+        return .left
     }
     
     static func getControlContentVerticalAlignment(
-        property: String, withClass className: String) -> UIControlContentVerticalAlignment {
+        _ property: String, withClass className: String) -> UIControlContentVerticalAlignment {
         
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toControlContentVerticalAlignment(propertyValue)
         }
-        return .Top
+        return .top
     }
     
-    static func getKeyboardAppearance(property: String, withClass className: String) -> UIKeyboardAppearance {
+    static func getKeyboardAppearance(_ property: String, withClass className: String) -> UIKeyboardAppearance {
         if let propertyValue = get(property, withClass: className) {
             return NUIConverter.toKeyboardAppearance(propertyValue)
         }
-        return .Default
+        return .default
     }
     
-    static func getClasses(className: String) -> [String] {
-        return className.componentsSeparatedByString(":").reverse()
+    static func getClasses(_ className: String) -> [String] {
+        return className.components(separatedBy: ":").reversed()
     }
     
-    static func setGlobalExclusions(array: [String]) {
+    static func setGlobalExclusions(_ array: [String]) {
         instance = getInstance()
         instance._globalExclusions = array
     }
@@ -323,7 +323,7 @@ class NUISettings: NSObject {
         return instance._stylesheetOrientation
     }
     
-    static func stylesheetOrientationFromInterfaceOrientation(orientation: UIInterfaceOrientation) -> String {
+    static func stylesheetOrientationFromInterfaceOrientation(_ orientation: UIInterfaceOrientation) -> String {
         return UIInterfaceOrientationIsLandscape(orientation) ? "landscape" : "portrait"
     }
     
@@ -334,7 +334,7 @@ class NUISettings: NSObject {
     var _globalExclusions = [String]()
     var _stylesheetOrientation: String?
     
-    func appendStyles(newStyles: [String : [String : String]]) {
+    func appendStyles(_ newStyles: [String : [String : String]]) {
         
         for (key, style) in newStyles {
             if _styles[key] == nil {
@@ -350,8 +350,8 @@ class NUISettings: NSObject {
     
     static func getInstance() -> NUISettings {
         
-        let settingsQueue = dispatch_queue_create("com.NUI.NUISettingsQueue", nil)
-        dispatch_sync(settingsQueue) { 
+        let settingsQueue = DispatchQueue(label: "com.NUI.NUISettingsQueue")
+        settingsQueue.sync { 
             if instance == nil {
                 NUISwizzler().swizzleAll()
                 instance = NUISettings()

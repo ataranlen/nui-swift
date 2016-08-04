@@ -10,19 +10,19 @@ import UIKit
 
 class NUITabBarItemRenderer: NSObject {
     
-    static func render(item: UITabBarItem, withClass className: String) {
+    static func render(_ item: UITabBarItem, withClass className: String) {
         
         let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
         if !titleTextAttributes.isEmpty {
-            item.setTitleTextAttributes(titleTextAttributes, forState: .Normal)
+            item.setTitleTextAttributes(titleTextAttributes, for: UIControlState())
         }
         
         let selectedTextAttributes = NUIUtilities.titleTextAttributesForClass(className,
                                                                               withSuffix: "selected")
         
         if !selectedTextAttributes.isEmpty {
-            item.setTitleTextAttributes(selectedTextAttributes, forState: .Selected)
+            item.setTitleTextAttributes(selectedTextAttributes, for: .selected)
         }
         
         if NUISettings.hasProperty("text-offset", withClass: className) {
@@ -32,14 +32,14 @@ class NUITabBarItemRenderer: NSObject {
         if NUISettings.hasProperty("finished-image", withClass: className) {
             
             let unselectedImage = NUISettings.getImage("finished-image", withClass: className)!
-                                             .imageWithRenderingMode(.AlwaysOriginal)
+                                             .withRenderingMode(.alwaysOriginal)
             item.image = unselectedImage
         }
         
         if NUISettings.hasProperty("finished-image-selected", withClass: className) {
             
             let selectedImage = NUISettings.getImage("finished-image-selected", withClass: className)!
-                                           .imageWithRenderingMode(.AlwaysOriginal)
+                                           .withRenderingMode(.alwaysOriginal)
             
             item.selectedImage = selectedImage
         }

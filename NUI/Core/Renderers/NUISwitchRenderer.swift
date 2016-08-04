@@ -10,7 +10,7 @@ import UIKit
 
 class NUISwitchRenderer: NSObject {
     
-    static func render(uiSwitch: UISwitch, withClass className: String) {
+    static func render(_ uiSwitch: UISwitch, withClass className: String) {
         
         if NUISettings.hasProperty("background-color", withClass: className) {
             uiSwitch.backgroundColor = NUISettings.getColor("background-color", withClass: className)

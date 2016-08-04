@@ -10,7 +10,7 @@ import UIKit
 
 class NUIUtilities: NSObject {
     
-    static func titleTextAttributesForClass(className: String, withSuffix suffix: String)  -> [String : AnyObject] {
+    static func titleTextAttributesForClass(_ className: String, withSuffix suffix: String)  -> [String : AnyObject] {
         
         var titleTextAttributes = [String : AnyObject]()
         
@@ -46,11 +46,11 @@ class NUIUtilities: NSObject {
         return titleTextAttributes
     }
     
-    static func titleTextAttributesForClass(className: String) -> [String : AnyObject] {
+    static func titleTextAttributesForClass(_ className: String) -> [String : AnyObject] {
         return titleTextAttributesForClass(className, withSuffix: "")
     }
     
-    static func selector(selector: String, withSuffix suffix: String) -> String {
+    static func selector(_ selector: String, withSuffix suffix: String) -> String {
         
         if suffix.isEmpty {
             return selector

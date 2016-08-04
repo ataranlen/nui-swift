@@ -10,7 +10,7 @@ import UIKit
 
 class NUITabBarRenderer: NSObject {
     
-    static func render(bar: UITabBar, withClass className: String) {
+    static func render(_ bar: UITabBar, withClass className: String) {
         
         if NUISettings.hasProperty("background-image", withClass: className) {
             bar.backgroundImage = NUISettings.getImage("background-image", withClass: className)
@@ -27,8 +27,8 @@ class NUITabBarRenderer: NSObject {
         renderSizeDependentProperties(bar)
         
         // Apply UITabBarItem's background-image-selected property to bar.selectionIndicatorImage
-        if let items =  bar.items where !items.isEmpty,
-           let firstItemClasses = items[0].nuiClass?.componentsSeparatedByString(":") {
+        if let items =  bar.items, !items.isEmpty,
+           let firstItemClasses = items[0].nuiClass?.components(separatedBy: ":") {
             
             for itemClass in firstItemClasses
                 where NUISettings.hasProperty("background-image-selected", withClass: itemClass) {
@@ -50,20 +50,20 @@ class NUITabBarRenderer: NSObject {
         }
     }
     
-    static func sizeDidChange(bar: UITabBar) {
+    static func sizeDidChange(_ bar: UITabBar) {
         renderSizeDependentProperties(bar)
     }
     
-    static func renderSizeDependentProperties(bar: UITabBar) {
+    static func renderSizeDependentProperties(_ bar: UITabBar) {
         
-        let className = bar.nuiClass
+        let className = bar.nuiClass!
         
         if NUISettings.hasProperty("background-color-top", withClass: className) {
             
             let frame = bar.bounds
             let topColor = NUISettings.getColor("background-color-top", withClass: className)!
             let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: frame)
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.cgColor, bottom: bottomColor.cgColor, frame: frame)
             
             bar.backgroundImage = gradientImage
         }

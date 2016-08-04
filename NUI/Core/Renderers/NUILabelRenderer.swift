@@ -10,7 +10,7 @@ import UIKit
 
 class NUILabelRenderer: NSObject {
     
-    static func render(label: UILabel, withClass className: String, withSuffix suffix: String = "") {
+    static func render(_ label: UILabel, withClass className: String, withSuffix suffix: String = "") {
         
         var className = className
         
@@ -20,10 +20,10 @@ class NUILabelRenderer: NSObject {
         
         if NUISettings.hasProperty("background-color", withClass: className) {
             label.backgroundColor = NUISettings.getColor("background-color", withClass: className)
-        } else if label.backgroundColor == nil || label.backgroundColor == UIColor.whiteColor() {
+        } else if label.backgroundColor == nil || label.backgroundColor == .white {
             
             // UILabels created programmatically have a white background by default
-            label.backgroundColor = UIColor.clearColor()
+            label.backgroundColor = .clear
         }
         
         if NUISettings.hasProperty("font-color", withClass: className) {
@@ -40,7 +40,7 @@ class NUILabelRenderer: NSObject {
         renderText(label, withClass: className)
     }
     
-    static func renderText(label: UILabel, withClass className: String) {
+    static func renderText(_ label: UILabel, withClass className: String) {
         
         if NUISettings.hasFontPropertiesWithClass(className) {
             label.font = NUISettings.getFontWithClass(className, baseFont: label.font)
@@ -71,12 +71,12 @@ class NUILabelRenderer: NSObject {
         }
     }
     
-    static func needsTextTransformWithClass(className: String) -> Bool {
+    static func needsTextTransformWithClass(_ className: String) -> Bool {
         
         return NUISettings.hasProperty("text-transform", withClass: className)
     }
     
-    static func transformText(text: String, withClass className: String) -> String {
+    static func transformText(_ text: String, withClass className: String) -> String {
         
         if !needsTextTransformWithClass(className) {
             return text
@@ -88,18 +88,18 @@ class NUILabelRenderer: NSObject {
         
         switch transform {
         case "uppercase":
-            return text.uppercaseString
+            return text.uppercased()
         case "lowercase":
-            return text.lowercaseString
+            return text.lowercased()
         case "capitalize":
-            return text.capitalizedString
+            return text.capitalized
         default:
             return text
         }
         
     }
     
-    static func transformAttributedText(attributedText: NSAttributedString,
+    static func transformAttributedText(_ attributedText: NSAttributedString,
                                         withClass className: String) -> NSAttributedString {
         
         if !needsTextTransformWithClass(className) {
@@ -110,7 +110,7 @@ class NUILabelRenderer: NSObject {
         
         let range = NSRange(location: 0, length: attributedText.length)
         
-        attributedText.enumerateAttributesInRange(range, options: .LongestEffectiveRangeNotRequired)
+        attributedText.enumerateAttributes(in: range, options: .longestEffectiveRangeNotRequired)
         { (attrs, range, _) in
             attributes.append( (attrs, range) )
         }
@@ -119,7 +119,7 @@ class NUILabelRenderer: NSObject {
         
         let transformedAttributedText = attributedText.mutableCopy() as! NSMutableAttributedString
         
-        transformedAttributedText.replaceCharactersInRange(range, withString: transformedText)
+        transformedAttributedText.replaceCharacters(in: range, with: transformedText)
         
         for attribute in attributes {
             transformedAttributedText.setAttributes(attribute.0, range: attribute.1)

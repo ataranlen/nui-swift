@@ -16,26 +16,26 @@ class ProgrammaticallyCreatedViewController: UIViewController, UITextFieldDelega
         programmaticallyRenderControls()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
     func programmaticallyRenderControls() {
 
-        let largeButton = UIButton(type: .System)
-        largeButton.setTitle("Large Button", forState: .Normal)
+        let largeButton = UIButton(type: .system)
+        largeButton.setTitle("Large Button", for: UIControlState())
         largeButton.nuiClass = "Button:LargeButton"
         largeButton.frame = CGRect(x: 20, y: 75, width: 133, height: 50)
         view.addSubview(largeButton)
         
-        let button = UIButton(type: .System)
-        button.setTitle("Button", forState: .Normal)
+        let button = UIButton(type: .system)
+        button.setTitle("Button", for: UIControlState())
         button.frame = CGRect(x: 20, y: 144, width: 74, height: 37)
         view.addSubview(button)
         
-        let smallButton = UIButton(type: .System)
-        smallButton.setTitle("Small", forState: .Normal)
+        let smallButton = UIButton(type: .system)
+        smallButton.setTitle("Small", for: UIControlState())
         smallButton.nuiClass = "Button:SmallButton"
         smallButton.frame = CGRect(x: 20, y: 200, width: 57, height: 27)
         view.addSubview(smallButton)
@@ -57,13 +57,13 @@ class ProgrammaticallyCreatedViewController: UIViewController, UITextFieldDelega
         let largeTextField = UITextField(frame: CGRect(x: 20, y: 244, width: 159, height: 31))
         largeTextField.placeholder = "Large Field"
         largeTextField.nuiClass = "TextField:LargeTextField"
-        largeTextField.returnKeyType = .Done
+        largeTextField.returnKeyType = .done
         largeTextField.delegate = self
         view.addSubview(largeTextField)
 
         let textField = UITextField(frame: CGRect(x: 20, y: 312, width: 93, height: 31))
         textField.placeholder = "Text Field"
-        textField.returnKeyType = .Done
+        textField.returnKeyType = .done
         textField.delegate = self
         view.addSubview(textField)
 

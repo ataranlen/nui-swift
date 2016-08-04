@@ -10,7 +10,7 @@ import UIKit
 
 class NUITextViewRenderer: NSObject {
     
-    static func render(textView: UITextView, withClass className: String) {
+    static func render(_ textView: UITextView, withClass className: String) {
         
         NUIViewRenderer.render(textView, withClass: className)
         

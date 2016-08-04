@@ -10,7 +10,7 @@ import UIKit
 
 class NUINavigationItemRenderer: NSObject {
     
-    static func render(item: UINavigationItem, withClass className: String) {
+    static func render(_ item: UINavigationItem, withClass className: String) {
         
         if let backBarButtonItem = item.backBarButtonItem {
             NUIRenderer.renderBarButtonItem(backBarButtonItem, withClass: className)

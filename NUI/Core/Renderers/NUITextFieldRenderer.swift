@@ -10,7 +10,7 @@ import UIKit
 
 class NUITextFieldRenderer: NSObject {
     
-    static func render(textField: UITextField, withClass className: String) {
+    static func render(_ textField: UITextField, withClass className: String) {
         
         if NUISettings.hasFontPropertiesWithClass(className) {
             textField.font = NUISettings.getFontWithClass(className, baseFont: textField.font)
@@ -28,7 +28,7 @@ class NUITextFieldRenderer: NSObject {
             
             let topColor = NUISettings.getColor("background-color-top", withClass: className)!
             let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: textField.bounds)
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.cgColor, bottom: bottomColor.cgColor, frame: textField.bounds)
             
             textField.background = gradientImage
         }

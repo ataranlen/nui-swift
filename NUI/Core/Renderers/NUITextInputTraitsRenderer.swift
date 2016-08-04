@@ -11,7 +11,7 @@ import UIKit
 class NUITextInputTraitsRenderer: NSObject {
     
     
-    static func renderKeyboard(traits: UITextInputTraits, withClass className: String) {
+    static func renderKeyboard(_ traits: UITextInputTraits, withClass className: String) {
         
         // FIXME: Swift doesn't let you set properties declared with an `optional` keyword, so downcast is needed.
         // Couldn't come up with any workaround yet.

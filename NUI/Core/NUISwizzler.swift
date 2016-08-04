@@ -48,15 +48,15 @@ class NUISwizzler: NSObject {
         swizzleDealloc(UITableView.self)
     }
     
-    func swizzleDidMoveToWindow(className: AnyClass) {
+    func swizzleDidMoveToWindow(_ className: AnyClass) {
         swizzle(className, methodName: "didMoveToWindow")
     }
     
-    func swizzleDealloc(className: AnyClass) {
+    func swizzleDealloc(_ className: AnyClass) {
         swizzle(className, methodName: "dealloc")
     }
     
-    func swizzle(className: AnyClass, methodName: String) {
+    func swizzle(_ className: AnyClass, methodName: String) {
         
         let originalMethod = NSSelectorFromString(methodName)
         let newMethod = NSSelectorFromString("override_" + methodName)
@@ -64,7 +64,7 @@ class NUISwizzler: NSObject {
         swizzle(className, from: originalMethod, to: newMethod)
     }
     
-    func swizzle(className: AnyClass, from original: Selector, to new: Selector) {
+    func swizzle(_ className: AnyClass, from original: Selector, to new: Selector) {
         
         let originalMethod = class_getInstanceMethod(className, original)
         let newMethod = class_getInstanceMethod(className, new)

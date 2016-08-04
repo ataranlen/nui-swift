@@ -10,7 +10,7 @@ import UIKit
 
 class NUISliderRenderer: NSObject {
     
-    static func render(slider: UISlider, withClass className: String) {
+    static func render(_ slider: UISlider, withClass className: String) {
         
         if NUISettings.hasProperty("minimum-track-tint-color", withClass: className) {
             slider.minimumTrackTintColor = NUISettings.getColor("minimum-track-tint-color", withClass: className)
@@ -29,7 +29,7 @@ class NUISliderRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("thumb-image", withClass: className) {
-            slider.setThumbImage(NUISettings.getImage("thumb-image", withClass: className), forState: .Normal)
+            slider.setThumbImage(NUISettings.getImage("thumb-image", withClass: className), for: UIControlState())
         }
         
         if NUISettings.hasProperty("thumb-tint-color", withClass: className) {

@@ -10,7 +10,7 @@ import UIKit
 
 class NUIWindowRenderer: NSObject {
     
-    static func render(window: UIWindow, withClass className: String) {
+    static func render(_ window: UIWindow, withClass className: String) {
         
         if NUISettings.hasProperty("background-color", withClass: className) {
             window.rootViewController?.view.backgroundColor = NUISettings.getColor("background-color", withClass: className)

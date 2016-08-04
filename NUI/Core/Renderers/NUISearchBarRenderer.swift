@@ -10,7 +10,7 @@ import UIKit
 
 class NUISearchBarRenderer: NSObject {
     
-    static func render(bar: UISearchBar, withClass className: String) {
+    static func render(_ bar: UISearchBar, withClass className: String) {
         
         if NUISettings.hasProperty("background-color", withClass: className) {
             bar.backgroundColor = NUISettings.getColor("background-color", withClass: className)
@@ -24,7 +24,7 @@ class NUISearchBarRenderer: NSObject {
             
             let topColor = NUISettings.getColor("background-color-top", withClass: className)!
             let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
-            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: bar.bounds)
+            let gradientImage = NUIGraphics.gradientImageWithTop(topColor.cgColor, bottom: bottomColor.cgColor, frame: bar.bounds)
             
             bar.backgroundImage = gradientImage
         }
@@ -47,7 +47,7 @@ class NUISearchBarRenderer: NSObject {
         let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(scopeBarClassName)
         
         if !titleTextAttributes.isEmpty {
-            bar.setScopeBarButtonTitleTextAttributes(titleTextAttributes, forState: .Normal)
+            bar.setScopeBarButtonTitleTextAttributes(titleTextAttributes, for: UIControlState())
         }
         
         if NUISettings.hasProperty("background-color", withClass: scopeBarClassName) ||
@@ -58,17 +58,17 @@ class NUISearchBarRenderer: NSObject {
             
             if NUISettings.hasProperty("background-color-selected", withClass: scopeBarClassName) {
                 layer.backgroundColor = NUISettings.getColor("background-color-selected",
-                                                             withClass: scopeBarClassName)!.CGColor
+                                                             withClass: scopeBarClassName)!.cgColor
             }
             
             let selectedImage = NUIGraphics.roundedRectImageWithClass(scopeBarClassName, layer: layer)
             
-            bar.setScopeBarButtonBackgroundImage(normalImage, forState: .Normal)
-            bar.setScopeBarButtonBackgroundImage(selectedImage, forState: .Selected)
+            bar.setScopeBarButtonBackgroundImage(normalImage, for: UIControlState())
+            bar.setScopeBarButtonBackgroundImage(selectedImage, for: .selected)
             
             if NUISettings.hasProperty("border-color", withClass: scopeBarClassName) {
                 let dividerImage = NUISettings.getImageFromColor("border-color", withClass: scopeBarClassName)
-                bar.setScopeBarButtonDividerImage(dividerImage, forLeftSegmentState: .Normal, rightSegmentState: .Normal)
+                bar.setScopeBarButtonDividerImage(dividerImage, forLeftSegmentState: UIControlState(), rightSegmentState: UIControlState())
             }
         }
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class NUIControlRenderer: NSObject {
     
-    static func render(control: UIControl, withClass className: String) {
+    static func render(_ control: UIControl, withClass className: String) {
         
         if NUISettings.hasProperty("background-image", withClass: className) {
             control.backgroundColor = NUISettings.getColorFromImage("background-image", withClass: className)

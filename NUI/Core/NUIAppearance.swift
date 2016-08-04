@@ -22,7 +22,7 @@ class NUIAppearance: NSObject {
         let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
         if !titleTextAttributes.isEmpty {
-            uiClass.appearance().setTitleTextAttributes(titleTextAttributes, forState: .Normal)
+            uiClass.appearance().setTitleTextAttributes(titleTextAttributes, for: UIControlState())
         }
         
         if NUISettings.hasProperty("background-tint-color", withClass: className) {
@@ -33,31 +33,31 @@ class NUIAppearance: NSObject {
             NUISettings.hasProperty("background-color-top", withClass: className) {
 
             let image = NUIGraphics.backButtonWithClass(className)
-            uiClass.appearance().setBackButtonBackgroundImage(image, forState: .Normal, barMetrics: .Default)
+            uiClass.appearance().setBackButtonBackgroundImage(image, for: UIControlState(), barMetrics: .default)
         }
         
         if NUISettings.hasProperty("background-image", withClass: className) {
             
             let backgroundImage = NUISettings.getImage("background-image", withClass: className)
-            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, forState: .Normal, barMetrics: .Default)
+            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, for: UIControlState(), barMetrics: .default)
         }
         
         if NUISettings.hasProperty("background-image-selected", withClass: className) {
             
             let backgroundImage = NUISettings.getImage("background-image-selected", withClass: className)
-            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, forState: .Selected, barMetrics: .Default)
+            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, for: .selected, barMetrics: .default)
         }
         
         if NUISettings.hasProperty("background-image-highlighted", withClass: className) {
             
             let backgroundImage = NUISettings.getImage("background-image-highlighted", withClass: className)
-            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, forState: .Highlighted, barMetrics: .Default)
+            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, for: .highlighted, barMetrics: .default)
         }
         
         if NUISettings.hasProperty("background-image-disabled", withClass: className) {
             
             let backgroundImage = NUISettings.getImage("background-image-disabled", withClass: className)
-            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, forState: .Disabled, barMetrics: .Default)
+            uiClass.appearance().setBackButtonBackgroundImage(backgroundImage, for: .disabled, barMetrics: .default)
         }
     }
 }

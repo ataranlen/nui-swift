@@ -10,7 +10,7 @@ import UIKit
 
 class NUIPageControlRenderer: NSObject {
     
-    static func render(pageControl: UIPageControl, withClass className: String) {
+    static func render(_ pageControl: UIPageControl, withClass className: String) {
         
         // Set page indicator colors
         if NUISettings.hasProperty("current-color", withClass: className) {

@@ -10,13 +10,13 @@ import UIKit
 
 class NUIViewRenderer: NSObject {
     
-    static func render(view: UIView, withClass className: String) {
+    static func render(_ view: UIView, withClass className: String) {
         
         if NUISettings.hasProperty("background-image", withClass: className) {
             if NUISettings.hasProperty("background-repeat", withClass: className) &&
                 !NUISettings.getBoolean("background-repeat", withClass: className){
                 
-                view.layer.contents = NUISettings.getImage("background-image", withClass: className)!.CGImage
+                view.layer.contents = NUISettings.getImage("background-image", withClass: className)!.cgImage
                 
             } else {
                 view.backgroundColor = NUISettings.getColorFromImage("background-image", withClass: className)
@@ -30,16 +30,16 @@ class NUIViewRenderer: NSObject {
         renderShadow(view, withClass: className)
     }
     
-    static func render(view: UIView, withClass className: String, withSuffix suffix: String) {
+    static func render(_ view: UIView, withClass className: String, withSuffix suffix: String) {
         render(view, withClass: className + suffix)
     }
     
-    static func renderBorder(view: UIView, withClass className: String) {
+    static func renderBorder(_ view: UIView, withClass className: String) {
         
         let layer = view.layer
         
         if NUISettings.hasProperty("border-color", withClass: className) {
-            layer.borderColor = NUISettings.getColor("border-color", withClass: className)!.CGColor
+            layer.borderColor = NUISettings.getColor("border-color", withClass: className)!.cgColor
         }
         
         if NUISettings.hasProperty("border-width", withClass: className) {
@@ -52,7 +52,7 @@ class NUIViewRenderer: NSObject {
         }
     }
     
-    static func renderShadow(view: UIView, withClass className: String) {
+    static func renderShadow(_ view: UIView, withClass className: String) {
         
         let layer = view.layer
         
@@ -65,7 +65,7 @@ class NUIViewRenderer: NSObject {
         }
         
         if NUISettings.hasProperty("shadow-color", withClass: className) {
-            layer.shadowColor = NUISettings.getColor("shadow-color", withClass: className)!.CGColor
+            layer.shadowColor = NUISettings.getColor("shadow-color", withClass: className)!.cgColor
         }
         
         if NUISettings.hasProperty("shadow-opacity", withClass: className) {
@@ -73,7 +73,7 @@ class NUIViewRenderer: NSObject {
         }
     }
     
-    static func renderSize(view: UIView, withClass className: String) {
+    static func renderSize(_ view: UIView, withClass className: String) {
         
         var height = view.frame.size.height
         if NUISettings.hasProperty("height", withClass: className) {
@@ -90,7 +90,7 @@ class NUIViewRenderer: NSObject {
         }
     }
     
-    static func hasShadowProperties(view: UIView, withClass className: String) -> Bool {
+    static func hasShadowProperties(_ view: UIView, withClass className: String) -> Bool {
         
         var hasAnyShadowProperty = false
         

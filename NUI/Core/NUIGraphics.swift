@@ -10,7 +10,7 @@ import UIKit
 
 class NUIGraphics: NSObject {
     
-    static func backButtonWithClass(className: String) -> UIImage {
+    static func backButtonWithClass(_ className: String) -> UIImage {
         
         let borderWidth: CGFloat = 1.0
         var cornerRadius: CGFloat = 7.0
@@ -22,23 +22,23 @@ class NUIGraphics: NSObject {
         
         let shape = CAShapeLayer()
         shape.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        shape.backgroundColor = UIColor.clearColor().CGColor
-        shape.fillColor = UIColor.clearColor().CGColor
-        shape.strokeColor = UIColor.clearColor().CGColor
+        shape.backgroundColor = UIColor.clear.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        shape.strokeColor = UIColor.clear.cgColor
         shape.lineWidth = 0
         shape.lineCap = kCALineCapRound
         shape.lineJoin = kCALineJoinRound
         
         if let _backgroundColor = NUISettings.getColor("background-color", withClass: className) {
-            shape.fillColor = _backgroundColor.CGColor
+            shape.fillColor = _backgroundColor.cgColor
         }
         
         if let _backgroundColorTop = NUISettings.getColor("background-color-top", withClass: className) {
-            shape.fillColor = _backgroundColorTop.CGColor
+            shape.fillColor = _backgroundColorTop.cgColor
         }
         
         if let _borderColor = NUISettings.getColor("border-color", withClass: className) {
-            shape.strokeColor = _borderColor.CGColor
+            shape.strokeColor = _borderColor.cgColor
         }
         
         if let _borderWidth = NUISettings.getFloat("border-width", withClass: className) {
@@ -49,36 +49,36 @@ class NUIGraphics: NSObject {
             cornerRadius = CGFloat(_cornerRadius)
         }
         
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, dWidth, dHeight - cornerRadius)
-        CGPathAddArcToPoint(path, nil, dWidth, dHeight, dWidth - cornerRadius, dHeight, cornerRadius)
-        CGPathAddLineToPoint(path, nil, arrowWidth, dHeight)
-        CGPathAddLineToPoint(path, nil, borderWidth + 0.5, height / 2)
-        CGPathAddLineToPoint(path, nil, arrowWidth, borderWidth + 0.5)
-        CGPathAddLineToPoint(path, nil, dWidth - cornerRadius, borderWidth + 0.5)
-        CGPathAddArcToPoint(path, nil, dWidth, borderWidth, dWidth, borderWidth + cornerRadius, cornerRadius)
-        CGPathAddLineToPoint(path, nil, dWidth, dHeight - cornerRadius)
+        let path = CGMutablePath()
+        path.moveTo(nil, x: dWidth, y: dHeight - cornerRadius)
+        path.addArc(nil, x1: dWidth, y1: dHeight, x2: dWidth - cornerRadius, y2: dHeight, radius: cornerRadius)
+        path.addLineTo(nil, x: arrowWidth, y: dHeight)
+        path.addLineTo(nil, x: borderWidth + 0.5, y: height / 2)
+        path.addLineTo(nil, x: arrowWidth, y: borderWidth + 0.5)
+        path.addLineTo(nil, x: dWidth - cornerRadius, y: borderWidth + 0.5)
+        path.addArc(nil, x1: dWidth, y1: borderWidth, x2: dWidth, y2: borderWidth + cornerRadius, radius: cornerRadius)
+        path.addLineTo(nil, x: dWidth, y: dHeight - cornerRadius)
         
         shape.path = path
         
         let insets = UIEdgeInsets(top: 1, left: arrowWidth + 5, bottom: 1, right: cornerRadius + 5)
         let image = caLayerToUIImage(shape)
         
-        return image.resizableImageWithCapInsets(insets, resizingMode: .Stretch)
+        return image.resizableImage(withCapInsets: insets, resizingMode: .stretch)
     }
     
-    static func roundedRectLayerWithClass(className: String, size: CGSize) -> CALayer {
+    static func roundedRectLayerWithClass(_ className: String, size: CGSize) -> CALayer {
         
         let layer = CALayer()
-        layer.frame = CGRect(origin: CGPointZero, size: size)
+        layer.frame = CGRect(origin: .zero, size: size)
         layer.masksToBounds = true
         
         if let backgroundColor = NUISettings.getColor("background-color", withClass: className) {
-            layer.backgroundColor = backgroundColor.CGColor
+            layer.backgroundColor = backgroundColor.cgColor
         }
         
         if let borderColor = NUISettings.getColor("border-color", withClass: className) {
-            layer.borderColor = borderColor.CGColor
+            layer.borderColor = borderColor.cgColor
         }
         
         if let borderWidth = NUISettings.getFloat("border-width", withClass: className) {
@@ -92,12 +92,12 @@ class NUIGraphics: NSObject {
         return layer
     }
     
-    static func roundedRectImageWithClass(className: String, size: CGSize) -> UIImage? {
+    static func roundedRectImageWithClass(_ className: String, size: CGSize) -> UIImage? {
         let layer = roundedRectLayerWithClass(className, size: size)
         return roundedRectImageWithClass(className, layer: layer)
     }
     
-    static func roundedRectImageWithClass(className: String, layer: CALayer) -> UIImage? {
+    static func roundedRectImageWithClass(_ className: String, layer: CALayer) -> UIImage? {
         
         guard let _cornerRadius = NUISettings.getFloat("corner-radius", withClass: className) else { return nil }
         let cornerRadius = CGFloat(_cornerRadius)
@@ -112,10 +112,10 @@ class NUIGraphics: NSObject {
         
         let image = caLayerToUIImage(layer)
         
-        return image.resizableImageWithCapInsets(insets, resizingMode: .Stretch)
+        return image.resizableImage(withCapInsets: insets, resizingMode: .stretch)
     }
     
-    static func uiColorToCIColor(color: UIColor) -> CIColor {
+    static func uiColorToCIColor(_ color: UIColor) -> CIColor {
         
         var red: CGFloat = 0.0
         var green: CGFloat = 0.0
@@ -126,33 +126,33 @@ class NUIGraphics: NSObject {
         return CIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    static func caLayerToUIImage(layer: CALayer) -> UIImage {
+    static func caLayerToUIImage(_ layer: CALayer) -> UIImage {
         
-        let screen = UIScreen.mainScreen()
+        let screen = UIScreen.main
         let scale = screen.scale
         
         UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
-        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
-    static func uiImageToCALayer(image: UIImage) -> CALayer {
+    static func uiImageToCALayer(_ image: UIImage) -> CALayer {
         
         let layer = CALayer()
-        let nativeWidth = CGImageGetWidth(image.CGImage)
-        let nativeHeight = CGImageGetHeight(image.CGImage)
+        let nativeWidth = image.cgImage?.width
+        let nativeHeight = image.cgImage?.height
         
-        let frame = CGRect(x: 0, y: 0, width: nativeWidth, height: nativeHeight)
-        layer.contents = image.CGImage
+        let frame = CGRect(x: 0, y: 0, width: nativeWidth!, height: nativeHeight!)
+        layer.contents = image.cgImage
         layer.frame = frame
         
         return layer
     }
     
-    static func tintCIImage(image: CIImage, withColor color: CIColor) -> CIImage {
+    static func tintCIImage(_ image: CIImage, withColor color: CIColor) -> CIImage {
         
         let monochromeFilter = CIFilter(name: "CIColorMonochrome")!
         monochromeFilter.setValue(image, forKey: "inputImage")
@@ -162,23 +162,23 @@ class NUIGraphics: NSObject {
         let compositingFilter = CIFilter(name: "CIMultiplyCompositing")!
         let colorGenerator = CIFilter(name: "CIConstantColorGenerator")!
         colorGenerator.setValue(color, forKey: "inputColor")
-        compositingFilter.setValue(colorGenerator.valueForKey("outputImage"), forKey: "inputImage")
-        compositingFilter.setValue(monochromeFilter.valueForKey("outputImage"), forKey: "inputBackgroundImage")
+        compositingFilter.setValue(colorGenerator.value(forKey: "outputImage"), forKey: "inputImage")
+        compositingFilter.setValue(monochromeFilter.value(forKey: "outputImage"), forKey: "inputBackgroundImage")
         
-        return compositingFilter.valueForKey("outputImage")! as! CIImage
+        return compositingFilter.value(forKey: "outputImage")! as! CIImage
     }
     
-    static func colorImage(color: UIColor, withFrame frame: CGRect) -> UIImage {
+    static func colorImage(_ color: UIColor, withFrame frame: CGRect) -> UIImage {
         
         UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)
         color.setFill()
         UIRectFill(frame)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
-    static func gradientLayerWithTop(topColor: CGColor, bottom bottomColor: CGColor,
+    static func gradientLayerWithTop(_ topColor: CGColor, bottom bottomColor: CGColor,
                                      frame: CGRect) -> CAGradientLayer {
         
         let layer = CAGradientLayer()
@@ -187,15 +187,15 @@ class NUIGraphics: NSObject {
         return layer
     }
     
-    static func gradientImageWithTop(topColor: CGColor, bottom bottomColor: CGColor, frame: CGRect) -> UIImage {
+    static func gradientImageWithTop(_ topColor: CGColor, bottom bottomColor: CGColor, frame: CGRect) -> UIImage {
        
        let layer = gradientLayerWithTop(topColor, bottom: bottomColor, frame: frame)
         
         UIGraphicsBeginImageContext(layer.frame.size)
-        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image
+        return image!
     }
 }

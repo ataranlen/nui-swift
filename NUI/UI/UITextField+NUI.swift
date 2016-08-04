@@ -22,12 +22,12 @@ extension UITextField {
         if nuiShouldBeApplied() {
             NUIRenderer.renderTextField(self, withClass: nuiClass)
         }
-        nuiApplied = true
+        isNUIApplied = true
     }
     
     func override_didMoveToWindow() {
         
-        if !nuiApplied {
+        if !isNUIApplied {
             applyNUI()
         }
         override_didMoveToWindow()
@@ -42,7 +42,7 @@ extension UITextField {
     }
     
     // Padding apparently can't be modified during didMoveToWindow
-    func override_textRectForBounds(bounds: CGRect) -> CGRect {
+    func override_textRectForBounds(_ bounds: CGRect) -> CGRect {
         
         guard nuiShouldBeApplied() && nuiClass != nil else {
             return override_textRectForBounds(bounds)
@@ -58,7 +58,7 @@ extension UITextField {
         return override_textRectForBounds(bounds)
     }
     
-    func override_editingRectForBounds(bounds: CGRect) -> CGRect {
-        return textRectForBounds(bounds)
+    func override_editingRectForBounds(_ bounds: CGRect) -> CGRect {
+        return textRect(forBounds: bounds)
     }
 }

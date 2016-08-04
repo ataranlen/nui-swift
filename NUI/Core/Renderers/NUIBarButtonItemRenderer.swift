@@ -10,12 +10,12 @@ import UIKit
 
 class NUIBarButtonItemRenderer: NSObject {
     
-    static func render(item: UIBarButtonItem, withClass className: String) {
+    static func render(_ item: UIBarButtonItem, withClass className: String) {
         
         if NUISettings.hasProperty("background-image", withClass: className) {
             
             let backgroundImage = NUISettings.getImage("background-image", withClass: className)
-            item.setBackgroundImage(backgroundImage, forState: .Normal, barMetrics: .Default)
+            item.setBackgroundImage(backgroundImage, for: UIControlState(), barMetrics: .default)
             
         } else if NUISettings.hasProperty("background-tint-color", withClass: className) {
             
@@ -32,23 +32,23 @@ class NUIBarButtonItemRenderer: NSObject {
                 
                 let topColor = NUISettings.getColor("background-color-top", withClass: className)!
                 let bottomColor = NUISettings.getColor("background-color-bottom", withClass: className)!
-                let gradientLayer = NUIGraphics.gradientLayerWithTop(topColor.CGColor, bottom: bottomColor.CGColor, frame: layer.frame)
+                let gradientLayer = NUIGraphics.gradientLayerWithTop(topColor.cgColor, bottom: bottomColor.cgColor, frame: layer.frame)
                 
                 if item.gradientLayer != nil {
                     layer.replaceSublayer(item.gradientLayer, with: gradientLayer)
                 } else {
-                    layer.insertSublayer(gradientLayer, atIndex: 0)
+                    layer.insertSublayer(gradientLayer, at: 0)
                 }
                 
                 item.gradientLayer = gradientLayer
             }
             
             if NUISettings.hasProperty("background-color", withClass: className) {
-                layer.backgroundColor = NUISettings.getColor("background-color", withClass: className)!.CGColor
+                layer.backgroundColor = NUISettings.getColor("background-color", withClass: className)!.cgColor
             }
             
             if NUISettings.hasProperty("border-color", withClass: className) {
-                layer.borderColor = NUISettings.getColor("border-color", withClass: className)!.CGColor
+                layer.borderColor = NUISettings.getColor("border-color", withClass: className)!.cgColor
             }
             
             if NUISettings.hasProperty("border-width", withClass: className) {
@@ -74,27 +74,27 @@ class NUIBarButtonItemRenderer: NSObject {
             
             var image = NUIGraphics.caLayerToUIImage(layer)
             
-            image = image.resizableImageWithCapInsets(insets, resizingMode: .Stretch)
+            image = image.resizableImage(withCapInsets: insets, resizingMode: .stretch)
             
-            item.setBackgroundImage(image, forState: .Normal, barMetrics: .Default)
+            item.setBackgroundImage(image, for: UIControlState(), barMetrics: .default)
             
             if NUISettings.hasProperty("background-color-highlighted", withClass: className) {
                 let highlightedLayer = layer
                 
                 highlightedLayer.backgroundColor = NUISettings.getColor("background-color-highlighted",
-                    withClass: className)!.CGColor
+                    withClass: className)!.cgColor
                 
                 var highlightedImage = NUIGraphics.caLayerToUIImage(highlightedLayer)
-                highlightedImage = highlightedImage.resizableImageWithCapInsets(insets, resizingMode: .Stretch)
+                highlightedImage = highlightedImage.resizableImage(withCapInsets: insets, resizingMode: .stretch)
                 
-                item.setBackgroundImage(highlightedImage, forState: .Highlighted, barMetrics: .Default)
+                item.setBackgroundImage(highlightedImage, for: .highlighted, barMetrics: .default)
             }
         }
         
         let titleTextAttributes = NUIUtilities.titleTextAttributesForClass(className)
         
         if !titleTextAttributes.isEmpty {
-            item.setTitleTextAttributes(titleTextAttributes, forState: .Normal)
+            item.setTitleTextAttributes(titleTextAttributes, for: UIControlState())
         }
     }
 }
