@@ -29,7 +29,6 @@
 		0E55162519388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162419388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m */; };
 		0E55162719388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162619388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m */; };
 		0E5516291938A15000B293B7 /* NUIButtonGradientSnapshotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5516281938A15000B293B7 /* NUIButtonGradientSnapshotTest.m */; };
-		0E55162E1938D5FD00B293B7 /* UIBarButtonRendererBackgroundColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162D1938D5FD00B293B7 /* UIBarButtonRendererBackgroundColorTests.m */; };
 		0E5516301938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162F1938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m */; };
 		0E5516321938D63300B293B7 /* NUIBarButtonSnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5516311938D63300B293B7 /* NUIBarButtonSnapshotTests.m */; };
 		0E8A86B218EC07C40027F275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B8637165EE59A005B5756 /* Foundation.framework */; };
@@ -96,6 +95,8 @@
 		8730CA541D26FCFC0016CD76 /* NUIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */; };
 		8730CA561D2709E80016CD76 /* NUISwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA551D2709E80016CD76 /* NUISwizzler.swift */; };
 		8730CA581D2711730016CD76 /* NUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA571D2711730016CD76 /* NUIRenderer.swift */; };
+		8746E3141D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */; };
+		8746E3181D53D8880089748E /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3171D53D8880089748E /* TestHelpers.swift */; };
 		87923D8B1D11737F001DCFAC /* NUIButtonRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */; };
 		87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */; };
 		87A4E8721D219BCF00A926C1 /* NUIViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */; };
@@ -174,7 +175,6 @@
 		0E55162419388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIButtonRendererForegroundImageTests.m; sourceTree = "<group>"; };
 		0E55162619388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIButtonRendererBackgroundColorTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E5516281938A15000B293B7 /* NUIButtonGradientSnapshotTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIButtonGradientSnapshotTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		0E55162D1938D5FD00B293B7 /* UIBarButtonRendererBackgroundColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UIBarButtonRendererBackgroundColorTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E55162F1938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UIBarButtonRendererBackgroundImageTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E5516311938D63300B293B7 /* NUIBarButtonSnapshotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIBarButtonSnapshotTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E8A86AF18EC07C40027F275 /* NUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +263,8 @@
 		8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIUtilities.swift; sourceTree = "<group>"; };
 		8730CA551D2709E80016CD76 /* NUISwizzler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISwizzler.swift; sourceTree = "<group>"; };
 		8730CA571D2711730016CD76 /* NUIRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIRenderer.swift; sourceTree = "<group>"; };
+		8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonRendererBackgroundColorTests.swift; sourceTree = "<group>"; };
+		8746E3171D53D8880089748E /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRenderer.swift; sourceTree = "<group>"; };
 		87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIToolbarRenderer.swift; sourceTree = "<group>"; };
 		87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIViewRenderer.swift; sourceTree = "<group>"; };
@@ -440,7 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				87009B871D53CFCB00519650 /* UIBarButtonRendererTests.swift */,
-				0E55162D1938D5FD00B293B7 /* UIBarButtonRendererBackgroundColorTests.m */,
+				8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */,
 				0E55162F1938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m */,
 				0E5516311938D63300B293B7 /* NUIBarButtonSnapshotTests.m */,
 			);
@@ -450,6 +452,7 @@
 		0E8A86B418EC07C40027F275 /* NUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8746E3171D53D8880089748E /* TestHelpers.swift */,
 				87009B7C1D53C50900519650 /* NUITests-Bridging-Header.h */,
 				0EE9CA7B191EC96D00C84934 /* TestTheme.NUI.nss */,
 				0E55160E1938727100B293B7 /* TestResources */,
@@ -1121,6 +1124,7 @@
 				0E921406193B791E00101B27 /* NUILabelRendererTests.m in Sources */,
 				0E3F5E0B193C7C1F003F6A77 /* NUISearchBarRendererTests.m in Sources */,
 				0EA8AA8C193DBDF300E1BD29 /* NUITabBarRendererBackgroundImageTests.m in Sources */,
+				8746E3181D53D8880089748E /* TestHelpers.swift in Sources */,
 				0EA8AA7F193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m in Sources */,
 				0E55162519388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m in Sources */,
 				0E5516291938A15000B293B7 /* NUIButtonGradientSnapshotTest.m in Sources */,
@@ -1131,7 +1135,7 @@
 				0EA8AA85193DB62900E1BD29 /* NUISwitchRendererTests.m in Sources */,
 				0EA8AA8A193DBD3200E1BD29 /* NUITabBarRendererGradientTests.m in Sources */,
 				87009B801D53C86600519650 /* NUITableViewCellRendererTests.swift in Sources */,
-				0E55162E1938D5FD00B293B7 /* UIBarButtonRendererBackgroundColorTests.m in Sources */,
+				8746E3141D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift in Sources */,
 				0EA8AA7D193CCB2C00E1BD29 /* NUISegmentedControlRendererBackgroundImagesTests.m in Sources */,
 				0E3F5DFD193C5FB9003F6A77 /* NUINavigationBarRendererTests.m in Sources */,
 				0E3F5E0D193C7EA1003F6A77 /* NUISearchBarRendererGradientTest.m in Sources */,
@@ -1323,6 +1327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.tbnr.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NUITests/UIKitTests/NUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
