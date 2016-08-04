@@ -27,6 +27,6 @@ class NUIActivityIndicatorRendererTests: XCTestCase {
     // color (Color)
     
     func testSetColor() {
-        XCTAssertEqual(sut.color, UIColor.red, "NUI should set color activity indicator color")
+        XCTAssertEqual(sut.color, .red, "NUI should set color activity indicator color")
     }
 }
