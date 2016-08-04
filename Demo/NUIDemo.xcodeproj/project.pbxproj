@@ -29,8 +29,6 @@
 		0E55162519388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162419388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m */; };
 		0E55162719388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162619388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m */; };
 		0E5516291938A15000B293B7 /* NUIButtonGradientSnapshotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5516281938A15000B293B7 /* NUIButtonGradientSnapshotTest.m */; };
-		0E5516301938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162F1938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m */; };
-		0E5516321938D63300B293B7 /* NUIBarButtonSnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5516311938D63300B293B7 /* NUIBarButtonSnapshotTests.m */; };
 		0E8A86B218EC07C40027F275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B8637165EE59A005B5756 /* Foundation.framework */; };
 		0E8A86B318EC07C40027F275 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B8635165EE59A005B5756 /* UIKit.framework */; };
 		0E8A86B918EC07C40027F275 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A86B718EC07C40027F275 /* InfoPlist.strings */; };
@@ -95,6 +93,7 @@
 		8730CA541D26FCFC0016CD76 /* NUIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */; };
 		8730CA561D2709E80016CD76 /* NUISwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA551D2709E80016CD76 /* NUISwizzler.swift */; };
 		8730CA581D2711730016CD76 /* NUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA571D2711730016CD76 /* NUIRenderer.swift */; };
+		873924941D53EDB600A1E781 /* NUIBarButtonSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873924931D53EDB600A1E781 /* NUIBarButtonSnapshotTests.swift */; };
 		8746E3141D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */; };
 		8746E3181D53D8880089748E /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3171D53D8880089748E /* TestHelpers.swift */; };
 		8746E31A1D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */; };
@@ -176,8 +175,6 @@
 		0E55162419388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIButtonRendererForegroundImageTests.m; sourceTree = "<group>"; };
 		0E55162619388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIButtonRendererBackgroundColorTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E5516281938A15000B293B7 /* NUIButtonGradientSnapshotTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIButtonGradientSnapshotTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		0E55162F1938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UIBarButtonRendererBackgroundImageTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		0E5516311938D63300B293B7 /* NUIBarButtonSnapshotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIBarButtonSnapshotTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E8A86AF18EC07C40027F275 /* NUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8A86B618EC07C40027F275 /* NUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NUITests-Info.plist"; sourceTree = "<group>"; };
 		0E8A86B818EC07C40027F275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -264,6 +261,7 @@
 		8730CA531D26FCFC0016CD76 /* NUIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIUtilities.swift; sourceTree = "<group>"; };
 		8730CA551D2709E80016CD76 /* NUISwizzler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISwizzler.swift; sourceTree = "<group>"; };
 		8730CA571D2711730016CD76 /* NUIRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIRenderer.swift; sourceTree = "<group>"; };
+		873924931D53EDB600A1E781 /* NUIBarButtonSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIBarButtonSnapshotTests.swift; sourceTree = "<group>"; };
 		8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonRendererBackgroundColorTests.swift; sourceTree = "<group>"; };
 		8746E3171D53D8880089748E /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonRendererBackgroundImageTests.swift; sourceTree = "<group>"; };
@@ -445,9 +443,8 @@
 			children = (
 				87009B871D53CFCB00519650 /* UIBarButtonRendererTests.swift */,
 				8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */,
-				0E55162F1938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m */,
 				8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */,
-				0E5516311938D63300B293B7 /* NUIBarButtonSnapshotTests.m */,
+				873924931D53EDB600A1E781 /* NUIBarButtonSnapshotTests.swift */,
 			);
 			path = UIBarButton;
 			sourceTree = "<group>";
@@ -1117,7 +1114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5888C61992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m in Sources */,
-				0E5516301938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m in Sources */,
 				87009B7E1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift in Sources */,
 				0E55162719388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m in Sources */,
 				8746E31A1D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift in Sources */,
@@ -1146,7 +1142,7 @@
 				0E55161C1938891000B293B7 /* NUIButtonRendererBackgroundImageTests.m in Sources */,
 				0EA8AA82193CD38100E1BD29 /* UISliderRendererTests.m in Sources */,
 				0EA8AA7B193CC01F00E1BD29 /* NUISegmentedControlRendererTests.m in Sources */,
-				0E5516321938D63300B293B7 /* NUIBarButtonSnapshotTests.m in Sources */,
+				873924941D53EDB600A1E781 /* NUIBarButtonSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
