@@ -19,14 +19,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FBSnapshotTestCase:
-    :commit: 8b989383e83ef0e19e8ba5382301f29f69ec61f5
+    :commit: de6a2c85a45a4ff1d9901530b4ea35c7a2aed2d8
     :git: https://github.com/broadwaylamb/ios-snapshot-test-case.git
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
+  FBSnapshotTestCase: d853c7b69136cbd377d062567d4a8a4ce919d45a
   NUIParse: 2e3885ba7807477266396292626bd387d34c2338
   UIImage+ColorFromImage: b84b5f8b4dc9d996d17d2b736e1429f4a13b37e4
 
-PODFILE CHECKSUM: 335eb2c37c3c6a1c9eff850f1eef75f0cfba7dd8
+PODFILE CHECKSUM: 80a8e013c100e443c7d9fb436bff118e948a3515
 
 COCOAPODS: 1.0.1

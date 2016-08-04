@@ -32,6 +32,7 @@ class UIBarButtonRendererBackgroundColorTests: XCTestCase {
     func testSetBackgroundColor() {
         
         let backgroundImage = self.backgroundImage(for: .normal)!
+        
         XCTAssertEqual(backgroundImage.uiColor, .green, "NUI should set button background color")
     }
     
@@ -39,6 +40,7 @@ class UIBarButtonRendererBackgroundColorTests: XCTestCase {
     func testSetBackgroundColorHighlighted() {
         
         let backgroundImage = self.backgroundImage(for: .highlighted)!
+        
         XCTAssertEqual(backgroundImage.uiColor, .yellow, "NUI should set button background color for highlighted state")
     }
 }

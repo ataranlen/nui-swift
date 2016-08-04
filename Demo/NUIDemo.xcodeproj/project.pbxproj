@@ -97,6 +97,7 @@
 		8730CA581D2711730016CD76 /* NUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730CA571D2711730016CD76 /* NUIRenderer.swift */; };
 		8746E3141D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */; };
 		8746E3181D53D8880089748E /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3171D53D8880089748E /* TestHelpers.swift */; };
+		8746E31A1D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */; };
 		87923D8B1D11737F001DCFAC /* NUIButtonRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */; };
 		87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */; };
 		87A4E8721D219BCF00A926C1 /* NUIViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */; };
@@ -265,6 +266,7 @@
 		8730CA571D2711730016CD76 /* NUIRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIRenderer.swift; sourceTree = "<group>"; };
 		8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonRendererBackgroundColorTests.swift; sourceTree = "<group>"; };
 		8746E3171D53D8880089748E /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonRendererBackgroundImageTests.swift; sourceTree = "<group>"; };
 		87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRenderer.swift; sourceTree = "<group>"; };
 		87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIToolbarRenderer.swift; sourceTree = "<group>"; };
 		87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIViewRenderer.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 				87009B871D53CFCB00519650 /* UIBarButtonRendererTests.swift */,
 				8746E3131D53D4750089748E /* UIBarButtonRendererBackgroundColorTests.swift */,
 				0E55162F1938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m */,
+				8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */,
 				0E5516311938D63300B293B7 /* NUIBarButtonSnapshotTests.m */,
 			);
 			path = UIBarButton;
@@ -1117,6 +1120,7 @@
 				0E5516301938D61300B293B7 /* UIBarButtonRendererBackgroundImageTests.m in Sources */,
 				87009B7E1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift in Sources */,
 				0E55162719388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m in Sources */,
+				8746E31A1D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift in Sources */,
 				0E55161D1938891000B293B7 /* NUIButtonRendererTests.m in Sources */,
 				87009B841D53CA2C00519650 /* NUITextViewRendererTests.swift in Sources */,
 				0EE34299193A116700306AC7 /* NUIControlRendererTests.m in Sources */,
@@ -1372,6 +1376,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1405,6 +1410,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
