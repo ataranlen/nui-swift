@@ -28,7 +28,6 @@
 		0E55162319388C1E00B293B7 /* foreground_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E55161F19388C1E00B293B7 /* foreground_image@2x.png */; };
 		0E55162519388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162419388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m */; };
 		0E55162719388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55162619388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m */; };
-		0E5516291938A15000B293B7 /* NUIButtonGradientSnapshotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5516281938A15000B293B7 /* NUIButtonGradientSnapshotTest.m */; };
 		0E8A86B218EC07C40027F275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B8637165EE59A005B5756 /* Foundation.framework */; };
 		0E8A86B318EC07C40027F275 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B8635165EE59A005B5756 /* UIKit.framework */; };
 		0E8A86B918EC07C40027F275 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A86B718EC07C40027F275 /* InfoPlist.strings */; };
@@ -118,6 +117,7 @@
 		87E2F35B1D119E0300E84AC2 /* NUIControlRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2F35A1D119E0300E84AC2 /* NUIControlRenderer.swift */; };
 		87E2F35D1D11A79800E84AC2 /* NUILabelRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2F35C1D11A79800E84AC2 /* NUILabelRenderer.swift */; };
 		87E2F35F1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2F35E1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift */; };
+		87EBCA1E1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EBCA1D1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift */; };
 		87F8B57A1D2D84E500FBBB70 /* NUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8B5791D2D84E500FBBB70 /* NUISettings.swift */; };
 		87F8B57C1D2E9BAD00FBBB70 /* NUIGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8B57B1D2E9BAD00FBBB70 /* NUIGraphics.swift */; };
 		87F8B57E1D2ED78500FBBB70 /* UITextField+NUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8B57D1D2ED78500FBBB70 /* UITextField+NUI.swift */; };
@@ -174,7 +174,6 @@
 		0E55161F19388C1E00B293B7 /* foreground_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foreground_image@2x.png"; sourceTree = "<group>"; };
 		0E55162419388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIButtonRendererForegroundImageTests.m; sourceTree = "<group>"; };
 		0E55162619388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIButtonRendererBackgroundColorTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		0E5516281938A15000B293B7 /* NUIButtonGradientSnapshotTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIButtonGradientSnapshotTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E8A86AF18EC07C40027F275 /* NUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8A86B618EC07C40027F275 /* NUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NUITests-Info.plist"; sourceTree = "<group>"; };
 		0E8A86B818EC07C40027F275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -286,6 +285,7 @@
 		87E2F35A1D119E0300E84AC2 /* NUIControlRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIControlRenderer.swift; sourceTree = "<group>"; };
 		87E2F35C1D11A79800E84AC2 /* NUILabelRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUILabelRenderer.swift; sourceTree = "<group>"; };
 		87E2F35E1D11CD3B00E84AC2 /* NUINavigationBarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUINavigationBarRenderer.swift; sourceTree = "<group>"; };
+		87EBCA1D1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonGradientSnapshotTests.swift; sourceTree = "<group>"; };
 		87F8B5791D2D84E500FBBB70 /* NUISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISettings.swift; sourceTree = "<group>"; };
 		87F8B57B1D2E9BAD00FBBB70 /* NUIGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIGraphics.swift; sourceTree = "<group>"; };
 		87F8B57D1D2ED78500FBBB70 /* UITextField+NUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NUI.swift"; sourceTree = "<group>"; };
@@ -428,7 +428,7 @@
 		0E5516191938891000B293B7 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				0E5516281938A15000B293B7 /* NUIButtonGradientSnapshotTest.m */,
+				87EBCA1D1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift */,
 				0E55162619388EC900B293B7 /* NUIButtonRendererBackgroundColorTests.m */,
 				0E55161A1938891000B293B7 /* NUIButtonRendererBackgroundImageTests.m */,
 				0E55162419388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m */,
@@ -1124,12 +1124,12 @@
 				0EE34299193A116700306AC7 /* NUIControlRendererTests.m in Sources */,
 				0E3F5E05193C6D90003F6A77 /* NUINavigationBarRendererGradientTest.m in Sources */,
 				0E921406193B791E00101B27 /* NUILabelRendererTests.m in Sources */,
+				87EBCA1E1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift in Sources */,
 				0E3F5E0B193C7C1F003F6A77 /* NUISearchBarRendererTests.m in Sources */,
 				0EA8AA8C193DBDF300E1BD29 /* NUITabBarRendererBackgroundImageTests.m in Sources */,
 				8746E3181D53D8880089748E /* TestHelpers.swift in Sources */,
 				0EA8AA7F193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m in Sources */,
 				0E55162519388CC500B293B7 /* NUIButtonRendererForegroundImageTests.m in Sources */,
-				0E5516291938A15000B293B7 /* NUIButtonGradientSnapshotTest.m in Sources */,
 				87009B861D53CE1F00519650 /* NUITextFieldRendererTextInputTraitsTests.swift in Sources */,
 				87009B881D53CFCB00519650 /* UIBarButtonRendererTests.swift in Sources */,
 				0EA8AA88193DBB5500E1BD29 /* NUITabBarRendererTests.m in Sources */,
