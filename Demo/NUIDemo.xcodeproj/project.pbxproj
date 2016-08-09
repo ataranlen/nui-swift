@@ -69,7 +69,6 @@
 		4ADA71C616A0F15C00BDCF81 /* UISearchBar+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA71C516A0F15C00BDCF81 /* UISearchBar+NUI.m */; };
 		5B5888C31992BD15005F1ACB /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5888C21992BD15005F1ACB /* Assets */; };
 		5B5888C41992BD1C005F1ACB /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5888C21992BD15005F1ACB /* Assets */; };
-		5B5888C61992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5888C51992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m */; };
 		7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */; };
 		87009B7E1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87009B7D1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift */; };
 		87009B801D53C86600519650 /* NUITableViewCellRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87009B7F1D53C86600519650 /* NUITableViewCellRendererTests.swift */; };
@@ -95,6 +94,7 @@
 		8746E31A1D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */; };
 		87923D8B1D11737F001DCFAC /* NUIButtonRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */; };
 		879FDAA61D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FDAA51D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift */; };
+		879FDAA81D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FDAA71D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift */; };
 		87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */; };
 		87A4E8721D219BCF00A926C1 /* NUIViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */; };
 		87A4E8741D21A37900A926C1 /* NUIWindowRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8731D21A37900A926C1 /* NUIWindowRenderer.swift */; };
@@ -231,7 +231,6 @@
 		4ADA71C416A0F15C00BDCF81 /* UISearchBar+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+NUI.h"; sourceTree = "<group>"; };
 		4ADA71C516A0F15C00BDCF81 /* UISearchBar+NUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+NUI.m"; sourceTree = "<group>"; };
 		5B5888C21992BD15005F1ACB /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		5B5888C51992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIButtonRendererSubdirectoryImageTests.m; sourceTree = "<group>"; };
 		5E7A82143441C74ECBC50656 /* Pods_NUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6327BDA600E6A42FDF1220F4 /* Pods-NUIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUIDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NUIDemo/Pods-NUIDemo.release.xcconfig"; sourceTree = "<group>"; };
 		7C5A17AC1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+NUI.h"; sourceTree = "<group>"; };
@@ -263,6 +262,7 @@
 		8746E3191D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonRendererBackgroundImageTests.swift; sourceTree = "<group>"; };
 		87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRenderer.swift; sourceTree = "<group>"; };
 		879FDAA51D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRendererForegroundImageTests.swift; sourceTree = "<group>"; };
+		879FDAA71D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRendererSubdirectoryImageTests.swift; sourceTree = "<group>"; };
 		87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIToolbarRenderer.swift; sourceTree = "<group>"; };
 		87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIViewRenderer.swift; sourceTree = "<group>"; };
 		87A4E8731D21A37900A926C1 /* NUIWindowRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIWindowRenderer.swift; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 				87EBCA1F1D5945AD00C93675 /* NUIButtonRendererBackgroundColorTests.swift */,
 				87D77F7F1D594C1A00A646FA /* NUIButtonRendererBackgroundImageTests.swift */,
 				879FDAA51D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift */,
-				5B5888C51992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m */,
+				879FDAA71D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift */,
 				0E55161B1938891000B293B7 /* NUIButtonRendererTests.m */,
 			);
 			path = UIButton;
@@ -1115,7 +1115,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5888C61992BDA7005F1ACB /* NUIButtonRendererSubdirectoryImageTests.m in Sources */,
 				87009B7E1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift in Sources */,
 				8746E31A1D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift in Sources */,
 				0E55161D1938891000B293B7 /* NUIButtonRendererTests.m in Sources */,
@@ -1126,6 +1125,7 @@
 				0E921406193B791E00101B27 /* NUILabelRendererTests.m in Sources */,
 				87EBCA1E1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift in Sources */,
 				0E3F5E0B193C7C1F003F6A77 /* NUISearchBarRendererTests.m in Sources */,
+				879FDAA81D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift in Sources */,
 				0EA8AA8C193DBDF300E1BD29 /* NUITabBarRendererBackgroundImageTests.m in Sources */,
 				8746E3181D53D8880089748E /* TestHelpers.swift in Sources */,
 				0EA8AA7F193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m in Sources */,
