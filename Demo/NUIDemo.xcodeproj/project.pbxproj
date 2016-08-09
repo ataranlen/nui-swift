@@ -20,7 +20,6 @@
 		0E5516121938738C00B293B7 /* background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E5516111938738C00B293B7 /* background_image.png */; };
 		0E5516131938751100B293B7 /* background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E5516111938738C00B293B7 /* background_image.png */; };
 		0E5516141938751400B293B7 /* background_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E55160F1938727100B293B7 /* background_image@2x.png */; };
-		0E55161D1938891000B293B7 /* NUIButtonRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55161B1938891000B293B7 /* NUIButtonRendererTests.m */; };
 		0E55162019388C1E00B293B7 /* foreground_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E55161E19388C1E00B293B7 /* foreground_image.png */; };
 		0E55162119388C1E00B293B7 /* foreground_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E55161E19388C1E00B293B7 /* foreground_image.png */; };
 		0E55162219388C1E00B293B7 /* foreground_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E55161F19388C1E00B293B7 /* foreground_image@2x.png */; };
@@ -95,6 +94,7 @@
 		87923D8B1D11737F001DCFAC /* NUIButtonRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */; };
 		879FDAA61D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FDAA51D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift */; };
 		879FDAA81D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FDAA71D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift */; };
+		879FDAAA1D5A6F2300122182 /* NUIButtonRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FDAA91D5A6F2300122182 /* NUIButtonRendererTests.swift */; };
 		87A4E8701D2196D600A926C1 /* NUIToolbarRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */; };
 		87A4E8721D219BCF00A926C1 /* NUIViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */; };
 		87A4E8741D21A37900A926C1 /* NUIWindowRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4E8731D21A37900A926C1 /* NUIWindowRenderer.swift */; };
@@ -168,7 +168,6 @@
 		0E3F5E0C193C7EA1003F6A77 /* NUISearchBarRendererGradientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUISearchBarRendererGradientTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E55160F1938727100B293B7 /* background_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_image@2x.png"; sourceTree = "<group>"; };
 		0E5516111938738C00B293B7 /* background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_image.png; sourceTree = "<group>"; };
-		0E55161B1938891000B293B7 /* NUIButtonRendererTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUIButtonRendererTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0E55161E19388C1E00B293B7 /* foreground_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foreground_image.png; sourceTree = "<group>"; };
 		0E55161F19388C1E00B293B7 /* foreground_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foreground_image@2x.png"; sourceTree = "<group>"; };
 		0E8A86AF18EC07C40027F275 /* NUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +262,7 @@
 		87923D8A1D11737F001DCFAC /* NUIButtonRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRenderer.swift; sourceTree = "<group>"; };
 		879FDAA51D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRendererForegroundImageTests.swift; sourceTree = "<group>"; };
 		879FDAA71D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRendererSubdirectoryImageTests.swift; sourceTree = "<group>"; };
+		879FDAA91D5A6F2300122182 /* NUIButtonRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIButtonRendererTests.swift; sourceTree = "<group>"; };
 		87A4E86F1D2196D600A926C1 /* NUIToolbarRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIToolbarRenderer.swift; sourceTree = "<group>"; };
 		87A4E8711D219BCF00A926C1 /* NUIViewRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIViewRenderer.swift; sourceTree = "<group>"; };
 		87A4E8731D21A37900A926C1 /* NUIWindowRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIWindowRenderer.swift; sourceTree = "<group>"; };
@@ -433,7 +433,7 @@
 				87D77F7F1D594C1A00A646FA /* NUIButtonRendererBackgroundImageTests.swift */,
 				879FDAA51D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift */,
 				879FDAA71D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift */,
-				0E55161B1938891000B293B7 /* NUIButtonRendererTests.m */,
+				879FDAA91D5A6F2300122182 /* NUIButtonRendererTests.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1117,11 +1117,11 @@
 			files = (
 				87009B7E1D53C50900519650 /* NUIActivityIndicatorRendererTests.swift in Sources */,
 				8746E31A1D53E2370089748E /* UIBarButtonRendererBackgroundImageTests.swift in Sources */,
-				0E55161D1938891000B293B7 /* NUIButtonRendererTests.m in Sources */,
 				87009B841D53CA2C00519650 /* NUITextViewRendererTests.swift in Sources */,
 				0EE34299193A116700306AC7 /* NUIControlRendererTests.m in Sources */,
 				87EBCA201D5945AD00C93675 /* NUIButtonRendererBackgroundColorTests.swift in Sources */,
 				0E3F5E05193C6D90003F6A77 /* NUINavigationBarRendererGradientTest.m in Sources */,
+				879FDAAA1D5A6F2300122182 /* NUIButtonRendererTests.swift in Sources */,
 				0E921406193B791E00101B27 /* NUILabelRendererTests.m in Sources */,
 				87EBCA1E1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift in Sources */,
 				0E3F5E0B193C7C1F003F6A77 /* NUISearchBarRendererTests.m in Sources */,
