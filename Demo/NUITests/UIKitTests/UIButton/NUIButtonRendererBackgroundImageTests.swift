@@ -18,6 +18,7 @@ class NUIButtonRendererBackgroundImageTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
         NUISettings.initWithStylesheet("TestTheme.NUI")
         sut = UIButton()
         sut.nuiClass = NUIButtonBackgroundImageTestsStyleClass

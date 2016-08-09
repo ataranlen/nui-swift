@@ -30,23 +30,34 @@ matrix:
     # - osx_image: xcode8
     #   env: DEVICE="iPad Pro" VERSION=9.3
     - osx_image: xcode8
+      env: DEVICE="iPhone 5" VERSION=10.0
+    - osx_image: xcode8
       env: DEVICE="iPhone 5s" VERSION=10.0
     - osx_image: xcode8
       env: DEVICE="iPhone 6" VERSION=10.0
     - osx_image: xcode8
       env: DEVICE="iPhone 6 Plus" VERSION=10.0
     - osx_image: xcode8
+      env: DEVICE="iPhone 6s" VERSION=10.0
+    - osx_image: xcode8
+      env: DEVICE="iPhone 6s Plus" VERSION=10.0
+    - osx_image: xcode8
+      env: DEVICE="iPhone SE" VERSION=10.0
+    - osx_image: xcode8
       env: DEVICE="iPad Retina" VERSION=10.0
+    - osx_image: xcode8
+      env: DEVICE="iPad Air" VERSION=10.0
     - osx_image: xcode8
       env: DEVICE="iPad Air 2" VERSION=10.0
     - osx_image: xcode8
-      env: DEVICE="iPad Pro" VERSION=10.0
+      env: DEVICE="iPad Pro (9.7-inch)" VERSION=10.0
+    - osx_image: xcode8
+      env: DEVICE="iPad Pro (12.9-inch)" VERSION=10.0
 
 before_install:
   - export LANG=en_US.UTF-8
   - rvm install 2.2
   - rvm use 2.2
-  # - sudo gem install bundler
   - sudo gem install xcpretty --no-rdoc --no-ri --no-document
   - sudo gem install cocoapods --no-rdoc --no-ri --no-document
   - pod install --project-directory=Demo --repo-update
