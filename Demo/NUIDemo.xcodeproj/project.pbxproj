@@ -24,7 +24,6 @@
 		0E8A86B918EC07C40027F275 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A86B718EC07C40027F275 /* InfoPlist.strings */; };
 		0E8A86C318EC08970027F275 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8A86C218EC08970027F275 /* XCTest.framework */; };
 		0EA8AA7D193CCB2C00E1BD29 /* NUISegmentedControlRendererBackgroundImagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA8AA7C193CCB2C00E1BD29 /* NUISegmentedControlRendererBackgroundImagesTests.m */; };
-		0EA8AA7F193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA8AA7E193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m */; };
 		0EA8AA82193CD38100E1BD29 /* UISliderRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA8AA81193CD38100E1BD29 /* UISliderRendererTests.m */; };
 		0EA8AA85193DB62900E1BD29 /* NUISwitchRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA8AA84193DB62900E1BD29 /* NUISwitchRendererTests.m */; };
 		0EA8AA88193DBB5500E1BD29 /* NUITabBarRendererTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA8AA87193DBB5500E1BD29 /* NUITabBarRendererTests.m */; };
@@ -106,6 +105,7 @@
 		87CF8C581D737B9200C64AF7 /* NUISearchBarRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF8C571D737B9200C64AF7 /* NUISearchBarRendererTests.swift */; };
 		87CF8C5A1D737DF800C64AF7 /* NUISearchBarRendererGradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF8C591D737DF800C64AF7 /* NUISearchBarRendererGradientTests.swift */; };
 		87CF8C5C1D73839D00C64AF7 /* NUISegmentedControlRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF8C5B1D73839D00C64AF7 /* NUISegmentedControlRendererTests.swift */; };
+		87CF8C5E1D7385E600C64AF7 /* NUISegmentedControlSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF8C5D1D7385E600C64AF7 /* NUISegmentedControlSnapshotTests.swift */; };
 		87D3F2671D73525E00D0253C /* NUIControlRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3F2661D73525E00D0253C /* NUIControlRendererTests.swift */; };
 		87D3F2691D73665700D0253C /* NUILabelRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3F2681D73665700D0253C /* NUILabelRendererTests.swift */; };
 		87D3F26B1D73696300D0253C /* NUINavigationBarRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3F26A1D73696300D0253C /* NUINavigationBarRendererTests.swift */; };
@@ -171,7 +171,6 @@
 		0E8A86BC18EC07C40027F275 /* NUITests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NUITests-Prefix.pch"; sourceTree = "<group>"; };
 		0E8A86C218EC08970027F275 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0EA8AA7C193CCB2C00E1BD29 /* NUISegmentedControlRendererBackgroundImagesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUISegmentedControlRendererBackgroundImagesTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		0EA8AA7E193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUISegmentedControlSnapshotTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0EA8AA81193CD38100E1BD29 /* UISliderRendererTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UISliderRendererTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0EA8AA84193DB62900E1BD29 /* NUISwitchRendererTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUISwitchRendererTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0EA8AA87193DBB5500E1BD29 /* NUITabBarRendererTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NUITabBarRendererTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -274,6 +273,7 @@
 		87CF8C571D737B9200C64AF7 /* NUISearchBarRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISearchBarRendererTests.swift; sourceTree = "<group>"; };
 		87CF8C591D737DF800C64AF7 /* NUISearchBarRendererGradientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISearchBarRendererGradientTests.swift; sourceTree = "<group>"; };
 		87CF8C5B1D73839D00C64AF7 /* NUISegmentedControlRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISegmentedControlRendererTests.swift; sourceTree = "<group>"; };
+		87CF8C5D1D7385E600C64AF7 /* NUISegmentedControlSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUISegmentedControlSnapshotTests.swift; sourceTree = "<group>"; };
 		87D3F2661D73525E00D0253C /* NUIControlRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUIControlRendererTests.swift; sourceTree = "<group>"; };
 		87D3F2681D73665700D0253C /* NUILabelRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUILabelRendererTests.swift; sourceTree = "<group>"; };
 		87D3F26A1D73696300D0253C /* NUINavigationBarRendererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NUINavigationBarRendererTests.swift; sourceTree = "<group>"; };
@@ -484,7 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				87CF8C5B1D73839D00C64AF7 /* NUISegmentedControlRendererTests.swift */,
-				0EA8AA7E193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m */,
+				87CF8C5D1D7385E600C64AF7 /* NUISegmentedControlSnapshotTests.swift */,
 				0EA8AA7C193CCB2C00E1BD29 /* NUISegmentedControlRendererBackgroundImagesTests.m */,
 			);
 			path = UISegmentedControl;
@@ -1124,9 +1124,9 @@
 				87EBCA1E1D593FE900C93675 /* NUIButtonGradientSnapshotTests.swift in Sources */,
 				87CF8C541D7377D400C64AF7 /* NUINavigationBarRendererGradientTests.swift in Sources */,
 				879FDAA81D5A6BA000122182 /* NUIButtonRendererSubdirectoryImageTests.swift in Sources */,
+				87CF8C5E1D7385E600C64AF7 /* NUISegmentedControlSnapshotTests.swift in Sources */,
 				0EA8AA8C193DBDF300E1BD29 /* NUITabBarRendererBackgroundImageTests.m in Sources */,
 				8746E3181D53D8880089748E /* TestHelpers.swift in Sources */,
-				0EA8AA7F193CCD8A00E1BD29 /* NUISegmentedControlSnapshotTests.m in Sources */,
 				879FDAA61D5A59D300122182 /* NUIButtonRendererForegroundImageTests.swift in Sources */,
 				87009B861D53CE1F00519650 /* NUITextFieldRendererTextInputTraitsTests.swift in Sources */,
 				87009B881D53CFCB00519650 /* UIBarButtonRendererTests.swift in Sources */,
