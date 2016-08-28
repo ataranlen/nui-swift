@@ -5,28 +5,25 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.2):
     - FBSnapshotTestCase/Core
   - NUIParse (1.3)
-  - UIImage+ColorFromImage (0.0.2)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (from `https://github.com/broadwaylamb/ios-snapshot-test-case.git`, branch `swift-3-beta-4`)
+  - FBSnapshotTestCase (from `https://github.com/broadwaylamb/ios-snapshot-test-case.git`, branch `swift3-beta-6`)
   - NUIParse
-  - UIImage+ColorFromImage
 
 EXTERNAL SOURCES:
   FBSnapshotTestCase:
-    :branch: swift-3-beta-4
+    :branch: swift3-beta-6
     :git: https://github.com/broadwaylamb/ios-snapshot-test-case.git
 
 CHECKOUT OPTIONS:
   FBSnapshotTestCase:
-    :commit: de6a2c85a45a4ff1d9901530b4ea35c7a2aed2d8
+    :commit: fa170d0d0cbf3b81be05c44495a398123465943d
     :git: https://github.com/broadwaylamb/ios-snapshot-test-case.git
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: d853c7b69136cbd377d062567d4a8a4ce919d45a
   NUIParse: 2e3885ba7807477266396292626bd387d34c2338
-  UIImage+ColorFromImage: b84b5f8b4dc9d996d17d2b736e1429f4a13b37e4
 
-PODFILE CHECKSUM: 80a8e013c100e443c7d9fb436bff118e948a3515
+PODFILE CHECKSUM: 9586e7dedbd1d705fe4192411b26b38d063a6203
 
 COCOAPODS: 1.0.1

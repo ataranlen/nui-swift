@@ -6,7 +6,6 @@ end
 
 target "NUITests" do
   pod 'FBSnapshotTestCase', :git => 'https://github.com/broadwaylamb/ios-snapshot-test-case.git', :branch => 'swift3-beta-6'
-  pod 'UIImage+ColorFromImage'
 end
 
 post_install do |installer|
