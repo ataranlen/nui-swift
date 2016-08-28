@@ -31,13 +31,15 @@ class NUIStyleParser: NSObject {
         var definitions = [String : String]()
         
         for definition in (styleSheet.definitions as! [NUIDefinition])
-            where mediaOptionsSatisified((definition.mediaOptions as? [String : String])) {
+            // as [NSObject : AnyObject]? as? [String : String] — due to swift compiler bug
+            where mediaOptionsSatisified((definition.mediaOptions as [NSObject : AnyObject]? as? [String : String])) {
             
             definitions[definition.variable] = definition.value
         }
         
         for ruleSet in (styleSheet.ruleSets as! [NUIRuleSet])
-            where mediaOptionsSatisified((ruleSet.mediaOptions as? [String : String])) {
+            // as [NSObject : AnyObject] as? [String : String] — due to swift compiler bug
+            where mediaOptionsSatisified((ruleSet.mediaOptions as [NSObject : AnyObject]? as? [String : String])) {
             
             for selector in (ruleSet.selectors as! [String]) {
                 
@@ -59,15 +61,15 @@ class NUIStyleParser: NSObject {
                                              definitions: [String : String]) -> [String : String] {
         
         var consolidatedRuleSet = consolidatedRuleSet
-        
-        for (property, var value) in (ruleSet.declarations as! [String : String]) {
+        // as [NSObject : AnyObject] as! [String : String] — due to swift compiler bug
+        for (property, var value) in (ruleSet.declarations as [NSObject : AnyObject] as! [String : String]) {
             
             if value.hasPrefix("@") {
                 
                 let variable = value
                 
                 if definitions[variable] == nil {
-                    NSException.raise("Undefined variable" as NSExceptionName,
+                    NSException.raise(NSExceptionName("Undefined variable"),
                                       format: "Variable %@ is not defined",
                                       arguments: getVaList([value]))
                 }

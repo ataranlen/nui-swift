@@ -50,14 +50,26 @@ class NUIGraphics: NSObject {
         }
         
         let path = CGMutablePath()
-        path.moveTo(nil, x: dWidth, y: dHeight - cornerRadius)
-        path.addArc(nil, x1: dWidth, y1: dHeight, x2: dWidth - cornerRadius, y2: dHeight, radius: cornerRadius)
-        path.addLineTo(nil, x: arrowWidth, y: dHeight)
-        path.addLineTo(nil, x: borderWidth + 0.5, y: height / 2)
-        path.addLineTo(nil, x: arrowWidth, y: borderWidth + 0.5)
-        path.addLineTo(nil, x: dWidth - cornerRadius, y: borderWidth + 0.5)
-        path.addArc(nil, x1: dWidth, y1: borderWidth, x2: dWidth, y2: borderWidth + cornerRadius, radius: cornerRadius)
-        path.addLineTo(nil, x: dWidth, y: dHeight - cornerRadius)
+
+        path.move(to: CGPoint(x: dWidth, y: dHeight - cornerRadius))
+
+        path.addArc(tangent1End: CGPoint(x: dWidth, y: dHeight),
+                    tangent2End: CGPoint(x: dWidth - cornerRadius, y: dHeight),
+                    radius: cornerRadius)
+
+        path.addLine(to: CGPoint(x: arrowWidth, y: dHeight))
+
+        path.addLine(to: CGPoint(x: borderWidth + 0.5, y: height / 2))
+
+        path.addLine(to: CGPoint(x: arrowWidth, y: borderWidth + 0.5))
+
+        path.addLine(to: CGPoint(x: dWidth - cornerRadius, y: borderWidth + 0.5))
+
+        path.addArc(tangent1End: CGPoint(x: dWidth, y: borderWidth),
+                    tangent2End: CGPoint(x: dWidth, y: borderWidth + cornerRadius),
+                    radius: cornerRadius)
+
+        path.addLine(to: CGPoint(x: dWidth, y: dHeight - cornerRadius))
         
         shape.path = path
         

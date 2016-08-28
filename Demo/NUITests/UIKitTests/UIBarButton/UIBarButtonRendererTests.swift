@@ -12,7 +12,7 @@ import XCTest
 class UIBarButtonRendererTests: XCTestCase {
     
     var sut: UIBarButtonItem!
-    var attributes: [String : AnyObject]!
+    var attributes: [String : Any]!
     
     override func setUp() {
         super.setUp()

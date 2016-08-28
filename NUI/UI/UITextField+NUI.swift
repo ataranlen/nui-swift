@@ -16,7 +16,7 @@ extension UITextField {
         }
     }
     
-    public override func applyNUI() {
+    open override func applyNUI() {
         
         initNUI()
         if nuiShouldBeApplied() {

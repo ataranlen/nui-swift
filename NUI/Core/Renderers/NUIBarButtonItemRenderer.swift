@@ -55,22 +55,22 @@ class NUIBarButtonItemRenderer: NSObject {
                 layer.borderWidth = CGFloat(NUISettings.getFloat("border-width", withClass: className)!)
             }
             
-            let cornerRadius = NUISettings.getFloat("corner-radius", withClass: className)
+            let cornerRadius = NUISettings.getFloat("corner-radius", withClass: className)!
             var insetLength = cornerRadius
             
             if cornerRadius < 5 {
                 insetLength = 5
             }
-            insetLength = insetLength! + 3.0
+            insetLength = insetLength + 3.0
             
             if NUISettings.hasProperty("corner-radius", withClass: className) {
                 layer.cornerRadius = CGFloat(NUISettings.getFloat("corner-radius", withClass: className)!)
             }
             
-            let insets = UIEdgeInsets(top: CGFloat(insetLength!),
-                                      left: CGFloat(insetLength!),
-                                      bottom: CGFloat(insetLength!),
-                                      right: CGFloat(insetLength!))
+            let insets = UIEdgeInsets(top: CGFloat(insetLength),
+                                      left: CGFloat(insetLength),
+                                      bottom: CGFloat(insetLength),
+                                      right: CGFloat(insetLength))
             
             var image = NUIGraphics.caLayerToUIImage(layer)
             

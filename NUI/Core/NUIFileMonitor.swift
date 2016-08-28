@@ -10,7 +10,7 @@ import UIKit
 
 class NUIFileMonitor: NSObject {
     
-    static func watch(_ path: String, withCallback callback: () -> Void) {
+    static func watch(_ path: String, withCallback callback: @escaping () -> Void) {
         
         let globalQueue = DispatchQueue.global(qos: .default)
         let c = path.cString(using: String.Encoding.utf8)!

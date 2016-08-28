@@ -106,7 +106,7 @@ class NUILabelRenderer: NSObject {
             return attributedText
         }
         
-        var attributes = [([String : AnyObject], NSRange)]()
+        var attributes = [([String : Any], NSRange)]()
         
         let range = NSRange(location: 0, length: attributedText.length)
         
