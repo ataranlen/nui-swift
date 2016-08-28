@@ -54,30 +54,30 @@ class NUIControlRendererTests: FBSnapshotTestCase {
     func testSetBorderWidth() {
         XCTAssertEqual(sut.layer.borderWidth, 2, "NUI should set control border width")
     }
-    // corner-radius (Number)
 
+    // corner-radius (Number)
     func testSetCornerRadius() {
         XCTAssertEqual(sut.layer.cornerRadius, 2, "NUI should set control corner radius")
     }
-    // shadow-color (Color)
 
+    // shadow-color (Color)
     func testSetShadowColor() {
         let shadowColor = UIColor(cgColor: sut.layer.shadowColor!)
         XCTAssertEqual(shadowColor, .black, "NUI should set control shadow color")
     }
-    // shadow-offset (Offset)
 
+    // shadow-offset (Offset)
     func testSetShadowOffset() {
         let offset = CGSize(width: 1, height: 2)
         XCTAssertEqual(sut.layer.shadowOffset, offset, "NUI should set control shadow offset")
     }
-    // shadow-opacity (Number)
 
+    // shadow-opacity (Number)
     func testSetShadowOpacity() {
         XCTAssertEqualWithAccuracy(sut.layer.shadowOpacity, 0.5, accuracy: 0.0001, "NUI should set control shadow opacity")
     }
-    // shadow-radius (Number)
 
+    // shadow-radius (Number)
     func testSetShadowRadius() {
         XCTAssertEqual(sut.layer.shadowRadius, 2, "NUI should set control shadow radius")
     }
